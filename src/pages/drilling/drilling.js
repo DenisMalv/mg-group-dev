@@ -2,7 +2,8 @@
 import './drilling.scss';
 
 
-
+// modules
+import '../../modules/drilling/some'
 
 
 

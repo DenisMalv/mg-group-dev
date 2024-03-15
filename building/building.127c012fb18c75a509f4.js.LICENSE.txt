@@ -1,4 +1,4 @@
-/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../node_modules/group-css-media-queries-loader/lib/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./drilling.scss */
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../node_modules/group-css-media-queries-loader/lib/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./building.scss */
 
 /*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
 
@@ -26,11 +26,13 @@
 
 /*! ../../fonts/Russo_One.ttf */
 
+/*! ../../modules/building/some */
+
 /*! ../css-loader/dist/runtime/api.js */
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
 
-/*! ./drilling.scss */
+/*! ./building.scss */
 
 /*!*********************************!*\
   !*** ./src/fonts/Russo_One.ttf ***!
@@ -40,16 +42,20 @@
   !*** ./src/fonts/MPLUS1p-Medium.ttf ***!
   \**************************************/
 
+/*!**************************************!*\
+  !*** ./src/modules/building/some.js ***!
+  \**************************************/
+
 /*!***************************************!*\
   !*** ./src/fonts/MPLUS1p-Regular.ttf ***!
   \***************************************/
 
 /*!****************************************!*\
-  !*** ./src/pages/drilling/drilling.js ***!
+  !*** ./src/pages/building/building.js ***!
   \****************************************/
 
 /*!******************************************!*\
-  !*** ./src/pages/drilling/drilling.scss ***!
+  !*** ./src/pages/building/building.scss ***!
   \******************************************/
 
 /*!*****************************************************!*\
@@ -93,5 +99,5 @@
   \****************************************************************************************/
 
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./src/pages/drilling/drilling.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./src/pages/building/building.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************/

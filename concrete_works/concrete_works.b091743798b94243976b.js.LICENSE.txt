@@ -26,6 +26,8 @@
 
 /*! ../../fonts/Russo_One.ttf */
 
+/*! ../../modules/concrete_works/some */
+
 /*! ../css-loader/dist/runtime/api.js */
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
@@ -43,6 +45,10 @@
 /*!***************************************!*\
   !*** ./src/fonts/MPLUS1p-Regular.ttf ***!
   \***************************************/
+
+/*!********************************************!*\
+  !*** ./src/modules/concrete_works/some.js ***!
+  \********************************************/
 
 /*!****************************************************!*\
   !*** ./src/pages/concrete_works/concrete_works.js ***!

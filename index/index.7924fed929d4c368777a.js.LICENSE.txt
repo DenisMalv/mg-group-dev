@@ -26,6 +26,8 @@
 
 /*! ../../fonts/Russo_One.ttf */
 
+/*! ../../modules/start/some */
+
 /*! ../css-loader/dist/runtime/api.js */
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
@@ -39,6 +41,10 @@
 /*!**********************************!*\
   !*** ./src/pages/start/start.js ***!
   \**********************************/
+
+/*!***********************************!*\
+  !*** ./src/modules/start/some.js ***!
+  \***********************************/
 
 /*!************************************!*\
   !*** ./src/pages/start/start.scss ***!

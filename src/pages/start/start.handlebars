@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="M-Group"
+  />
+  <meta name="language" content="Ukrainian (Ukraine)"/>
+  <meta http-equiv="content-language" content="uk_UA"/>
+  <meta name="theme-color" content="#F4FFFE"/>
+  <link rel="icon" href="./img/favicon.ico" type="image">
+
+  <title>M-Group</title>
+</head>
+<body>
+  <header id="header">
+    start
+    {{>header}}
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container flex jc-sb al-c">
+        
+        <!-- <picture class="hero_picture_wrapper">
+          <source srcset="./img/hero/hero-x1.webp 1x, ./img/hero/hero-@2x.webp 2x" >
+          <img width="435" height="435" src="#" alt="Зображення підшипниківnpm MVT Bearings" title="Зображення підшипників MVT Bearings. Посилання на сайт СЕЛМ АГРО: Головна сторінка - https://selm.com.ua/ . Розділ з брендом MVT Bearings  selm.com.ua/brand/mvt . Каталог підшипників https://selm.com.ua/catalogtovarov/pidshipniki-universalni" class="hero_img" >
+        </picture> -->
+      </div>
+    </section>
+    <section class="advantages intersection" id="advantages">
+      <div class="container">
+        <h2 class="is-hidden">Our advantages</h2>
+      </div>
+    </section>
+    <section class="assortment intersection" id="assortment">
+      <div class="container">
+      </div>
+    </section>
+    <section class="about_us intersection" id="about-us">
+      <div class="container">
+        <h2 class="about_us_title">Heading</h2>
+      </div>
+    </section>
+    <section class="contact_us intersection">
+      <div class="container">
+        <h2 class="contact_us_title">Heading</h2>
+      </div>
+    </section>
+    <section class="own_brand intersection">
+      <div class="container">
+        <h2 class="own_brand_title">Heading</h2>
+      </div>
+    </section>
+    <section class="how_find_us">
+      <div class="container">
+        <h2 class="how_find_us_title">Heading</h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container flex wrap">
+    </div>
+  </footer>
+
+      <div class="modal-bgd">        
+        <form action="#" class="form modal-form"  id="modal-form">
+          <h3 class="form_title">Отримати консультацію</h3>
+          <p class="form_descr">Залишайте заявку і менеджер з вами зв’яжеться та проконсультує</p>
+          <div class="label_wrapper">
+            <label class="form_label" for="modal-name">Прізвище та ім’я<span class="label-error hide"> тільки літери від 2 до 30 символів</span></label>
+              <input type="text" class="form_input" name="name" id="modal-name" placeholder="Введіть свої прізвище та ім’я" required>
+          </div>
+          <div class="label_wrapper">
+            <label class="form_label" for="modal-phone">Номер телефону<span class="label-error hide"> тільки цифри від 7 до 15 символів</span></label>
+            <input type="tel" class="form_input" name="phone" id="modal-phone" placeholder="Введіть свій номер телефону" required>
+          </div>
+          <div class="label_wrapper">
+            <label class="form_label" for="modal-comment">Коментар</label>
+            <textarea rows="4" resize="none" class="form_textarea" name="comment" id="modal-comment" placeholder="Напишіть коментар до заявки"></textarea>
+          </div>
+          <button type="submit" role="button" class="btn" id="recall-submit" aria-label="Кнопка відправки форми для отримання консультації всередині поп-ап">Відправити</button>
+          <button type="button" role="button" class="close-btn" aria-label="Кнопка закрити поп-ап з формою отримання консультації">
+            <!-- <svg width="24" height="24" alt="іконка закриття модального вікна з формою">
+              <use href="./img/icon-sprite.svg#icon-icon-park_close"></use>
+            </svg> -->
+            <svg alt="іконка закриття модального вікна з формою" width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4L20 20"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 20L20 4"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              
+          </button>
+        </form>
+      </div>
+
+      <a href="#" class="scroll js-scroll" aria-label="Кнопка переходу вгору сайту до навігації" >
+        <svg class="header__icon--rocket" width="16" height="16" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.19719 14.9283L8.40442 15.7417C8.06874 16.0861 7.52595 16.0861 7.19384 15.7417L0.251758 8.62285C-0.0839195 8.27845 -0.0839195 7.72155 0.251758 7.38081L7.19384 0.2583C7.52952 -0.0861015 8.07231 -0.0861015 8.40442 0.2583L9.19719 1.07167C9.53644 1.41974 9.52929 1.98763 9.1829 2.32837L4.87981 6.53446H15.143C15.6179 6.53446 16 6.92649 16 7.41378V8.58621C16 9.0735 15.6179 9.46554 15.143 9.46554H4.87981L9.1829 13.6716C9.53286 14.0124 9.54001 14.5803 9.19719 14.9283Z" />
+        </svg> 
+      </a>
+
+</body>
+</html>
+
+
+

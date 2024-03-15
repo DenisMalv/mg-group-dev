@@ -1,0 +1,56 @@
+{
+  "name": "MG-Group",
+  "version": "1.2.2",
+  "homepage": "https://denismalv.github.io/mg-group-dev/",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build-dev": "webpack",
+    "build-prod": "webpack --node-env=production",
+    "clear": "rd /s /q dist",
+    "deploy": "npm run build-dev && gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "gh-pages": "^6.1.1",
+    "group-css-media-queries-loader": "^4.3.0",
+    "handlebars-loader": "^1.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-partials-plugin": "^0.8.0",
+    "html-webpack-plugin": "^5.5.1",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.2.4",
+    "postcss-preset-env": "^8.3.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "lodash.throttle": "^4.1.1",
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.0.6"
+  }
+}

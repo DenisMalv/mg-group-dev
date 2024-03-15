@@ -36,31 +36,31 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'start', 'start.html'),
+      template: path.resolve(__dirname, 'src', 'pages', 'start', 'start.handlebars'),
       output:'index.html',
       filename:'index.html',
       chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'building', 'building.html'),
+      template: path.resolve(__dirname, 'src', 'pages', 'building', 'building.handlebars'),
       output:'building.html',
       filename:'building.html',
       chunks: ['building'],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.html'),
+      template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.handlebars'),
       output:'concrete_works.html',
       filename:'concrete_works.html',
       chunks: ['concrete_works'],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.html'),
+      template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.handlebars'),
       output:'drilling.html',
       filename:'drilling.html',
       chunks: ['drilling'],
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'reconstruction', 'reconstruction.html'),
+      template: path.resolve(__dirname, 'src', 'pages', 'reconstruction', 'reconstruction.handlebars'),
       output:'reconstruction.html',
       filename:'reconstruction.html',
       chunks: ['reconstruction'],

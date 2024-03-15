@@ -1,0 +1,17 @@
+.icon{
+    fill:transparent;
+    stroke: blue;
+    transition: $transition;
+    &:hover{
+        stroke:red;
+    }
+}
+
+.icon-use{
+    fill: transparent;
+    stroke: blue;
+    transition: $transition;
+    &:hover{
+        stroke:red;
+    }
+}

@@ -13,6 +13,9 @@ module.exports = {
   mode,
   target,
   devtool,
+  stats:{
+    children:true
+  },
   devServer: {
     port: 3000,
     open: true,

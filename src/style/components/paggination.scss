@@ -1,0 +1,28 @@
+.pagination-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    // font-size: clamp(18px, 0.5rem + 1.5vw, 20px);
+    font-size: 20px;
+    font-weight: 400;
+    // line-height: clamp(24px, 0.8rem + 1.8vw, 28px);
+    line-height: 1.4;
+  
+    color: $pagination-text;
+    background-color: $pagination-bg;
+    border-radius: $frame-rad-40;
+  
+    // width: clamp(48px, 1.5rem + 4vw, 60px);
+    // height: clamp(48px, 1.5rem + 4vw, 60px);
+    width: 60px;
+    height: 60px;
+  
+    cursor: pointer;
+  
+    &.active{
+      color: $pagination-active-text;
+      background-color: $pagination-active-bg;
+    }
+  
+  }

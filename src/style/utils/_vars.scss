@@ -1,29 +1,71 @@
+// font family
+$main:"M PLUS 1p", sans-serif;
+$russo:"Russo One", sans-serif;
+
 // transition
 $transition: all 0.3s ease-out;
 
 // text
 $black:#000;
 $white:#fff;
-$heading-text: #F6F7F7;
+$white-text: #F6F7F7;
 $main-text:#C2CDC6;
-$btn-text:#171C1A;
+
 $input-select-text:#171C1A;
 $about-us-subheader-text:#FFE888;
-$inpu-label-text:#E1E6E3;
-
+$input-label-text:#E1E6E3;
+$input-placeholder-text:#73877B;
 
 // buttons
-$btn-bg:#FFC935;
-$btn-accent-bg:#FFD74A;
-$btn-works-bg:#5C7065;
+$btn-primary-text:#171C1A;
+$btn-primary-bg:#FFC935;
+$btn-primary-accent-bg:#F9A207;
+$btn-primary-active-bg:#FFD74A;
+$btn-primary-disable-bg:#333C38;
 
-//borders
-$pref-border:#73877B;
 
-//background
+$btn-secondary-text:#F6F7F7;
+$btn-secondary-accent-text:#171C1A;
+$btn-secondary-border:1px solid $white-text;
+$btn-secondary-accent-border:1px solid #FFD74A;
+$btn-secondary-accent-bg:#FFD74A;
+$btn-secondary-desktop-text:#FFC935;
+$btn-secondary-desctop-border:1px solid #FFC935;
+
+// tabs 
+$tab-bg:#5C7065;
+$tab-color-text: #F6F7F7;
+$tab-border:1px solid #5C7065;
+
+$tab-active-text: #5C7065;
+$tab-active-bg:#F6F7F7;
+$tab-active-border: 1px solid #5C7065;
+
+// pagination
+$pagination-bg:#48594F;
+$pagination-text:#F6F7F7;
+$pagination-active-bg:#F6F7F7;
+$pagination-active-text:#48594F;
+
+
+// pref/about-us card
+$pref-card-border: clamp(1px,1vw,2px) solid #73877B;
+$pref-card-circle:#FFD74A;
+$about-us-border: clamp(2px,1vw,1px) solid #73877B;
+
+
+// frames
+$frame-rad-12:12px;
+$frame-rad-16:16px;
+$frame-rad-20:20px;
+$frame-rad-24:24px;
+$frame-rad-40:40px;
+
+// background
 $card-bg:#283935;
 $slider-bg:#3C4942;
 $main-bg:#182825;
+
 
 
 

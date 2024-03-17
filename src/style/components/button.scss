@@ -1,0 +1,85 @@
+.btn-primary{
+
+    padding-top: clamp(16px, 0.65rem + 1vw, 20px);
+    padding-bottom: clamp(16px, 0.65rem + 1vw, 20px);
+    padding-left: clamp(17.5px, 0.5rem + 2.3vw, 40px);
+    padding-right: clamp(17.5px, 0.7rem + 2.3vw, 40px);
+  
+    background-color: $btn-primary-bg;
+    color: $btn-primary-text;
+  
+    border: none;
+    outline: none;
+    border-radius: clamp($frame-rad-12, 2.6vw, $frame-rad-20);
+    
+  
+    font-size: clamp(18px, 0.5rem + 1.5vw, 20px);
+    font-weight: 500;
+    line-height: clamp(24px, 0.8rem + 1.8vw, 28px);
+  
+    cursor:pointer;
+  
+    transition: $transition;
+  
+    &:hover,&:focus{
+      background-color: $btn-primary-accent-bg;
+    }
+    &:active{
+      background-color: $btn-primary-active-bg;
+    }
+    &:disabled{
+      background-color: $btn-primary-disable-bg;
+      color: $white-text;
+      cursor:initial;
+    }
+  
+  }
+  
+  .btn-secondary{
+  
+    padding-top: clamp(16px, 0.65rem + 1vw, 20px);
+    padding-bottom: clamp(16px, 0.65rem + 1vw, 20px);
+    padding-left: clamp(17.5px, 0.5rem + 2.3vw, 24px);
+    padding-right: clamp(17.5px, 0.7rem + 2.3vw, 24px);
+    
+    width: 100%;
+    max-width: 100%;
+  
+    background-color: transparent;
+    color: $white-text;
+  
+    border: $btn-secondary-border;
+    outline: none;
+    border-radius: clamp($frame-rad-12, 2.6vw, $frame-rad-20);
+    
+  
+    font-size: clamp(18px, 0.5rem + 1.5vw, 20px);
+    font-weight: 500;
+    line-height: clamp(24px, 0.8rem + 1.8vw, 28px);
+  
+    cursor:pointer;
+  
+    transition: $transition;
+  
+    &:hover,&:focus{
+      background-color: $btn-secondary-accent-bg;
+      color: $btn-secondary-accent-text;
+      border: $btn-secondary-accent-border;
+    }
+    &:active{
+      background-color: transparent;
+      color: $white-text;
+      border: $btn-secondary-border;
+    }
+  
+    @include tablet{
+      max-width: max-content;
+      color: $btn-secondary-desktop-text;
+      border: $btn-secondary-desctop-border;
+      &:active{
+        background-color: transparent;
+        color: $btn-secondary-desktop-text;
+        border: $btn-secondary-desctop-border;
+      }
+    }
+  }

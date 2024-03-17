@@ -1,0 +1,67 @@
+.label-input-with-icon{
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    max-width: 524px;
+    
+    .label-icon{
+      position: absolute;
+      top: 56px;
+      left: 24px;
+      fill: #3C4942;
+      stroke: #3C4942;
+      z-index: 1;
+    }
+  
+    .input-with-icon{
+  
+      margin-top: 12px;
+  
+      outline: none;
+      border: none;
+      border-radius: clamp($frame-rad-16,2vw,$frame-rad-20);
+      
+      color: $input-select-text;
+  
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 60px;
+      padding-right: 24px;
+  
+      &::placeholder{
+        color:$input-placeholder-text
+      }
+    }
+  
+  }
+  
+  .label-textarea{
+  
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    max-width: 524px;
+  
+    .textarea-field{
+      margin-top: 12px;
+  
+      outline: none;
+      border: none;
+      border-radius: clamp($frame-rad-16,2vw,$frame-rad-20);
+      
+      color: $input-select-text;
+  
+      padding: 16px 24px;
+  
+      position: relative;
+  
+      &::placeholder{
+        color:$input-placeholder-text
+      }
+    }
+  
+  }

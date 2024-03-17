@@ -1,11 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-
-// const CopyPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -41,30 +38,41 @@ module.exports = {
       filename:'index.html',
       chunks: ['index'],
     }),
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'building', 'building.html'),
       output:'building.html',
       filename:'building.html',
       chunks: ['building'],
     }),
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.html'),
       output:'concrete_works.html',
       filename:'concrete_works.html',
       chunks: ['concrete_works'],
     }),
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.html'),
       output:'drilling.html',
       filename:'drilling.html',
       chunks: ['drilling'],
     }),
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'reconstruction', 'reconstruction.html'),
       output:'reconstruction.html',
       filename:'reconstruction.html',
       chunks: ['reconstruction'],
     }),
+
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: 'src/img', to: 'assets/img' } // из какой папки копировать и куда
+    //   ]
+    // }),
+
     new MiniCssExtractPlugin({
       filename: '[name]/[name].[contenthash].css',
     }),  
@@ -73,7 +81,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+          loader: 'html-loader',
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -149,21 +157,21 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.handlebars$/,
-        loader: "handlebars-loader",
-        options: {
-          helperDirs: path.resolve(__dirname, 'src/helpers'),
-          partialDirs:path.resolve(__dirname, 'src/partials')
-        }
-      },
+      // {
+      //   test: /\.handlebars$/,
+      //   loader: "handlebars-loader",
+      //   options: {
+      //     helperDirs: path.resolve(__dirname, 'src/helpers'),
+      //     partialDirs:path.resolve(__dirname, 'src/partials')
+      //   }
+      // },
     ],
   },
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin(), // Минификация JavaScript
-      new CssMinimizerPlugin(), // Минификация CSS
+      new TerserPlugin(), // Мініфікація JavaScript
+      new CssMinimizerPlugin(), // Мініфікація CSS
     ],
   },
 };

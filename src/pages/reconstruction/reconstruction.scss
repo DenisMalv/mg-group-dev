@@ -1,6 +1,5 @@
 @import '~normalize.css';
 
-@import '../../style/common';
 
 // utils
 @import '../../style/utils/mixin';
@@ -10,6 +9,9 @@
 @import '../../style/utils/reset';
 @import '../../style/utils/vars';
 @import '../../style/common';
+
+// component
+@import '../../style/components/index.scss';
 
 // partials
 @import '../../style/reconstruction/header'

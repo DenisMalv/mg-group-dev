@@ -1,0 +1,21 @@
+.tab-label{
+    display: inline-block;
+    padding: 8px 12px;
+  
+    border-radius: $frame-rad-12;
+    border: $tab-border;
+    outline: none;
+  
+    background-color: $tab-bg;
+  
+    transition: $transition;
+  }
+  
+  .tab-checkbox{
+    display: none;
+  }
+  .tab-checkbox:checked + .tab-label {
+    background-color: $tab-active-bg;
+    color: $tab-active-text;
+    border: $tab-active-border;
+  }

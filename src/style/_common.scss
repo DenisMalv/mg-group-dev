@@ -1,21 +1,55 @@
 html,
 body {
-  font-family: "M PLUS 1p", sans-serif;;
-  // background-color: $main_bg;
+  font-family: $main;
+  background-color: $main-bg;
 
-  font-size: 18px;
+  font-size: clamp(18px, 0.5rem + 1.5vw, 20px);
   font-weight: 400;
-  line-height: 1.33333;
-  // color: $main-text;
+  line-height: clamp(24px, 0.8rem + 1.8vw, 28px);
+  color: $main-text;
   
   margin: 0 auto;
   width: 100%;
 
   scroll-behavior: smooth;
-
-  overflow-x: hidden;
-
 }
+//   clamp(min, current, max)
+//   window 1440px / max font-size = 44px
+//   1vw = 14.4px
+//   44px / 14.4px = 3.05vw
+
+
+.component-title{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.component-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.component-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .flex {

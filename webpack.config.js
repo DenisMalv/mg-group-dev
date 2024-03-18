@@ -27,7 +27,7 @@ module.exports = {
     concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
     drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
     reconstruction:path.resolve(__dirname, 'src', 'pages', 'reconstruction', 'reconstruction.js'),
-    // components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
+    components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -71,12 +71,12 @@ module.exports = {
       chunks: ['reconstruction'],
     }),
 
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),
-    //   output:'components.html',
-    //   filename:'components.html',
-    //   chunks: ['components'],
-    // }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),
+      output:'components.html',
+      filename:'components.html',
+      chunks: ['components'],
+    }),
 
     // new CopyWebpackPlugin({
     //   patterns: [

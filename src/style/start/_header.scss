@@ -1,7 +1,11 @@
-header.burger-show{
+header{
     position: relative;
     z-index: 11;
 }
+// header.burger-show{
+//     position: relative;
+
+// }
 
 
 .header-backround{
@@ -48,6 +52,10 @@ header.burger-show{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    //
+    position: relative;
+    z-index: 11;
 
 
 }

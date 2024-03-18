@@ -14,7 +14,7 @@
   <title>M-Group</title>
 </head>
 <body>
-  <header class="header-backround burger-show">
+  <header class="header-backround" id="header">
     <div class="container green-background">
       <nav class="header-navigation">
         <a href="./components.html" class="logo" role="link" aria-label="">
@@ -45,12 +45,29 @@
 
         <a href="tel:+38970000000" class="header-link-phone" role="link" aria-label="">+3897000 00 00</a>
 
-        <button type="button" role="button" class="burger-button">
+        <button type="button" role="button" class="burger-button" id="burger-btn">
           <svg class="burger-button-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
               <use href="../../img/icons/icon-sprite.svg#menu-burger"></use>
           </svg>
         </button>
       </nav>
+      <ul class="burger-list" id="burger-list">
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Про нас</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Послуги</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Галерея</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Ціна</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Контакти</a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -60,9 +77,9 @@
   <footer>
   </footer>
 
-  <div class="burger-modal-bgd burger modal-active" >
+  <div class="burger-modal-bgd burger" id="burger-modal">
     <!-- <div class="container"> -->
-      <ul class="burger_list">
+      <!-- <ul class="burger_list" id="burger-list">
         <li class="burger_item">
           <a href="#about_us" class="burger_link" aria-label="Навігація до блоку Про нас">
             Про нас
@@ -78,7 +95,7 @@
             Як Нас Знайти
           </a>
         </li>
-      </ul>
+      </ul> -->
     <!-- </div> -->
   </div>
   

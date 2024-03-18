@@ -5,35 +5,31 @@
     top: 0;
     left: 0;
     background: $modal-bgd;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
 
     opacity: 0;
     pointer-events: none;
 
-    transition: $transition;
+    transition: $transition-burger;
     
 
-    // filter:blur(5px);
+    filter:blur(5px);
 
     z-index: 10;
 }
 
-.modal-active {
+.burger-modal-active {
     opacity: 1;
     pointer-events: all;
 }
 
-.burger_list{
-    padding-top: clamp(94px, 3.541rem + 7.34vw, 121px);
-    padding-bottom: 32px;
-    padding-left: clamp(18px, 0.106rem + 4.08vw, 33px);
-    padding-right: clamp(18px, 0.106rem + 4.08vw, 33px);
+.burger-list{
+    // padding-left: clamp(18px, 0.106rem + 4.08vw, 33px);
+    // padding-right: clamp(18px, 0.106rem + 4.08vw, 33px);
 
+    padding: 0 6px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 0px;
 
     background-color: $card-bg;
     width: 100%;
@@ -41,4 +37,59 @@
     border-bottom-left-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
     border-bottom-right-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
 
+    transition: $transition-burger;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    @include tablet{
+        display: none;
+    }
+
+    &.burger-show{
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 6px;
+        padding-right: 6px;
+    
+        pointer-events: all;
+
+        gap: 24px;
+    }
+
+}
+
+.burger-item{
+    width: 40%;
+    opacity: 0;
+    transition: $transition-burger;
+
+    & a{
+        transition: $transition-burger;
+        max-height: 0px;
+    }
+
+}
+
+// .burger-item:nth-child(1){
+//     transition-delay: .500ms;
+// }
+// .burger-item:nth-child(2){
+//     transition-delay: .450ms;
+// }
+// .burger-item:nth-child(3){
+//     transition-delay: .400ms;
+// }
+// .burger-item:nth-child(4){
+//     transition-delay: .350ms;
+// }
+// .burger-item:nth-child(5){
+//     transition-delay: .300ms;
+// }
+
+.burger-item.item-show{
+    opacity: 1;
+    & a{
+        max-height: 40px;
+    }
 }

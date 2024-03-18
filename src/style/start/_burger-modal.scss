@@ -1,0 +1,44 @@
+.burger-modal-bgd{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $modal-bgd;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: $transition;
+    
+
+    // filter:blur(5px);
+
+    z-index: 10;
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.burger_list{
+    padding-top: clamp(94px, 3.541rem + 7.34vw, 121px);
+    padding-bottom: 32px;
+    padding-left: clamp(18px, 0.106rem + 4.08vw, 33px);
+    padding-right: clamp(18px, 0.106rem + 4.08vw, 33px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    background-color: $card-bg;
+    width: 100%;
+
+    border-bottom-left-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
+    border-bottom-right-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
+
+}

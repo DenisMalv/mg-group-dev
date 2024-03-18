@@ -7,13 +7,6 @@ h1{
     font-size: clamp(24px, 0.9rem + 1.8vw, 40px);
     line-height: clamp(32px, 1.1rem + 1.8vw, 48px);
     color: $white-text;
-    
-    padding-top: clamp(16px, 0.3rem + 2.5vw, 32px);
-    padding-bottom: clamp(16px, 0.3rem + 2.5vw, 32px);
-    padding-left: clamp(12px, -0.4rem + 5vw, 56px);
-    padding-right: clamp(12px, -0.4rem + 5vw, 56px);
-    background-color: $card-bg;
-    border-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
   }
   h3{
     font-size: clamp(22px, 0.7rem + 1.8vw, 32px);
@@ -49,3 +42,4 @@ h1{
     gap: 10px;
     width: 100%;
   }
+

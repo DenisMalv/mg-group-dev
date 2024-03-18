@@ -13,17 +13,60 @@
   <title>M-Group</title>
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <h1>this is header building page h1</h1>
-      <h2>this is header building page h2</h2>
-      <h3>this is header building page h3</h3>
-      <p>paragraph</p>
-      <a href="./start.html" class="logo">
-          <svg width="40" height="40">
-              <use href="../../img/icons/icon-sprite.svg#logo"></use>
+  <header class="header-backround" id="header">
+    <div class="container green-background">
+      <nav class="header-navigation">
+        <a href="./components.html" class="logo" role="link" aria-label="">
+            <svg class="logo-icon" width="112" height="56" alt="Логотип компанії" >
+                <use href="../../img/icons/icon-sprite.svg#logo"></use>
+            </svg>
+        </a>
+        <ul class="nav-list">
+          <!-- <li class="nav-item">
+            <a href="./components.html" class="nav-link" role="link" aria-label="">Comp.</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="link" aria-label="">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="link" aria-label="">Послуги</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="link" aria-label="">Галерея</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="link" aria-label="">Ціна</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" role="link" aria-label="">Контакти</a>
+          </li>
+        </ul>
+
+        <a href="tel:+38970000000" class="header-link-phone" role="link" aria-label="">+3897000 00 00</a>
+
+        <button type="button" role="button" class="burger-button" id="burger-btn">
+          <svg class="burger-button-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+              <use href="../../img/icons/icon-sprite.svg#menu-burger"></use>
           </svg>
-      </a>
+        </button>
+      </nav>
+      <ul class="burger-list" id="burger-list">
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Про нас</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Послуги</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Галерея</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Ціна</a>
+        </li>
+        <li class="burger-item">
+          <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Контакти</a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -32,6 +75,10 @@
 
   <footer class="footer">
   </footer>
+
+  <div class="burger-modal-bgd burger" id="burger-modal"></div>
+
+  
 </body>
 </html>
 

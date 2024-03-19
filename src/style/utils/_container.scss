@@ -2,8 +2,13 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 12px;
-  max-width: clamp(352px, -0.617rem + 97vw, 1376px)
+
+  // padding: 0 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left:  clamp(12px, 0.344rem + 1.84vw, 32px);
+  padding-right: clamp(12px, 0.344rem + 1.84vw, 32px);
+  // max-width: clamp(352px, -0.617rem + 97vw, 1376px)
 
   // @include mobile {
   //   max-width: 376px;

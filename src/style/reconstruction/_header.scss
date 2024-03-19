@@ -15,14 +15,15 @@ header{
 
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: clamp(12px, -0.6rem + 5vw, 56px);
-    padding-right: clamp(12px,  -0.6rem + 5vw, 56px);
+    padding-left:  clamp(12px, 0.344rem + 1.84vw, 32px);
+    padding-right: clamp(12px, 0.344rem + 1.84vw, 32px);
 
     @include tablet{
+        margin-top: clamp(12px, 2.3vw, 32px);
         padding-top: 0;
         padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
         background-color: transparent;
         border-radius: 0;
     }
@@ -38,7 +39,7 @@ header{
     padding-right: 0;
 
     @include tablet{
-      margin-top: clamp(12px, 2.3vw, 32px);
+
       padding-top: 16px;
       padding-bottom: 16px;
       padding-left: clamp(12px, -0.4rem + 4vw, 56px);

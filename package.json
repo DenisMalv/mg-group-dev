@@ -48,6 +48,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6",
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
     "lodash.throttle": "^4.1.1",

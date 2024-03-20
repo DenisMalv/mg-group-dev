@@ -4,6 +4,7 @@ const {header, headerNav, burgerModal, burgerList, headerBurgerBtn} = refs
 
 const BURGER_MODAL_ACTIVE = 'burger-modal-active'
 const SHOW = 'burger-show'
+const BTN_HIDE = 'btn-hide'
 
 let timeoutId =[]
 
@@ -26,6 +27,7 @@ const closeBurgerMenu = ()=>{
     burgerModal.classList.remove(BURGER_MODAL_ACTIVE)
     burgerList.classList.remove(SHOW)
     burgerListAnimationToggle(burgerList)
+    toggleBurgerIcon()
     document.removeEventListener('click',clickInOrOutsideBurger)
 }
 
@@ -33,14 +35,17 @@ const openBurgerMenu = ()=>{
     console.log('burger show')
     burgerModal.classList.add(BURGER_MODAL_ACTIVE)
     burgerList.classList.add(SHOW)
+
     
     burgerListAnimationToggle(burgerList)
-    
+    toggleBurgerIcon()
+
     document.addEventListener('click',clickInOrOutsideBurger)
    
 }
 
 const toggleBurgerMenu = ()=>{
+    
     if(!burgerModal.classList.contains(BURGER_MODAL_ACTIVE)){
         openBurgerMenu()
     }else{
@@ -75,6 +80,10 @@ const burgerListAnimationHide = (e)=>{
     }
     Array.from(burgerList.children).forEach(el=>el.classList.remove('item-show'))
     closeBurgerMenu()
+}
+
+const toggleBurgerIcon = () =>{
+    Array.from(headerBurgerBtn.children).forEach(el=>el.classList.toggle(BTN_HIDE))
 }
 
 

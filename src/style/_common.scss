@@ -22,12 +22,51 @@ address {
   font-style: normal;
 }
 
-.gap-24-to-32{
-  gap: clamp(24px, 1.25rem + 1vw, 32px);
+// link hover focus active 
+.link-hfa{
+  transition: $transition;
+
+  &:hover,&:focus{
+    color: $hover-accent-text;
+    & svg{
+      transition: $transition;
+      color: $hover-accent-text;
+    }
+  }
+  &:active{
+    color: $active-accent-text;
+
+    & svg{
+      transition: $transition;
+      color: $active-accent-text;
+    }
+  }
 }
+
+
 .bg-card{
   background-color: $card-bg;  
 }
+
+.br-16-to-24{
+  border-radius: clamp(16px, 0.6rem + 1.1vw, 24px);
+}
+
+.br-24{
+  border-radius: 24px;
+}
+
+// width height 
+.w-32-to-48{
+  width: clamp(32px, 1rem + 4vw, 48px);
+}
+.h-32-to-48{
+  height: clamp(32px, 1rem + 4vw, 48px);
+}
+
+
+
+// padding margin
 .p-lr-12-to-32{
   padding-left: clamp(12px, 0.125rem + 2.3vw, 32px);
   padding-right: clamp(12px, 0.125rem + 2.3vw, 32px);
@@ -38,17 +77,28 @@ address {
   padding-bottom: clamp(16px, 0.4rem + 1.9vw, 32px);
 }
 
-.br-24{
-  border-radius: 24px;
+.mb-24-to-32{
+  margin-bottom: clamp(24px, 1rem + 1vw, 32px);;
+}
+
+.mb-40-to-32{
+  margin-bottom: clamp(40px, 1.25rem + 1vw, 32px);;
+}
+
+.mt-24-to-32{
+  margin-top: clamp(24px, 1.25rem + 1vw, 32px);;
 }
 
 
-
-
-
-
+// flex
 .flex {
   display: flex;
+}
+.fd-row{
+  flex-direction: row;
+}
+.fd-col{
+  flex-direction: column;
 }
 .wrap{
   flex-wrap: wrap;
@@ -59,21 +109,16 @@ address {
 .ai-c{
   align-items: center;
 }
-
-
-
-
-.m-a{
-  margin: auto;
+.gap-24-to-32{
+  gap: clamp(24px, 1rem + 1vw, 32px);
 }
 
-.mt-69{
-  margin-top: 69px;
-}
 
-.mb-12{
-  margin-bottom: 12px;
-}
+
+
+
+
+
 
 
 

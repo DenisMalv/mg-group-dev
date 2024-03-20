@@ -1,4 +1,4 @@
-/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../node_modules/group-css-media-queries-loader/lib/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./start.scss */
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../node_modules/group-css-media-queries-loader/lib/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./building.scss */
 
 /*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
 
@@ -26,51 +26,59 @@
 
 /*! ../../fonts/Russo_One.ttf */
 
-/*! ../../modules/start/header */
+/*! ../../modules/building/header */
 
-/*! ../../modules/start/refs */
+/*! ../../modules/building/refs */
 
-/*! ../../modules/start/some */
+/*! ../../modules/building/some */
+
+/*! ../../modules/common/google-map */
 
 /*! ../css-loader/dist/runtime/api.js */
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
 
+/*! ./building.scss */
+
 /*! ./refs */
 
-/*! ./start.scss */
+/*! @googlemaps/js-api-loader */
 
 /*!*********************************!*\
   !*** ./src/fonts/Russo_One.ttf ***!
   \*********************************/
 
-/*!**********************************!*\
-  !*** ./src/pages/start/start.js ***!
-  \**********************************/
-
-/*!***********************************!*\
-  !*** ./src/modules/start/refs.js ***!
-  \***********************************/
-
-/*!***********************************!*\
-  !*** ./src/modules/start/some.js ***!
-  \***********************************/
-
-/*!************************************!*\
-  !*** ./src/pages/start/start.scss ***!
-  \************************************/
-
-/*!*************************************!*\
-  !*** ./src/modules/start/header.js ***!
-  \*************************************/
-
 /*!**************************************!*\
   !*** ./src/fonts/MPLUS1p-Medium.ttf ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/modules/building/refs.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/modules/building/some.js ***!
   \**************************************/
 
 /*!***************************************!*\
   !*** ./src/fonts/MPLUS1p-Regular.ttf ***!
   \***************************************/
+
+/*!****************************************!*\
+  !*** ./src/modules/building/header.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/pages/building/building.js ***!
+  \****************************************/
+
+/*!******************************************!*\
+  !*** ./src/modules/common/google-map.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/pages/building/building.scss ***!
+  \******************************************/
 
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -83,6 +91,10 @@
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
   \************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/@googlemaps/js-api-loader/dist/index.mjs ***!
+  \***************************************************************/
 
 /*!***************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
@@ -112,6 +124,6 @@
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/normalize.css/normalize.css ***!
   \****************************************************************************************/
 
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./src/pages/start/start.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./src/pages/building/building.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************/

@@ -11,9 +11,9 @@
   <meta name="theme-color" content="#F4FFFE"/>
 
   <title>M-Group</title>
-<script defer src="building/building.0f61a207d6371adbc8c7.js"></script></head>
+<script defer src="building/building.5dd5268b288e07d35d0d.js"></script></head>
 <body>
-  <header class="header-backround" id="header">
+  <header class="header-backround mb-24-to-32" id="header">
     <div class="container">
       <nav class="header-navigation bg-card br-24" aria-label="Навігація по сайте на широкому екрані, планшет компʼютер">
         <a href="./components.html" class="logo" role="link" aria-label="">
@@ -23,61 +23,160 @@
         </a>
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link" role="link" aria-label="">Про нас</a>
+            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Про нас</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" role="link" aria-label="">Послуги</a>
+            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Послуги</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" role="link" aria-label="">Галерея</a>
+            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Галерея</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" role="link" aria-label="">Ціна</a>
+            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Ціна</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" role="link" aria-label="">Контакти</a>
+            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Контакти</a>
           </li>
         </ul>
 
-        <a href="tel:+38970000000" class="header-link-phone" role="link" aria-label="">+3897000 00 00</a>
+        <a href="tel:+38970000000" class="header-link-phone link-hfa" role="link" aria-label="">+3897000 00 00</a>
 
         <button type="button" role="button" class="burger-button" id="burger-btn">
-          <svg class="burger-button-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+          <svg class="burger-button-icon" width="32" height="32" alt="Іконка відкриття мобільного меню навігації" >
               <use href="assets/img/icon-sprite.svg#menu-burger"></use>
+          </svg>
+          <svg class="burger-button-icon btn-hide" width="32" height="32" alt="Іконка закриття мобільного меню навігації" >
+              <use href="assets/img/icon-sprite.svg#close"></use>
           </svg>
         </button>
       </nav>
       <nav aria-label="Навігація по сайту на вузькому екрані, телефон">
         <ul class="burger-list" id="burger-list">
           <li class="burger-item">
-            <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Про нас</a>
+            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Про нас</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Послуги</a>
+            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Послуги</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Галерея</a>
+            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Галерея</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Ціна</a>
+            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Ціна</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link" role="link" aria-label="Навігація до ">Контакти</a>
+            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Контакти</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="mb-24-to-32 flex fd-col gap-24-to-32">
+    <section>
+      <div class="container">
+        content-section-one
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        content-section-two
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        content-section-three
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        content-section-four
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
+  <footer>
+    <div class="container gap-24-to-32">
+      <div class="upper-footer gap-24-to-32">
+        <div class="footer-map br-16-to-24" id="map"></div>
+        <div class="contacts gap-24-to-32">
+          <address class="footer-address bg-card p-lr-12-to-32  p-tb-16-to-32 br-16-to-24">
+            <ul class="footer-contacts-list mb-24-to-32">
+              <li class="footer-contacts-item mb-24-to-32">
+               
+                <a href="tel:+3800000000" class="footer-contacts-item-link link-hfa" role="link" aria-label="ПОдзвонити компанії МГгруп ">
+                  <svg class="footer-contacts-item-icon w-32-to-48 h-32-to-48" width="32" height="32" alt="Іконка телефону" >
+                    <use href="assets/img/icon-sprite.svg#phone"></use>
+                  </svg>
+                  <span class="footer-contacts-item-text-wrapper">
+                    <span class="footer-contacts-item-text">Телефон</span>
+                    <span >+380 000 00 00</span>
+                  </span>
+                </a>
+              </li>
+              <li class="footer-contacts-item">
+                <svg class="footer-contacts-item-icon w-32-to-48 h-32-to-48 " width="32" height="32" alt="Іконка локації" >
+                  <use href="assets/img/icon-sprite.svg#pin-location"></use>
+                </svg>
+                <div class="footer-contacts-item-text-wrapper">
+                  <p class="footer-contacts-item-text">Адреса</p>
+                  <p  class="footer-contacts-item-link" role="link" aria-label="Адреса компанії МГгруп ">м. Дніпро</з>
+                </div>
+              </li>
+            </ul>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer-social-link link-hfa" role="link" aria-label="Посилання на telegram компанії МГгруп">
+                  <svg class="footer-contacts-item-icon w-32-to-48 h-32-to-48" width="32" height="32" alt="Іконка соцмережі telegram" >
+                    <use href="assets/img/icon-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer-social-link link-hfa" role="link" aria-label="Посилання на viber компанії МГгруп">
+                  <svg class="footer-contacts-item-icon w-32-to-48 h-32-to-48" width="32" height="32" alt="Іконка соцмережі viber" >
+                    <use href="assets/img/icon-sprite.svg#viber"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer-social-link link-hfa" role="link" aria-label="Посилання на TikTok компанії МГгруп">
+                  <svg class="footer-contacts-item-icon w-32-to-48 h-32-to-48" width="32" height="32" alt="Іконка соцмережі TikTok" >
+                    <use href="assets/img/icon-sprite.svg#tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+          <nav>
+            <ul class="footer-list bg-card p-lr-12-to-32  p-tb-16-to-32 br-16-to-24 gap-24-to-32">
+              <li class="footer-item">
+                <a href="./index.html" class="footer-link link-hfa" rel="noopener noreferrer" role="link" aria-label="Навігація до головної сторінки">Головна</a>
+              </li>
+              <li class="footer-item">
+                <a href="./building.html" class="footer-link link-hfa" rel="noopener noreferrer" role="link" aria-label="Навігація до сторінки Будівництво та реконструкція котеджів під  ключ">Будівництво котеджів</a>
+              </li>
+              <li class="footer-item">
+                <a href="./concrete_works.html" class="footer-link link-hfa" rel="noopener noreferrer" role="link" aria-label="Навігація до сторінки Бетонні роботи: фундаменти">Бетонні роботи</a>
+              </li>
+              <li class="footer-item">
+                <a href="./warehouse.html" class="footer-link link-hfa" rel="noopener noreferrer" role="link" aria-label="Навігація до сторінки Будівництво та реконструкція ангарів, складських приміщень">Будівництво ангарів</a>
+              </li>
+              <li class="footer-item">
+                <a href="./drilling.html" class="footer-link link-hfa" rel="noopener noreferrer" role="link" aria-label="Навігація до сторінки Буріння отворів">Буріння отворів</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="footer-copyright mt-24-to-32 mb-40-to-32">Copyright © 2021 Maxim Haliev group. All Rights Reserved.</p>
+    </div>
+
   </footer>
 
-  <div class="burger-modal-bgd burger" id="burger-modal"></div>
+  <div class="burger-modal-bgd burger" id="burger-modal">
+  </div>
 
-  
 </body>
 </html>
 

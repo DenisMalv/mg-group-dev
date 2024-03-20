@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -86,7 +87,9 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: '[name]/[name].[contenthash].css',
-    }),  
+    }),
+    new Dotenv(),
+      
   ],
   module: {
     rules: [

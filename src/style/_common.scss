@@ -18,6 +18,32 @@ body {
 //   1vw = 14.4px
 //   44px / 14.4px = 3.05vw
 
+address {
+  font-style: normal;
+}
+
+.gap-24-to-32{
+  gap: clamp(24px, 1.25rem + 1vw, 32px);
+}
+.bg-card{
+  background-color: $card-bg;  
+}
+.p-lr-12-to-32{
+  padding-left: clamp(12px, 0.125rem + 2.3vw, 32px);
+  padding-right: clamp(12px, 0.125rem + 2.3vw, 32px);
+}
+
+.p-tb-16-to-32{
+  padding-top: clamp(16px, 0.4rem + 1.9vw, 32px);
+  padding-bottom: clamp(16px, 0.4rem + 1.9vw, 32px);
+}
+
+.br-24{
+  border-radius: 24px;
+}
+
+
+
 
 
 

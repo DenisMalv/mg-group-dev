@@ -15,8 +15,8 @@
 </head>
 <body>
   <header class="header-backround" id="header">
-    <div class="container green-background">
-      <nav class="header-navigation" aria-label="Навігація по сайте на широкому екрані, планшет компʼютер">
+    <div class="container">
+      <nav class="header-navigation bg-card br-24" aria-label="Навігація по сайте на широкому екрані, планшет компʼютер">
         <a href="./components.html" class="logo" role="link" aria-label="">
             <svg class="logo-icon" width="112" height="56" alt="Логотип компанії" >
                 <use href="../../img/icons/icon-sprite.svg#logo"></use>
@@ -74,74 +74,76 @@
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-map">
-        <picture class="wedo__list__picture">
-          <source srcset="../../img/start/footer/mobile-map.jpg 1x, ../../img/start/footer/mobile-map.jpg 2x" >
-          <source srcset="../../img/start/footer/desktop-map.jpg 1x, ../../img/start/footer/desktop-map.jpg 2x" media="(min-width: 768px)">
-          <img src="#" alt="alt" width="370" height="294">
-        </picture>
-      </div>
-      <div class="contacts">
-        <address>
-          <ul class="footer-contacts-list">
-            <li class="footer-contacts-item">
-              <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
-                  <use href="../../img/icons/icon-sprite.svg#phone"></use>
-              </svg>
-              <div class="footer-contacts-item-text-wrapper">
-                <p class="footer-contacts-item-text">Телефон</p>
-                <a href="tel:+3800000000" class="footer-contacts-item-link" role="link" aria-label="Навігація до ">+380 000 00 00</a>
-              </div>
+    <div class="container gap-24-to-32">
+      <div class="upper-footer gap-24-to-32">
+        <div class="footer-map">
+          <picture class="wedo__list__picture">
+            <source srcset="../../img/start/footer/mobile-map.jpg 1x, ../../img/start/footer/mobile-map.jpg 2x" >
+            <source srcset="../../img/start/footer/desktop-map.jpg 1x, ../../img/start/footer/desktop-map.jpg 2x" media="(min-width: 768px)">
+            <img class="footer-map-img" src="#" alt="alt" width="370" height="294">
+          </picture>
+        </div>
+        <div class="contacts gap-24-to-32">
+          <address class="bg-card p-lr-12-to-32  p-tb-16-to-32 br-24">
+            <ul class="footer-contacts-list">
+              <li class="footer-contacts-item">
+                <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+                    <use href="../../img/icons/icon-sprite.svg#phone"></use>
+                </svg>
+                <div class="footer-contacts-item-text-wrapper">
+                  <p class="footer-contacts-item-text">Телефон</p>
+                  <a href="tel:+3800000000" class="footer-contacts-item-link" role="link" aria-label="Навігація до ">+380 000 00 00</a>
+                </div>
+              </li>
+              <li class="footer-contacts-item">
+                <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+                  <use href="../../img/icons/icon-sprite.svg#pin-location"></use>
+                </svg>
+                <div class="footer-contacts-item-text-wrapper">
+                  <p class="footer-contacts-item-text">Адреса</p>
+                  <a href="tel:" class="footer-contacts-item-link" role="link" aria-label="Навігація до ">м. Дніпро, Дніпропетровська обл.</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+                    <use href="../../img/icons/icon-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+                    <use href="../../img/icons/icon-sprite.svg#viber"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
+                    <use href="../../img/icons/icon-sprite.svg#tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+          <ul class="footer-list bg-card p-lr-12-to-32  p-tb-16-to-32 br-24">
+            <li class="footer-item">
+              <a href="" class="footer-link" role="link" aria-label="Навігація до ">Будівництво котеджів</a>
             </li>
-            <li class="footer-contacts-item">
-              <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
-                <use href="../../img/icons/icon-sprite.svg#pin-location"></use>
-              </svg>
-              <div class="footer-contacts-item-text-wrapper">
-                <p class="footer-contacts-item-text">Адреса</p>
-                <a href="tel:" class="footer-contacts-item-link" role="link" aria-label="Навігація до ">м. Дніпро, Дніпропетровська обл.</a>
-              </div>
+            <li class="footer-item">
+              <a href="" class="footer-link" role="link" aria-label="Навігація до ">Бетонні роботи</a>
+            </li>
+            <li class="footer-item">
+              <a href="" class="footer-link" role="link" aria-label="Навігація до ">Будівництво ангарів</a>
+            </li>
+            <li class="footer-item">
+              <a href="" class="footer-link" role="link" aria-label="Навігація до ">Буріння отворів</a>
             </li>
           </ul>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link">
-                <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
-                  <use href="../../img/icons/icon-sprite.svg#telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link">
-                <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
-                  <use href="../../img/icons/icon-sprite.svg#viber"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" class="footer-social-link">
-                <svg class="footer-contacts-item-icon" width="32" height="32" alt="Іконка для мобільного меню навігації" >
-                  <use href="../../img/icons/icon-sprite.svg#tiktok"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </address>
-        <ul class="footer-list">
-          <li class="footer-item">
-            <a href="" class="footer-link" role="link" aria-label="Навігація до ">Будівництво котеджів</a>
-          </li>
-          <li class="footer-item">
-            <a href="" class="footer-link" role="link" aria-label="Навігація до ">Бетонні роботи</a>
-          </li>
-          <li class="footer-item">
-            <a href="" class="footer-link" role="link" aria-label="Навігація до ">Будівництво ангарів</a>
-          </li>
-          <li class="footer-item">
-            <a href="" class="footer-link" role="link" aria-label="Навігація до ">Буріння отворів</a>
-          </li>
-        </ul>
+        </div>
       </div>
       <p>Copyright © 2021 Maxim Haliev group. All Rights Reserved.</p>
     </div>

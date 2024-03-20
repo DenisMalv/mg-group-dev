@@ -1,0 +1,31 @@
+// footer .container{
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+.upper-footer{
+    display: flex;
+    flex-wrap: wrap;
+    
+    @include tablet{
+        flex-wrap: nowrap;
+    }
+}
+
+.footer-map{
+    width: 100%;
+    max-width: 672px;
+}
+
+.footer-map-img{
+    width: 100%;
+    // max-width: 672px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 672px;
+
+}

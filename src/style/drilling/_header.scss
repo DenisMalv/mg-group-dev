@@ -1,11 +1,8 @@
 header{
     position: relative;
     z-index: 11;
+    margin: 0 auto;
 }
-// header.burger-show{
-//     position: relative;
-
-// }
 
 
 .header-backround{
@@ -15,15 +12,11 @@ header{
 
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left:  clamp(12px, 0.344rem + 1.84vw, 32px);
-    padding-right: clamp(12px, 0.344rem + 1.84vw, 32px);
 
     @include tablet{
         margin-top: clamp(12px, 2.3vw, 32px);
         padding-top: 0;
         padding-bottom: 0;
-        // padding-left: 0;
-        // padding-right: 0;
         background-color: transparent;
         border-radius: 0;
     }
@@ -34,21 +27,6 @@ header{
 //   44px / 14.4px = 3.05vw
 
 
-.container.green-background{
-    padding-left: 0;
-    padding-right: 0;
-
-    @include tablet{
-
-      padding-top: 16px;
-      padding-bottom: 16px;
-      padding-left: clamp(12px, -0.4rem + 4vw, 56px);
-      padding-right: clamp(12px, -0.4rem + 4vw, 56px);
-      background-color: $card-bg;
-      border-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
-    }
-}
-
 .header-navigation{
     display: flex;
     align-items: center;
@@ -57,6 +35,13 @@ header{
     //
     position: relative;
     z-index: 11;
+
+    @include tablet{
+    padding-top: 16px;
+    padding-bottom: 16px;
+      padding-left: clamp(12px, -0.4rem + 4vw, 56px);
+      padding-right: clamp(12px, -0.4rem + 4vw, 56px);
+    }
 
 
 }
@@ -100,3 +85,28 @@ header{
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// .container.green-background{
+//     // padding-left: 0;
+//     // padding-right: 0;
+
+//     @include tablet{
+
+
+//     //   padding-left: clamp(12px, -0.4rem + 4vw, 56px);
+//     //   padding-right: clamp(12px, -0.4rem + 4vw, 56px);
+//       background-color: $card-bg;
+//       border-radius: clamp($frame-rad-16,2vw,$frame-rad-24);
+//     }
+// }

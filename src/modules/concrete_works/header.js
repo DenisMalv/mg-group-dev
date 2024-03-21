@@ -22,13 +22,19 @@ const clickInOrOutsideBurger =(e)=>{
         closeBurgerMenu()
     }
 }
-const closeBurgerMenu = ()=>{
+const closeBurgerMenu = (resize)=>{
     console.log('burger hide')
     burgerModal.classList.remove(BURGER_MODAL_ACTIVE)
     burgerList.classList.remove(SHOW)
     burgerListAnimationToggle(burgerList)
-    toggleBurgerIcon()
     document.removeEventListener('click',clickInOrOutsideBurger)
+    
+    if(resize){
+        headerBurgerBtn.children[0].classList.remove(BTN_HIDE)
+        headerBurgerBtn.children[1].classList.add(BTN_HIDE)
+        return
+    }
+    toggleBurgerIcon()
 }
 
 const openBurgerMenu = ()=>{
@@ -79,7 +85,7 @@ const burgerListAnimationHide = (e)=>{
         return
     }
     Array.from(burgerList.children).forEach(el=>el.classList.remove('item-show'))
-    closeBurgerMenu()
+    closeBurgerMenu('resize')
 }
 
 const toggleBurgerIcon = () =>{

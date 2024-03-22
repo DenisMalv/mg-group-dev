@@ -11,6 +11,8 @@ import '../../modules/start/refs';
 import '../../modules/start/header';
 
 
+// react calculator
+import '../../modules/react/index'
 
 
 

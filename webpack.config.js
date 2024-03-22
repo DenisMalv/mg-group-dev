@@ -29,6 +29,7 @@ module.exports = {
     drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
     warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
+    calculator:path.resolve(__dirname, 'src', 'modules', 'react', 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -171,6 +172,16 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader', // Используем babel-loader для транспиляции JSX
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'] // Пресеты для транспиляции JavaScript и JSX
+          }
+        }
+      }
       // {
       //   test: /\.handlebars$/,
       //   loader: "handlebars-loader",

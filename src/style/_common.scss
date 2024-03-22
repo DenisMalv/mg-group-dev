@@ -82,7 +82,10 @@ address {
 }
 
 .mb-40-to-32{
-  margin-bottom: clamp(40px, 1.25rem + 1vw, 32px);;
+  margin-bottom: clamp(40px, 1.25rem + 1vw, 32px);
+}
+.mb-88-to-120{
+  margin-bottom: clamp(88px, 3.5rem + 5vw, 120px);
 }
 
 .mt-24-to-32{
@@ -111,6 +114,9 @@ address {
 }
 .gap-24-to-32{
   gap: clamp(24px, 1rem + 1vw, 32px);
+}
+.gap-88-to-120{
+  gap: clamp(88px, 3.5rem + 5vw, 120px);
 }
 
 

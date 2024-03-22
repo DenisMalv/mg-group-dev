@@ -8,7 +8,7 @@ const Calculator = () => {
   
   return (
   <div className='container'> 
-  
+    <h2 className='bg-card'></h2>
     <p>Hello, World! {state}</p>
     <button onClick={()=>setState(state+1)}>increase</button>
     <button onClick={()=>setState(state-1)}>decrese</button>

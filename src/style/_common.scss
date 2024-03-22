@@ -56,6 +56,10 @@ address {
   border-radius: 24px;
 }
 
+.br-24-to-20{
+  border-radius: clamp(20px, 1.7rem - 1.5vw, 24px);
+}
+
 // width height 
 .w-32-to-48{
   width: clamp(32px, 1rem + 4vw, 48px);
@@ -76,6 +80,10 @@ address {
     padding-right: clamp(12px, -0.4rem + 4vw, 56px);
 }
 
+.p-tb-12-to-16{
+  padding-top: clamp(12px, 0.625rem + 0.5vw, 16px);
+  padding-bottom: clamp(12px, 0.625rem + 0.5vw, 16px);
+}
 .p-tb-16-to-32{
   padding-top: clamp(16px, 0.4rem + 1.9vw, 32px);
   padding-bottom: clamp(16px, 0.4rem + 1.9vw, 32px);

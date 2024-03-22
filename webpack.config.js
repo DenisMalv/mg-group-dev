@@ -29,7 +29,6 @@ module.exports = {
     drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
     warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
-    calculator:path.resolve(__dirname, 'src', 'modules', 'react', 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

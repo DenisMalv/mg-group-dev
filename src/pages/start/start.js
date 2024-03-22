@@ -12,7 +12,7 @@ import '../../modules/start/header';
 
 
 // react calculator
-import '../../modules/react/index'
+import '../../modules/react/startpage/index'
 
 
 

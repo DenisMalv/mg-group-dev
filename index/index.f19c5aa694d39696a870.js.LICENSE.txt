@@ -28,6 +28,8 @@
 
 /*! ../../modules/common/google-map */
 
+/*! ../../modules/react/index */
+
 /*! ../../modules/start/header */
 
 /*! ../../modules/start/refs */
@@ -38,11 +40,25 @@
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
 
+/*! ./calculator.jsx */
+
+/*! ./cjs/react-dom.development.js */
+
+/*! ./cjs/react.development.js */
+
+/*! ./cjs/scheduler.development.js */
+
 /*! ./refs */
 
 /*! ./start.scss */
 
 /*! @googlemaps/js-api-loader */
+
+/*! react */
+
+/*! react-dom */
+
+/*! scheduler */
 
 /*!*********************************!*\
   !*** ./src/fonts/Russo_One.ttf ***!
@@ -61,8 +77,16 @@
   \***********************************/
 
 /*!************************************!*\
+  !*** ./src/modules/react/index.js ***!
+  \************************************/
+
+/*!************************************!*\
   !*** ./src/pages/start/start.scss ***!
   \************************************/
+
+/*!*************************************!*\
+  !*** ./node_modules/react/index.js ***!
+  \*************************************/
 
 /*!*************************************!*\
   !*** ./src/modules/start/header.js ***!
@@ -76,12 +100,28 @@
   !*** ./src/fonts/MPLUS1p-Regular.ttf ***!
   \***************************************/
 
+/*!*****************************************!*\
+  !*** ./node_modules/react-dom/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/scheduler/index.js ***!
+  \*****************************************/
+
 /*!******************************************!*\
   !*** ./src/modules/common/google-map.js ***!
   \******************************************/
 
+/*!******************************************!*\
+  !*** ./src/modules/react/calculator.jsx ***!
+  \******************************************/
+
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/react/cjs/react.development.js ***!
   \*****************************************************/
 
 /*!********************************************************!*\
@@ -91,6 +131,14 @@
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
   \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/scheduler/cjs/scheduler.development.js ***!
+  \*************************************************************/
 
 /*!***************************************************************!*\
   !*** ./node_modules/@googlemaps/js-api-loader/dist/index.mjs ***!
@@ -127,3 +175,37 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[5]!./src/pages/start/start.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+/**
+ * @license React
+ * react-dom.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */

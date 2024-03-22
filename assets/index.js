@@ -1,0 +1,1 @@
+import React from"react";import ReactDOM from"react-dom";import Calculator from"./calculator.jsx";ReactDOM.render(React.createElement(Calculator,null),document.getElementById("calculate"));

@@ -26,6 +26,8 @@
 
 /*! ../../fonts/Russo_One.ttf */
 
+/*! ../../img/icons/icon-sprite.svg */
+
 /*! ../../modules/common/google-map */
 
 /*! ../../modules/react/startpage/index */
@@ -36,6 +38,8 @@
 
 /*! ../../modules/start/some */
 
+/*! ../IconSprite */
+
 /*! ../css-loader/dist/runtime/api.js */
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
@@ -43,6 +47,8 @@
 /*! ./Calculator */
 
 /*! ./CalculatorForm */
+
+/*! ./CalculatorStepItem */
 
 /*! ./cjs/react-dom.development.js */
 
@@ -100,12 +106,20 @@
   !*** ./src/fonts/MPLUS1p-Regular.ttf ***!
   \***************************************/
 
+/*!***************************************!*\
+  !*** ./src/img/icons/icon-sprite.svg ***!
+  \***************************************/
+
 /*!*****************************************!*\
   !*** ./node_modules/react-dom/index.js ***!
   \*****************************************/
 
 /*!*****************************************!*\
   !*** ./node_modules/scheduler/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/modules/react/IconSprite.js ***!
   \*****************************************/
 
 /*!******************************************!*\
@@ -139,6 +153,10 @@
 /*!********************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
   \********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/modules/react/startpage/CalculatorStepItem.js ***!
+  \***********************************************************/
 
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!

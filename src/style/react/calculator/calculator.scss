@@ -3,6 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .calc-type{
@@ -50,4 +53,82 @@
 
 }
 
+.calc-form{
+    padding-top: 32px;
+    padding-bottom: 32px;
 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.calc-step-wrapper{
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+}
+
+.step-btn{
+    font-family: "Russo One", sans-serif;
+
+    width: clamp(40px, 0.6rem + 9vw, 112px);
+    height: clamp(40px, 1.6rem + 2.5vw, 60px);
+
+    padding: 0;
+
+    border-radius: 40px;
+    border: 1px solid $calc-step-non-active;
+
+    color: $calc-step-non-active;
+
+    background-color: transparent;
+
+}
+.calc-svg-wrapper{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: clamp(16px, 4vw, 20px);
+
+    @media screen and (min-width: 620px) { 
+        width: clamp(20px, -1.2rem + 9vw, 72px);
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 100%;
+            height: 3px;
+
+            border-radius: 20px;
+            background-color: $calc-step-non-active;
+            color: #fff;
+
+
+        }
+    }
+}
+
+.step-active {
+    & .step-btn{
+        background-color: $calc-step-active-bg;
+        border: 1px solid $calc-step-active-bg;
+        color: $calc-step-active-text;
+    }
+    & .calc-svg-wrapper::after{
+        background-color: $calc-step-active-bg;
+    }
+    & .mobile-arrow-step-svg{
+        color: $calc-step-active-bg;
+    }
+}

@@ -127,8 +127,14 @@ address {
 .ai-c{
   align-items: center;
 }
+.gap-12-to-32{
+  gap: clamp(12px, 0.125rem + 2.5vw, 32px)
+}
 .gap-24-to-32{
   gap: clamp(24px, 1rem + 1vw, 32px);
+}
+.gap-44-to-68{
+  gap: clamp(44px, 2rem + 4vw, 68px)
 }
 .gap-88-to-120{
   gap: clamp(88px, 3.5rem + 5vw, 120px);

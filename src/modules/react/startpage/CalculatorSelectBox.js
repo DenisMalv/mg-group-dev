@@ -3,7 +3,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 import Icon from '../IconSprite';
 
-const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData})=>{
+const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData,drill})=>{
 
     // const componentRef = useRef(null)
     const dropdownRef= useRef(null);
@@ -43,7 +43,7 @@ const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData
 
     return(
        
-            <div className='calc-select-label' >
+            <div className={`calc-select-label ${drill ? 'drill-step-one' : ''}`} >
                 <span className='calc-select-label-text'>{title}</span>
                
                 <div className='calc-select-input-wrapper' onClick={(e)=>toggleDropdown(e,selectName)}> 
@@ -52,13 +52,13 @@ const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData
                     <Icon classlist={`calc-select-input-icon ${open === selectName ? 'open' : ''}`} id={`${selectName}-icon`} name="arrow-down" color="transparent" stroke="#5C7065" width="24" height="24"/>
 
                 </div>
-              
-                <ul ref={dropdownRef}  className={`calc-select-dropdown  ${open === selectName ? 'open' : ''}`}  onClick={(e)=>onSelect(e)}>
-                    {
-                        options.filter(el=>el !== data[selectName]).map((el)=><li key={el} data-value={el} className='calc-select-dropdown-item'>{el}</li>)
-                    }
-                </ul>
-                
+                <div className='scroll-wrapper'>
+                    <ul ref={dropdownRef}  className={`calc-select-dropdown  ${open === selectName ? 'open' : ''}`}  onClick={(e)=>onSelect(e)}>
+                        {
+                            options.filter(el=>el !== data[selectName]).map((el)=><li key={el} data-value={el} className='calc-select-dropdown-item'>{el}</li>)
+                        }
+                    </ul>
+                </div>
             </div>
        
     )

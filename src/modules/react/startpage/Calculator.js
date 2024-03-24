@@ -13,8 +13,12 @@ const Calculator = () => {
 
     <div className='calc-wrapper'>
       <div className='calc-type '>
-        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='build' ? 'active' : ''}`} htmlFor="calc-build">Build<input onChange={()=>setType('build')} value={type}  type="radio" name='calc-option' id='calc-build' checked={type==='build'}/></label>
-        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='drill' ? 'active' : ''}`} htmlFor="calc-drill">Drill<input onChange={()=>setType('drill')} value={type}  type="radio" name='calc-option' id='calc-drill' checked={type==='drill'}/></label>
+        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='build' ? 'active' : ''}`} htmlFor="calc-build">Build
+          <input onChange={()=>setType('build')} value={type}  type="radio" name='calc-option' id='calc-build' checked={type==='build'}/>
+        </label>
+        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='drill' ? 'active' : ''}`} htmlFor="calc-drill">Drill
+          <input onChange={()=>setType('drill')} value={type}  type="radio" name='calc-option' id='calc-drill' checked={type==='drill'}/>
+        </label>
       </div>
       <CalculatorForm type={type} />
     </div>

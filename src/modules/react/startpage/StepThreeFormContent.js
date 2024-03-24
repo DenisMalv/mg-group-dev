@@ -1,12 +1,16 @@
 import React,{useRef, useEffect, useState} from 'react';
 
-const StepThreeFormContent = ({area, data,updData})=>{
+const StepThreeFormContent = ({area, data,updData,  isShow, setIsShow})=>{
+
+    useEffect(()=>{
+        setTimeout(()=>{setIsShow(true)},20)
+    },[])
 
     return(
         <>
-            <h4 className='calc-form-title'>Введіть бажану площу будинку</h4>
+            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Введіть бажану площу будинку</h4>
 
-            <div className='calc-select-label' >
+            <div className={`calc-select-label ${isShow ? 'show' : 'hide'}`} >
                 <span className='calc-select-label-text'>Площа, кв.м.</span>
                
                 <div className='calc-select-input-wrapper' onClick={(e)=>console.log('q')}> 

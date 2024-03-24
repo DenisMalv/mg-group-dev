@@ -1,10 +1,38 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 
 import CalculatorStepItem from './CalculatorStepItem';
+import CalculatorSelectBox from './CalculatorSelectBox';
+
+// import useOutsideClick from '../clickOutside';
 
 const CalculatorForm = ({type})=>{
     console.log(type)
     const [step,setStep] = useState(1)
+    const [open,setOpen] = useState('')
+    const [data,setData] = useState({
+        basement:'Бетон',
+        wall:'Цегла',
+        roof:'Металочерепиця',
+        stage:'',
+        area:'',
+    })
+    const basement = ['Бетон','Не-Бетон']
+    const wall = ['Цегла','Панель',"Газоблок"]
+    const roof = ['Металочерепиця','Шифер','Солома','Камиш']
+
+    const updData = (name,value)=>{
+        const newData = {...data}
+        newData[name]=value
+
+        setData(newData)
+    }
+
+   
+    
+
+  
+
+
 
     return(
         type === 'build' 
@@ -17,8 +45,15 @@ const CalculatorForm = ({type})=>{
                         <CalculatorStepItem step={4} active={step === 4 ? true : false} />
                     </ul>
 
-                    <h4>Оберіть матеріал, який бажаєте використати</h4>
+                    <h4 className='calc-form-title'>Оберіть матеріал, який бажаєте використати</h4>
 
+                    <div className='calc-select-wrapper'>
+                        <CalculatorSelectBox selectName={'basement'} title={'Фундамент'} options={basement} open={open} setOpen={setOpen} data={data} updData={updData}/>
+                        <CalculatorSelectBox selectName={'wall'} title={'Стіни'} options={wall} open={open} setOpen={setOpen} data={data} updData={updData}/>
+                        <CalculatorSelectBox selectName={'roof'} title={'Покрівля'} options={roof} open={open} setOpen={setOpen} data={data} updData={updData}/>
+                    </div>
+
+                    <button className='btn-primary calc-next-step' type='button' >Далі</button>
 
             </form>
 

@@ -7,7 +7,7 @@
 <path fill="none" stroke="#f6f7f7" style="stroke: var(--color1, #f6f7f7)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M12 24l7.057-7.057c0.521-0.521 0.521-1.365 0-1.886l-7.057-7.057"></path>
 </symbol>
 <symbol id="arrow-down" viewBox="0 0 32 32">
-<path fill="none" stroke="#f6f7f7" style="stroke: var(--color1, #f6f7f7)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 12l7.057 7.057c0.521 0.521 1.365 0.521 1.886 0l7.057-7.057"></path>
+<path  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 12l7.057 7.057c0.521 0.521 1.365 0.521 1.886 0l7.057-7.057"></path>
 </symbol>
 <symbol id="arrow-left" viewBox="0 0 32 32">
 <path fill="none" stroke="#f6f7f7" style="stroke: var(--color1, #f6f7f7)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M20 8l-7.057 7.057c-0.521 0.521-0.521 1.365 0 1.886l7.057 7.057"></path>

@@ -3,10 +3,12 @@ import React from 'react';
 import Icon from '../IconSprite'
 
 
-const CalculatorStepItem = ({step, currentStep, setCurrentStep, active, svg})=>{
+const CalculatorStepItem = ({step, currentStep, setCurrentStep, active, svg, setIsShow})=>{
     const toPrevStep=(e)=>{
         if(e.target.id && currentStep > +e.target.id){
-            setCurrentStep(+e.target.id)
+            setIsShow(false)
+            setTimeout(()=>{setCurrentStep(+e.target.id)},300)
+            
         }
     }
     return(

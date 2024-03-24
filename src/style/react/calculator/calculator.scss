@@ -71,6 +71,14 @@
 
 .calc-form-title{
     text-align: center;
+
+    transition: $transition;
+    
+    opacity: 0;
+    &.show{
+        opacity: 1;
+    }
+
 }
 
 // step
@@ -161,17 +169,23 @@
     gap: 32px;
 
     width: 100%;
-
+    opacity: 0;
     // transform: translateX(0);
-    // transition: $transition;
+    transition: $transition;
     // &.hide{
     //     transform: translateX(-100%);
     // }
 
 
+    &.show{
+        opacity: 1;
+    }
+
+
     &.step-two{
         @include tablet{
             flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 
@@ -185,11 +199,26 @@
     width: 100%;
     max-width: 400px;
     
+    transition: $transition;
+    
     &-text{
         color: $input-label-text;
         font-weight: 500;
         margin-left: 24px;
         margin-bottom: 12px;
+    }
+    &.drill-step-one{
+        // flex-wrap: wrap;
+        @include tablet{
+            max-width: clamp(300px, -1.94rem + 43.1vw, 400px);
+        }
+    }
+
+    &.hide{
+        opacity: 0;
+    }
+    &.show{
+        opacity: 1;
     }
 }
 
@@ -232,32 +261,65 @@
     }
 
 }
-
-.calc-select-dropdown{
-    display: none;
+.scroll-wrapper{
+    overflow: hidden;
     position: absolute;
     top: 76px;
     left: 0;
 
-    width: 100%;
-    padding-top: 20px;
+    z-index: 1;
 
-    
+    width: 100%;
+
     background-color: $white;
 
     border-bottom-left-radius: clamp(16px, 0.4rem + 1.5vw, 20px);
     border-bottom-right-radius: clamp(16px, 0.4rem + 1.5vw, 20px);
 
-    overflow: hidden;
+    cursor: pointer;
+}
+
+.calc-select-dropdown{
+    display: none;
+   
+    width: 100%;
+    max-height: 200px;
+    margin-top: 20px;
+
+    background-color: $white;
+
+    overflow: auto;
 
     z-index: 1;
-
-
 
     &.open{
         display: block;
     }
 }
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+::-webkit-scrollbar-thumb {
+    transition: $transition;
+    background: $active-accent-text; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $hover-accent-text; 
+}
+
+
 
 .calc-select-dropdown-item{
     padding: 16px 24px 16px 24px;
@@ -311,5 +373,25 @@
 }
 
 // --------------------------------- step three --------------------
+
+// --------------------------------- step four --------------------
+
+.calc-step-four-res-text{
+    text-align: center;
+    max-width: 512px;
+
+    opacity: 0;
+
+    transition: $transition;
+    &.show{
+        opacity: 1;
+    }
+
+    & h2{
+        margin-bottom: 12px;
+    }
+}
+
+
 
 

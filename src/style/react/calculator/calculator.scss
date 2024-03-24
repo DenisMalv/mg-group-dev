@@ -8,6 +8,7 @@
     margin: 0 auto;
 }
 
+// type
 .calc-type{
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@
 
 }
 
+// form
 .calc-form{
     padding-top: 32px;
     padding-bottom: 32px;
@@ -60,10 +62,16 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 
     width: 100%;
 }
 
+.calc-form-title{
+    text-align: center;
+}
+
+// step
 .calc-step-wrapper{
     display: flex; 
     justify-content: center;
@@ -124,11 +132,120 @@
         background-color: $calc-step-active-bg;
         border: 1px solid $calc-step-active-bg;
         color: $calc-step-active-text;
+        cursor: pointer;
     }
     & .calc-svg-wrapper::after{
         background-color: $calc-step-active-bg;
     }
     & .mobile-arrow-step-svg{
         color: $calc-step-active-bg;
+    }
+}
+
+// select
+
+.calc-select-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    width: 100%;
+}
+
+.calc-select-label{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 100%;
+    max-width: 400px;
+    
+    &-text{
+        color: $input-label-text;
+        font-weight: 500;
+        margin-left: 24px;
+        margin-bottom: 12px;
+    }
+}
+
+.calc-select-input-wrapper{
+    position: relative;
+}
+
+.calc-select-input-icon{
+    position: absolute;
+    
+    top: 50%;
+    right: 24px;
+
+    transform: translateY(-50%);
+    transition: $transition;
+
+    // z-index: 2;
+
+    &.open{
+        transform: translateY(-50%) rotateX(180deg);
+    }    
+
+}
+
+.calc-select-input{
+    // position: relative;
+    width: 100%;
+    padding: 16px 60px 16px 24px;
+    border-radius: clamp(16px, 0.4rem + 1.5vw, 20px);
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    // z-index: 2;
+}
+
+.calc-select-dropdown{
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+    padding-top: 20px;
+
+    
+    background-color: $white;
+
+    border-bottom-left-radius: clamp(16px, 0.4rem + 1.5vw, 20px);
+    border-bottom-right-radius: clamp(16px, 0.4rem + 1.5vw, 20px);
+
+    overflow: hidden;
+
+    z-index: 1;
+
+
+    &.open{
+        display: block;
+    }
+}
+
+.calc-select-dropdown-item{
+    padding: 16px 24px 16px 24px;
+    color: $input-select-text;
+
+    transition: $transition;
+
+    &:hover{
+        background-color: #FFD74A;
+    }
+}
+
+.calc-next-step{
+    width: 100%;
+
+    max-width: 400px;
+
+    @include tablet{
+        max-width: max-content;
     }
 }

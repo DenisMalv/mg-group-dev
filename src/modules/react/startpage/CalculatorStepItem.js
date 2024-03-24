@@ -7,7 +7,7 @@ const CalculatorStepItem = ({step, active, svg})=>{
 
     return(
             <li className={`step flex ai-c gap-12-to-32 ${active ? "step-active" : ''}`}>
-                <button className='step-btn'>
+                <button type='button' role='button' className='step-btn'>
                     {step}
                 </button>
                 {svg &&

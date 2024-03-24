@@ -22,6 +22,12 @@ address {
   font-style: normal;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 // link hover focus active 
 .link-hfa{
   transition: $transition;
@@ -50,6 +56,10 @@ address {
 
 .br-16-to-24{
   border-radius: clamp(16px, 0.6rem + 1.1vw, 24px);
+}
+
+.br-20{
+  border-radius: 20px;
 }
 
 .br-24{

@@ -239,7 +239,14 @@
 
     &.open{
         transform: translateY(-50%) rotateX(180deg);
-    }    
+    }  
+    
+    &.error{
+        opacity: 1;
+    }
+    &.hide{
+        opacity: 0;
+    }
 
 }
 
@@ -258,6 +265,10 @@
 
     &::placeholder{
         color: $input-placeholder-text;
+    }
+
+    &.error::placeholder{
+        color: $error-text;
     }
 
 }
@@ -373,6 +384,8 @@
 }
 
 // --------------------------------- step three --------------------
+
+
 
 // --------------------------------- step four --------------------
 

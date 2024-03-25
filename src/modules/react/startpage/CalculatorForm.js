@@ -7,9 +7,9 @@ import StepThreeFormContent from './StepThreeFormContent';
 import StepFourFormContent from './StepFourFormContent';
 import StepOneDrillContent from './StepOneDrillContent';
 
-const CalculatorForm = ({type})=>{
+const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     console.log(type)
-    const [isShow,setIsShow] = useState(true)
+   
     const [error,setError] = useState({
         area:false,
         count:false,
@@ -137,7 +137,9 @@ const CalculatorForm = ({type})=>{
     },[type])
 
    
-    
+    useEffect(()=>{
+        setTimeout(()=>{setTypeIsShow(true)},10)
+    },[type])
 
   
 
@@ -147,7 +149,7 @@ const CalculatorForm = ({type})=>{
         type === 'build' 
             ?
             <form action="" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
-                    <ul className='calc-step-wrapper gap-12-to-32'>
+                    <ul className={`calc-step-wrapper gap-12-to-32  ${typeIsShow ? 'show' : ''}`}>
                         <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow}/>
                         <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1   ? true : false} svg setIsShow={setIsShow}/>
                         <CalculatorStepItem step={3} currentStep={step} setCurrentStep={setStep} active={step >2  ? true : false} svg setIsShow={setIsShow}/>
@@ -160,8 +162,8 @@ const CalculatorForm = ({type})=>{
                     {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}
                     
                     {step !== 4 
-                        ?<button className='btn-primary calc-next-step' type='button' onClick={()=>onNextStep('area')}>Далі</button>
-                        :<button className='btn-primary calc-next-step' type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
+                        ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('area')}>Далі</button>
+                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
                     }
 
             </form>
@@ -169,7 +171,7 @@ const CalculatorForm = ({type})=>{
 
             :
             <form action="" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
-                    <ul className='calc-step-wrapper gap-12-to-32'>
+                    <ul className={`calc-step-wrapper gap-12-to-32  ${typeIsShow ? 'show' : ''}`}>
                         <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow}/>        
                         <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1  ? true : false} setIsShow={setIsShow}/>
                     </ul>
@@ -178,8 +180,8 @@ const CalculatorForm = ({type})=>{
                     {step === 2 && <StepFourFormContent title={"Вартість послуги з буріння отвору"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'}  summ={totalDrillSumm} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} drill/>}
                     
                     {step !== 2 
-                        ?<button className='btn-primary calc-next-step' type='button' onClick={()=>onNextStep('count')}>Далі</button>
-                        :<button className='btn-primary calc-next-step' type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
+                        ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('count')}>Далі</button>
+                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
                     }
 
             </form>

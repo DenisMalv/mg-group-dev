@@ -54,6 +54,10 @@
 
 }
 
+.calc-type-label-illust{
+    margin-right: 24px;
+}
+
 // form
 .calc-form{
     padding-top: 32px;
@@ -88,6 +92,12 @@
     align-items: center;  
 
     transition: $transition; 
+
+    opacity: 0;
+
+    &.show{
+        opacity: 1;
+    }
 
 }
 
@@ -347,6 +357,14 @@
     width: 100%;
 
     max-width: 400px;
+
+    transition: $transition;
+
+    opacity: 0;
+
+    &.show{
+        opacity: 1;
+    }
 
     @include tablet{
         max-width: max-content;

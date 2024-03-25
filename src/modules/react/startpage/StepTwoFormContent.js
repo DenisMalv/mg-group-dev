@@ -18,7 +18,7 @@ const StepTwoFormContent = ({stage, data,updData, isShow, setIsShow})=>{
             <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Виберіть кількість поверхів будинку</h4>
 
             <ul className={`calc-select-wrapper step-two ${isShow ? 'show' : ''}`}>
-                <li className={`step-two-item ${data[stage] === 1 ? 'active' : ''}`}  onClick={()=>updData(stage,1)}>
+                <li className={`step-two-item ${data[stage] == 1 ? 'active' : ''}`}  onClick={()=>updData(stage,'1')}>
                     <picture >
                         <source srcSet={`${h1x1} 1x, ${h1x2} 2x`} />
                         <img width="423" height="242" src="#" alt="house" title="mggroup" className={`step-two-picture br-20`} />
@@ -26,7 +26,7 @@ const StepTwoFormContent = ({stage, data,updData, isShow, setIsShow})=>{
                     {/* <img src="" alt="" title='' /> */}
                     <p className='step-two-picture-descr'>Одноповерховий</p>
                 </li>
-                <li className={`step-two-item ${data[stage] === 2 ? 'active' : ''}`}  onClick={()=>updData(stage,2)}>
+                <li className={`step-two-item ${data[stage] == 2 ? 'active' : ''}`}  onClick={()=>updData(stage,'2')}>
                     <picture width="300" height="300">
                         <source srcSet={`${h2x1} 1x, ${h2x2} 2x`} />
                         <img width="423" height="242" src="#" alt="house" title="mggroup" className={`step-two-picture br-20`}  />

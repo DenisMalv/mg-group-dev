@@ -1,8 +1,11 @@
 import React,{useRef, useEffect, useState} from 'react';
 
+import Icon from '../IconSprite';
+
 import CalculatorSelectBox from './CalculatorSelectBox';
 
-const StepOneDrillContent = ({material, diametr, deep, count, open,setOpen, isShow, setIsShow, data, updData })=>{
+
+const StepOneDrillContent = ({material, diametr, deep, count, open,setOpen, isShow, setIsShow, data, updData, error, errorMessage })=>{
 
     useEffect(()=>{
         setTimeout(()=>{setIsShow(true)},20)
@@ -20,9 +23,10 @@ const StepOneDrillContent = ({material, diametr, deep, count, open,setOpen, isSh
                 <div className={`calc-select-label drill-step-one ${isShow ? 'show' : 'hide'}`} >
                     <span className='calc-select-label-text'>Кількість, шт.</span>
                     <div className='calc-select-input-wrapper' onClick={(e)=>console.log('q')}> 
-                        <input className='calc-select-input' name={count} id={count} type='number' onChange={(e)=>updData(count,e.target.value)} value={data[count]}/>
-                        {/* <Icon classlist={`calc-select-input-icon ${open === selectName ? 'open' : ''}`} id={`${selectName}-icon`} name="arrow-down" color="transparent" stroke="#5C7065" width="24" height="24"/> */}
+                        <input className={`calc-select-input ${error[count] ? 'error' : ''}`}  name={count} id={count} type='number' onChange={(e)=>updData(count,e.target.value)} value={data[count]} placeholder='Enter your text'/>
+                        <Icon classlist={`calc-select-input-icon ${error[count] ? 'error' : 'hide'}`} id={`${count}-icon`} name="warning" color="#DD7A02" width="24" height="24"/>
                     </div>
+                    <p className={`error-message ${error[count] ? 'error' : ''}`}>{errorMessage}</p>
                     
                 </div>
             </div>

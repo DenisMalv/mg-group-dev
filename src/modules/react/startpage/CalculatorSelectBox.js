@@ -48,14 +48,14 @@ const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData
                
                 <div className='calc-select-input-wrapper' onClick={(e)=>toggleDropdown(e,selectName)}> 
 
-                    <input className='calc-select-input' name={selectName} id={selectName} type='text' value={data[selectName]} readOnly/>
+                    <input className='calc-select-input' name={selectName} id={selectName} type='text' value={selectName !== 'material' && drill ? `До ${data[selectName]}` : data[selectName]} readOnly/>
                     <Icon classlist={`calc-select-input-icon ${open === selectName ? 'open' : ''}`} id={`${selectName}-icon`} name="arrow-down" color="transparent" stroke="#5C7065" width="24" height="24"/>
 
                 </div>
                 <div className='scroll-wrapper'>
                     <ul ref={dropdownRef}  className={`calc-select-dropdown  ${open === selectName ? 'open' : ''}`}  onClick={(e)=>onSelect(e)}>
                         {
-                            options.filter(el=>el !== data[selectName]).map((el)=><li key={el} data-value={el} className='calc-select-dropdown-item'>{el}</li>)
+                            options.filter(el=>el !== data[selectName]).map((el)=><li key={el} data-value={el} className='calc-select-dropdown-item'>{selectName !== 'material' && drill ? `До ${el}` : el}</li>)
                         }
                     </ul>
                 </div>

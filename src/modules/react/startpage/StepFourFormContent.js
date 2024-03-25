@@ -3,7 +3,7 @@ import React,{useRef, useEffect, useState} from 'react';
 const StepFourFormContent = ({title, descr, summ, data,updData, isShow, setIsShow, drill})=>{
 
     const normalizeSum=()=>{
-        const numberString = ""+summ
+        const numberString = "" + summ()
         return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     }
 

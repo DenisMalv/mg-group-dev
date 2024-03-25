@@ -1,11 +1,20 @@
 import React,{useState} from 'react';
 
+import Illustration from '../IllustrationSprite';
+
 import CalculatorForm from './CalculatorForm';
 
 
 const Calculator = () => {
   const [type,setType] = useState('build')
+  const [typeIsShow, setTypeIsShow] = useState(false) // for change form content on change type
+  const [isShow,setIsShow] = useState(false) // for change form content on change step
 
+  const setTypeCalculatop=(typeCalc)=>{
+        setTypeIsShow(false)
+        setIsShow(false)
+        setTimeout(()=>{setType(typeCalc)},300)
+  }
   
   return (
   <div className='container'> 
@@ -13,14 +22,18 @@ const Calculator = () => {
 
     <div className='calc-wrapper'>
       <div className='calc-type '>
-        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='build' ? 'active' : ''}`} htmlFor="calc-build">Build
-          <input onChange={()=>setType('build')} value={type}  type="radio" name='calc-option' id='calc-build' checked={type==='build'}/>
+        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='build' ? 'active' : ''}`} htmlFor="calc-build">
+          <Illustration  classlist={`calc-type-label-illust`} id={`build-icon`} name="architecture" color="" width="32" height="32" />
+            Вартість будинку
+          <input onChange={()=>setTypeCalculatop('build')} value={type}  type="radio" name='calc-option' id='calc-build' checked={type==='build'}/>
         </label>
-        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='drill' ? 'active' : ''}`} htmlFor="calc-drill">Drill
-          <input onChange={()=>setType('drill')} value={type}  type="radio" name='calc-option' id='calc-drill' checked={type==='drill'}/>
+        <label className={`calc-type-label p-tb-12-to-16 br-24-to-20 ${type==='drill' ? 'active' : ''}`} htmlFor="calc-drill">
+          <Illustration  classlist={`calc-type-label-illust`} id={`build-icon`} name="diamond-drill" color="" width="44" height="32" />
+          Вартість буріння
+          <input onChange={()=>setTypeCalculatop('drill')} value={type}  type="radio" name='calc-option' id='calc-drill' checked={type==='drill'}/>
         </label>
       </div>
-      <CalculatorForm type={type} />
+      <CalculatorForm isShow={isShow} setIsShow={setIsShow} typeIsShow={typeIsShow} setTypeIsShow={setTypeIsShow} type={type} />
     </div>
 
 

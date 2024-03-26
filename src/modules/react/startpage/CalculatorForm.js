@@ -158,7 +158,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
 
                     {step === 1 && <StepOneFormContent basement={basement} wall={wall} roof={roof} open={open} setOpen={setOpen} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
                     {step === 2 && <StepTwoFormContent stage={'stage'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
-                    {step === 3 && <StepThreeFormContent area={'area'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} on errorMessage={"Поле обов'язкове для заповнення"}/>}
+                    {step === 3 && <StepThreeFormContent area={'area'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"}/>}
                     {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}
                     
                     {step !== 4 

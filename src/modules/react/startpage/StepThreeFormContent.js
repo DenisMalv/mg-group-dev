@@ -19,7 +19,7 @@ const StepThreeFormContent = ({area, data,updData,  isShow, setIsShow, error, se
                
                 <div className={`calc-select-input-wrapper`}> 
 
-                    <input className={`calc-select-input ${error[area] ? 'error' : ''}`} name={area} id={area} type='number' onChange={(e)=>updData(area,e.target.value)} value={data[area]} placeholder='Enter your text'/>
+                    <input className={`calc-select-input ${error[area] ? 'error' : ''}`} name={area} id={area} type='number' onChange={(e)=>updData(area,e.target.value)} value={data[area]} placeholder='Введіть площу, кв.м.'/>
                     
                     <Icon classlist={`calc-select-input-icon ${error[area] ? 'error' : 'hide'}`} id={`${area}-icon`} name="warning" color="#DD7A02" width="24" height="24"/>
 

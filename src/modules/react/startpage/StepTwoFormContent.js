@@ -1,9 +1,9 @@
 import React,{useRef, useEffect, useState} from 'react';
 
-import h1x1 from '../../../img/сalculator/step-two-h-1.webp'
-import h1x2 from '../../../img/сalculator/step-two-h-1@2x.webp'
-import h2x1 from '../../../img/сalculator/step-two-h-2.webp'
-import h2x2 from '../../../img/сalculator/step-two-h-2@2x.webp'
+import h1x1 from '../../../img/calculator/step-two-h-1.webp'
+import h1x2 from '../../../img/calculator/step-two-h-1@2x.webp'
+import h2x1 from '../../../img/calculator/step-two-h-2.webp'
+import h2x2 from '../../../img/calculator/step-two-h-2@2x.webp'
 
 
 const StepTwoFormContent = ({stage, data,updData, isShow, setIsShow})=>{

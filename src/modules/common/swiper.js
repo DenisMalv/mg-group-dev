@@ -4,33 +4,19 @@ import Swiper from 'swiper/bundle';
 const options = {
     slidesPerView: 1,
     loop: false,
-    // loopAdditionalSlides:1,
     effect: "fade",
     preloadSlides: 1,
     lazy:true,
     lazyPreloadPrevNext:1,
     init:false,
     slideToClickedSlide: true,
-    // grid: {
-    //   rows: 1,
-    // },
-    // spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: false,
       renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index ) + "</span>";
-        // return `<span class="${className}" id="${index}">${index}</span>`;
+        return `<span class="${className} margin-0">${index}</span>`;
       },
-  },
-  // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-  // Responsive breakpoints
-  breakpoints: {
   },
   on: {
     
@@ -67,7 +53,7 @@ const options = {
 
         const pagination = document.querySelector('.swiper-pagination');
         const currentPosition = parseInt(pagination.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
-        pagination.style.transform = 'translateX(' + (currentPosition - 28*multiple) + 'px)';
+        pagination.style.transform = 'translateX(' + (currentPosition - 72*multiple) + 'px)';
       },
 
     slidePrevTransitionStart: function (e) {
@@ -103,12 +89,12 @@ const options = {
 
         const pagination = document.querySelector('.swiper-pagination');
         const currentPosition = parseInt(pagination.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
-        pagination.style.transform = 'translateX(' + (currentPosition + 28*multiple) + 'px)';
+        pagination.style.transform = 'translateX(' + (currentPosition + 72*multiple) + 'px)';
     },
   },
 }
 
-const swiper = new Swiper(".swiper", options)
+const swiper = new Swiper(".swiper-last-works", options)
 
 
 async function initializeSwiper() {

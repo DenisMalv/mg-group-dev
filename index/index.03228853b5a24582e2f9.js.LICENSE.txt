@@ -20,13 +20,13 @@ object-assign
 
 /*! -!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/normalize.css/normalize.css */
 
-/*! ../../../img/сalculator/step-two-h-1.webp */
+/*! ../../../img/calculator/step-two-h-1.webp */
 
-/*! ../../../img/сalculator/step-two-h-1@2x.webp */
+/*! ../../../img/calculator/step-two-h-1@2x.webp */
 
-/*! ../../../img/сalculator/step-two-h-2.webp */
+/*! ../../../img/calculator/step-two-h-2.webp */
 
-/*! ../../../img/сalculator/step-two-h-2@2x.webp */
+/*! ../../../img/calculator/step-two-h-2@2x.webp */
 
 /*! ../../../node_modules/css-loader/dist/runtime/api.js */
 
@@ -649,11 +649,11 @@ object-assign
   \**********************************************/
 
 /*!**********************************************!*\
-  !*** ./src/img/сalculator/step-two-h-1.webp ***!
+  !*** ./src/img/calculator/step-two-h-1.webp ***!
   \**********************************************/
 
 /*!**********************************************!*\
-  !*** ./src/img/сalculator/step-two-h-2.webp ***!
+  !*** ./src/img/calculator/step-two-h-2.webp ***!
   \**********************************************/
 
 /*!**********************************************!*\
@@ -729,11 +729,11 @@ object-assign
   \*************************************************/
 
 /*!*************************************************!*\
-  !*** ./src/img/сalculator/step-two-h-1@2x.webp ***!
+  !*** ./src/img/calculator/step-two-h-1@2x.webp ***!
   \*************************************************/
 
 /*!*************************************************!*\
-  !*** ./src/img/сalculator/step-two-h-2@2x.webp ***!
+  !*** ./src/img/calculator/step-two-h-2@2x.webp ***!
   \*************************************************/
 
 /*!*************************************************!*\

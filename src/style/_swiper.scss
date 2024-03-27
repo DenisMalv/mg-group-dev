@@ -1,45 +1,157 @@
-.swiper {
-    width: 100%;
+.swiper-component-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 888px;
+  height: 100%;
+
+  position: relative;
+
+  // @include tablet{
+  //   max-height: clamp(448px, 7.31rem + 43.1vw, 548px);
+  // }
+
+}
+.swiper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 888px;
+  height: 100%;
+  // max-height: 548px;
+  max-height: clamp(252px, 3.417rem + 52.33vw, 548px);
+}
+
+.swiper-component-wrapper .swiper-wrapper{
+  height: auto;
+}
+
+.swiper-slide{
+  max-height: 548px;
+
+  & img{
     height: 100%;
+    width: 100%;
   }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
 
-  .swiper-pagination{
-    transition: $transition;
-  }
-  .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    transition: $transition;
-  }
-  .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
-  }
+.swiper-pagination{
+  transition: $transition;
+}
+.swiper-pagination-bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .hidden{
-    position: relative;
-    width: 140px;
-    height: 40px;
-    overflow: hidden;
-    background-color: aliceblue;
-    & div{
-      display: flex;
-      position: absolute!important;
-      width: max-content!important;
+  width: 60px;
+  height: 60px;
+
+  color: $white-text;
+  line-height: 1.4;
+  font-size: 20px;
+
+  opacity: 1;
+  background-color: $card-bg;
+
+  transition: $transition;
+}
+.swiper-pagination-bullet-active {
+  color: $input-select-text;
+  background-color: $white-text;
+}
+
+.swiper-component-wrapper{
+  @include tablet{
+    &::before{
+      content: "";
+      position: absolute;
+      display: block;
+      left: -20px;
+      bottom: 51px;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-bottom-left-radius: 40px;
+      border-left: 20px solid #182825;
+      border-bottom: 20px solid #182825;
     }
+
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      left: 339px;
+      bottom: -20px;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-bottom-left-radius: 40px;
+      border-left: 20px solid #182825;
+      border-bottom: 20px solid #182825;
+    }
+  }
+  
+
+}
+
+.swiper-pagination-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  
+  padding-top: 12px;
+
+  
+
+  overflow: hidden;
+  // background-color: #fff;
+  background-color: $main-bg;
+
+  z-index: 2;
+
+  @include tablet{
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+
+    padding-right: 12px; 
+
+    border-top-right-radius: clamp(16px, 0.6rem + 1.1vw, 24px);
+
+  }
+  
+
+  & .swiper-pagination{
+    display: flex;
+    gap: 12px;
+    position: absolute!important;
+    width: max-content!important;
+    bottom: 0;
+  }
+}
+
+
+  // rewrite default styles 
+.swiper-component-wrapper .swiper-pagination-bullet.margin-0{
+    margin: 0!important;
   }

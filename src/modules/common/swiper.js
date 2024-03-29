@@ -3,7 +3,7 @@ import Swiper from 'swiper/bundle';
 import { building,warehouse,drilling,concreteWorks } from '../../data/imgData';
 import refs from '../start/refs';
 
-const {swiperWrapper,pagination} = refs
+const {swiperWrapper,pagination,swiperComponentWrapper} = refs
 
 
 const options = {
@@ -117,7 +117,29 @@ async function initializeSwiper() {
 }
 
 
-
+const paginationLength = (arr) =>{
+    if(arr.length === 4){
+        swiperComponentWrapper.classList.add('four')
+        swiperComponentWrapper.classList.remove('one','two','three')
+        return
+    }
+    if(arr.length === 3){
+        swiperComponentWrapper.classList.add('three')
+        swiperComponentWrapper.classList.remove('one','two','four')
+        return
+    }
+    if(arr.length === 2){
+        swiperComponentWrapper.classList.add('two')
+        swiperComponentWrapper.classList.remove('one','three','four')
+        return
+    }
+    if(arr.length === 1){
+        swiperComponentWrapper.classList.add('one')
+        swiperComponentWrapper.classList.remove('two','three','four')
+        return
+    }
+    swiperComponentWrapper.classList.remove('one','two','three','four')
+}
 
 const createSlide = (imageSrc,altText) =>{
     const slide = document.createElement('div');
@@ -180,7 +202,7 @@ export const createSlides = (name,e,)=>{
             return createSlide(`assets/img/start/last-works/warehouse/${id}.webp`, alt)
         });
     }
-
+    paginationLength(slidesArray)
     slidesArray.forEach(slide => {
         swiperWrapper.appendChild(slide); // Додати слайд до swiper.wrapperEl
     })

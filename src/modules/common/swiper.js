@@ -1,5 +1,10 @@
 import Swiper from 'swiper/bundle';
 
+import { building,warehouse,drilling,concreteWorks } from '../../data/imgData';
+import refs from '../start/refs';
+
+const {swiperWrapper,pagination} = refs
+
 
 const options = {
     slidesPerView: 1,
@@ -15,7 +20,7 @@ const options = {
       clickable: true,
       dynamicBullets: false,
       renderBullet: function (index, className) {
-        return `<span class="${className} margin-0">${index}</span>`;
+        return `<span class="${className} margin-0">${index+1}</span>`;
       },
   },
   on: {
@@ -46,12 +51,16 @@ const options = {
             // правильний рух 3 елемента ззаду при кліку на передостанній елемент інакше блоку руху елемента приклад 10 слайдів з 7 перехід на 9
             if(swiper.activeIndex === swiper.slides.length -2 && swiper.previousIndex === swiper.slides.length -4){
                 multiple = 1
+            }else if(swiper.slides.length === 6 
+                && ((swiper.activeIndex === swiper.slides.length -2 && swiper.previousIndex === 0)||(swiper.activeIndex === swiper.slides.length -2 && swiper.previousIndex === 1))
+            ){
+                multiple = 1
             }else{
                 return
             }
         }
 
-        const pagination = document.querySelector('.swiper-pagination');
+        // const pagination = document.querySelector('.swiper-pagination');
         const currentPosition = parseInt(pagination.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
         pagination.style.transform = 'translateX(' + (currentPosition - 72*multiple) + 'px)';
       },
@@ -82,24 +91,101 @@ const options = {
             // правильний рух 3 елемента при кліку на передостанній елемент інакше блоку руху елемента приклад 10 слайдів з 3 перехід на 1
             if(swiper.activeIndex === 1 && swiper.previousIndex === 3){
                 multiple = 1
+            }else if(swiper.slides.length === 6 
+                && ((swiper.activeIndex === 1 && swiper.previousIndex === swiper.slides.length -1)||(swiper.activeIndex === 1 && swiper.previousIndex === swiper.slides.length -2))
+            ){
+                multiple = 1
             }else{
                 return
             }
         }
 
-        const pagination = document.querySelector('.swiper-pagination');
+        // const pagination = document.querySelector('.swiper-pagination');
         const currentPosition = parseInt(pagination.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
         pagination.style.transform = 'translateX(' + (currentPosition + 72*multiple) + 'px)';
     },
   },
 }
 
-const swiper = new Swiper(".swiper-last-works", options)
-
+let swiper 
 
 async function initializeSwiper() {
-    return swiper.init();
+    // return swiper.init();
+    swiper  = new Swiper(".swiper-last-works", options).init();
+    swiper.pagination.update()
+    pagination.style.transform = 'translateX(' + 0 + 'px)';
 }
 
 
-initializeSwiper()
+
+
+const createSlide = (imageSrc,altText) =>{
+    const slide = document.createElement('div');
+    // Додаємо клас "swiper-slide" до створеного <div>
+    slide.classList.add('swiper-slide');
+
+    // Створюємо тег <img>
+    const img = document.createElement('img');
+    // Встановлюємо атрибут src для зображення
+    img.src = imageSrc;
+    // Встановлюємо атрибут alt для опису зображення
+    img.alt = altText;
+
+    // Додаємо тег <img> до створеного <div>
+    slide.appendChild(img);
+
+    return slide
+}
+
+export const createSlides = (name,e,)=>{
+    let slidesArray = []
+
+    if (swiper) {
+        swiperWrapper.innerHTML=''
+        swiper.destroy(true, true); // Сброс Swiper перед фильтрацией
+    }
+
+    if(name === 'all'){
+        const buildingSlides = building.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/building/${id}.webp`, alt)
+        })
+        const concreteWorksSlides = concreteWorks.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/concrete-works/${id}.webp`, alt)
+        })
+        const drillingSlides = drilling.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/drilling/${id}.webp`, alt)
+        })
+        const warehouseSlides = warehouse.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/warehouse/${id}.webp`, alt)
+        })
+        slidesArray = [...buildingSlides,...concreteWorksSlides,...drillingSlides,...warehouseSlides]
+    }
+    if(name==='building'){
+        slidesArray =  building.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/building/${id}.webp`, alt)
+        });
+    }
+    if(name==='concrete'){
+        slidesArray =  concreteWorks.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/concrete-works/${id}.webp`, alt)
+        });
+    }
+    if(name==='drilling'){
+        slidesArray =  drilling.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/drilling/${id}.webp`, alt)
+        });
+    }
+    if(name==='warehouse'){
+        slidesArray =  warehouse.map(({id,alt}) => {
+            return createSlide(`assets/img/start/last-works/warehouse/${id}.webp`, alt)
+        });
+    }
+
+    slidesArray.forEach(slide => {
+        swiperWrapper.appendChild(slide); // Додати слайд до swiper.wrapperEl
+    })
+
+    initializeSwiper()
+}
+
+createSlides('all')

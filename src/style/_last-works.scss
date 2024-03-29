@@ -1,0 +1,19 @@
+.last-works-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1440px){
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.last-works-filter-card{
+    width: 100%;
+}
+
+.tabs-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}

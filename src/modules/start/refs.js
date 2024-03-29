@@ -3,7 +3,15 @@ const refs ={
     headerNav:document.querySelector('.header-navigation'),
     headerBurgerBtn:document.getElementById('burger-btn'),
     burgerModal: document.getElementById('burger-modal'),
-    burgerList:document.getElementById('burger-list')
+    burgerList:document.getElementById('burger-list'),
+
+
+    //last work section
+    lastWorksForm: document.getElementById('last-works-form'),
+    swiperWrapper:document.querySelector('.swiper-wrapper'),
+    pagination: document.querySelector('.swiper-pagination'),
+    
+    
 }
 
 //test ref

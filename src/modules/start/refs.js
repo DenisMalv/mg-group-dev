@@ -8,9 +8,10 @@ const refs ={
 
     //last work section
     lastWorksForm: document.getElementById('last-works-form'),
+    swiperComponentWrapper: document.querySelector('.swiper-component-wrapper'),
     swiperWrapper:document.querySelector('.swiper-wrapper'),
     pagination: document.querySelector('.swiper-pagination'),
-    
+
     
 }
 

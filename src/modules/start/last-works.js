@@ -3,7 +3,7 @@ import refs from './refs'
 import { building,warehouse,drilling,concreteWorks } from '../../data/imgData';
 import { createSlides } from '../common/swiper';
 
-const {lastWorksForm} = refs
+const {lastWorksForm,swiperWrapper} = refs
 
 const tabsArray = Array.from(lastWorksForm.elements)
 
@@ -20,13 +20,16 @@ const onChangeTab = (e) => {
         e.target.checked = true
         return
     }
-
+    swiperWrapper.classList.add('hide')
     tabsArray.forEach(el=>el === e.target ? el.checked = true : el.checked = false)
 
     createSlides(e.target.id,e)
     
     activeTab.tab = e.target.id
-
+    
+    setTimeout(()=>{
+        swiperWrapper.classList.remove('hide')
+    },300)
 }
 
 

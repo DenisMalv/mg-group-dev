@@ -6,24 +6,28 @@
   margin: 0 auto;
 
   width: 100%;
-  max-width: 888px;
+  // max-width: 888px;
+  max-width: 1024px;
   height: 100%;
 
   position: relative;
-
-  // @include tablet{
-  //   max-height: clamp(448px, 7.31rem + 43.1vw, 548px);
-  // }
 
 }
 .swiper{
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 888px;
+  // max-width: 888px;
+  max-width: 1024px;
   height: 100%;
-  // max-height: 548px;
-  max-height: clamp(252px, 3.417rem + 52.33vw, 548px);
+  max-height: 720px;
+  // max-height: clamp(252px, 3.417rem + 52.33vw, 548px);
+  // max-height: clamp(252px, -0.059rem + 63.24vw, 682px)
+
+  @media screen and (min-width: 1440px){
+    max-width: 888px;
+    max-height: 568px;
+  }
 }
 
 .swiper-component-wrapper .swiper-wrapper{
@@ -31,11 +35,12 @@
 }
 
 .swiper-slide{
-  max-height: 548px;
-
+  // max-height: 548px;
+  // max-height: clamp(252px, 2.17rem + 58.32vw, 730px);
   & img{
     height: 100%;
     width: 100%;
+    
   }
 }
 
@@ -124,7 +129,6 @@
   
 
   overflow: hidden;
-  // background-color: #fff;
   background-color: $main-bg;
 
   z-index: 2;

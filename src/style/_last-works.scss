@@ -10,7 +10,10 @@
 
 .last-works-filter-card{
     width: 100%;
-    max-width: 456px;
+    
+    @media screen and (min-width: 1440px){
+        max-width: 456px;
+    }
 }
 
 .tabs-container{

@@ -6,4 +6,4 @@ import Calculator from './Calculator'
 
 
 const root = ReactDOM.createRoot(document.getElementById('calculator'));
-root.render(<Calculator />);
+root.render(<Calculator typeCalc={'drill'} />);

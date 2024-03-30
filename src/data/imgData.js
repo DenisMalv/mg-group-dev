@@ -81,3 +81,26 @@ export const warehouse =[
     // {id:8,alt:'alt-text'},
     // {id:9,alt:'alt-text'},
 ]
+
+export const imgObjStart = {
+    building:[
+        {id:1,alt:'alt-text'},
+        {id:2,alt:'alt-text'},
+    ],
+    concreteWorks:[
+        {id:1,alt:'alt-text'},
+    ],
+    drilling:[
+        {id:1,alt:'alt-text'},
+        {id:2,alt:'alt-text'},
+        {id:3,alt:'alt-text'},
+    ],
+    warehouse:[
+        {id:1,alt:'alt-text'},
+        {id:2,alt:'alt-text'},
+        {id:3,alt:'alt-text'},
+        {id:4,alt:'alt-text'},
+    ],
+    
+}
+

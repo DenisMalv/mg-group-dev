@@ -1,9 +1,10 @@
-import refs from './refs'
+import refsCommon from './refsCommon'
 
-const {header, headerNav, burgerModal, burgerList, headerBurgerBtn} = refs
+const {header, headerNav, burgerModal, burgerList, headerBurgerBtn} = refsCommon
 
 const BURGER_MODAL_ACTIVE = 'burger-modal-active'
 const SHOW = 'burger-show'
+const BTN_HIDE = 'btn-hide'
 
 let timeoutId =[]
 
@@ -21,26 +22,36 @@ const clickInOrOutsideBurger =(e)=>{
         closeBurgerMenu()
     }
 }
-const closeBurgerMenu = ()=>{
+const closeBurgerMenu = (resize)=>{
     console.log('burger hide')
     burgerModal.classList.remove(BURGER_MODAL_ACTIVE)
     burgerList.classList.remove(SHOW)
     burgerListAnimationToggle(burgerList)
     document.removeEventListener('click',clickInOrOutsideBurger)
+    
+    if(resize){
+        headerBurgerBtn.children[0].classList.remove(BTN_HIDE)
+        headerBurgerBtn.children[1].classList.add(BTN_HIDE)
+        return
+    }
+    toggleBurgerIcon()
 }
 
 const openBurgerMenu = ()=>{
     console.log('burger show')
     burgerModal.classList.add(BURGER_MODAL_ACTIVE)
     burgerList.classList.add(SHOW)
+
     
     burgerListAnimationToggle(burgerList)
-    
+    toggleBurgerIcon()
+
     document.addEventListener('click',clickInOrOutsideBurger)
    
 }
 
 const toggleBurgerMenu = ()=>{
+    
     if(!burgerModal.classList.contains(BURGER_MODAL_ACTIVE)){
         openBurgerMenu()
     }else{
@@ -74,7 +85,11 @@ const burgerListAnimationHide = (e)=>{
         return
     }
     Array.from(burgerList.children).forEach(el=>el.classList.remove('item-show'))
-    closeBurgerMenu()
+    closeBurgerMenu('resize')
+}
+
+const toggleBurgerIcon = () =>{
+    Array.from(headerBurgerBtn.children).forEach(el=>el.classList.toggle(BTN_HIDE))
 }
 
 

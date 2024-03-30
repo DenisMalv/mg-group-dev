@@ -35,7 +35,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const wall = ['Газоблок','Керамоблок','Каркас','Модуль','Цегла']
     const roof = ['Металочерепиця','Шифер','Солома','Камиш']
 
-    const material = ['Бетон','Цегла','Газобетон','Глина']
+    const material = ['Бетон','Цегла','Газоблок','Глина']
     const diametr = [100,200,300,400]
     const deep = [100,200,300,400,500,600,700,800]
     
@@ -124,12 +124,12 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         return basement+wall+roof*stage*numberArea
     }
     const totalDrillSumm = () =>{
-        const materia = drillPrises[drillData['material']]
+        const material = drillPrises[drillData['material']]
         const diametr = drillPrises[`diametr-${drillData['diametr']}`]
         const deep = drillPrises[`deep-${drillData['deep']}`]
         const count = +drillData['count']
-
-        return (materia+diametr+deep)*count
+        
+        return (material+diametr+deep)*count
     }
 
     useEffect(()=>{

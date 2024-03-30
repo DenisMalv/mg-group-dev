@@ -1,9 +1,9 @@
 import Swiper from 'swiper/bundle';
 
 import { building,warehouse,drilling,concreteWorks } from '../../data/imgData';
-import refs from '../start/refs';
+import refsCommon from './refsCommon';
 
-const {swiperWrapper,pagination,swiperComponentWrapper} = refs
+const {swiperWrapper,pagination,swiperComponentWrapper} = refsCommon
 
 
 const options = {

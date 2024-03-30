@@ -1,9 +1,9 @@
-import refs from './refs'
+import refsCommon from './refsCommon'
 
 import { building,warehouse,drilling,concreteWorks } from '../../data/imgData';
-import { createSlides } from '../common/swiper';
+import { createSlides } from './swiper';
 
-const {lastWorksForm,swiperWrapper} = refs
+const {lastWorksForm,swiperWrapper} = refsCommon
 
 const tabsArray = Array.from(lastWorksForm.elements)
 

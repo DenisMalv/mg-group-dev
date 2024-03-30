@@ -1,0 +1,13 @@
+.pref-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+}
+
+.pref-item{
+    width: clamp(162px, 1.8rem + 33.65vw, 292px);
+
+}

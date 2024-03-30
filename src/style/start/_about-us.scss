@@ -1,0 +1,44 @@
+.about-us-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+}
+.about-us-item{
+    padding: 24px;
+    width: 100%;
+  
+    text-align: center;
+    
+    border: $about-us-border;
+    border-radius: clamp($frame-rad-16,2vw,$frame-rad-20);
+  
+    @include tablet{
+      max-width: 298px;
+    }
+  
+    &-svg{
+      width: clamp(40px, 1.2rem + 5vw, 60px);
+      height: clamp(40px, 1.2rem + 5vw, 60px);
+  
+      &.since{
+        width: clamp(72px, 2.5rem + 7vw, 104px);
+        height: clamp(40px, 1.5rem + 3vw, 60px);
+      }
+    }
+    
+  
+    &-title{
+      font-family: $russo;
+  
+      font-size: clamp(24px, 0.5rem + 3.5vw, 40px);
+      line-height: 1.4;
+      font-weight: 400;
+      color: $about-us-subheader-text;
+  
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+  }

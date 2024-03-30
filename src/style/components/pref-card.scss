@@ -11,12 +11,16 @@
   .pref-item-svg-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-  
+    
+    width: clamp(100px, 4.3rem + 5.5vw, 150px);
   
   
     position: relative;
     z-index: 1;
+
+    @include tablet {
+      justify-content: center;
+    }
     
     &::before{
       content: '';

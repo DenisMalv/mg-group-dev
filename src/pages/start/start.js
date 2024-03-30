@@ -17,7 +17,7 @@ import '../../modules/start/some';
 
 
 // react calculator
-import '../../modules/react/startpage/index'
+import '../../modules/react/Calculator/indexStartPage'
 
 
 

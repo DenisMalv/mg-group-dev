@@ -16,3 +16,5 @@ import '../../modules/drilling/header';
 
 
 
+// react calculator
+import '../../modules/react/Calculator/indexDrillingPage'

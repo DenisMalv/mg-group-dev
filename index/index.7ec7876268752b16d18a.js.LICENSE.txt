@@ -20,14 +20,6 @@ object-assign
 
 /*! -!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/normalize.css/normalize.css */
 
-/*! ../../../img/calculator/step-two-h-1.webp */
-
-/*! ../../../img/calculator/step-two-h-1@2x.webp */
-
-/*! ../../../img/calculator/step-two-h-2.webp */
-
-/*! ../../../img/calculator/step-two-h-2@2x.webp */
-
 /*! ../../../node_modules/css-loader/dist/runtime/api.js */
 
 /*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */
@@ -48,15 +40,15 @@ object-assign
 
 /*! ../../modules/common/google-map */
 
+/*! ../../modules/common/header */
+
+/*! ../../modules/common/last-our-works-tabs */
+
+/*! ../../modules/common/refsCommon */
+
 /*! ../../modules/common/swiper */
 
 /*! ../../modules/react/startpage/index */
-
-/*! ../../modules/start/header */
-
-/*! ../../modules/start/last-works */
-
-/*! ../../modules/start/refs */
 
 /*! ../../modules/start/some */
 
@@ -65,8 +57,6 @@ object-assign
 /*! ../IconSprite */
 
 /*! ../IllustrationSprite */
-
-/*! ../common/swiper */
 
 /*! ../css-loader/dist/runtime/api.js */
 
@@ -95,8 +85,6 @@ object-assign
 /*! ../shared/ssr-window.esm.mjs */
 
 /*! ../shared/utils.mjs */
-
-/*! ../start/refs */
 
 /*! ./ */
 
@@ -272,7 +260,7 @@ object-assign
 
 /*! ./ref */
 
-/*! ./refs */
+/*! ./refsCommon */
 
 /*! ./requiredBy */
 
@@ -295,6 +283,8 @@ object-assign
 /*! ./stringEndsWith */
 
 /*! ./stringStartsWith */
+
+/*! ./swiper */
 
 /*! ./truncate */
 
@@ -445,10 +435,6 @@ object-assign
   \**********************************/
 
 /*!***********************************!*\
-  !*** ./src/modules/start/refs.js ***!
-  \***********************************/
-
-/*!***********************************!*\
   !*** ./src/modules/start/some.js ***!
   \***********************************/
 
@@ -464,16 +450,16 @@ object-assign
   !*** ./node_modules/react/index.js ***!
   \*************************************/
 
-/*!*************************************!*\
-  !*** ./src/modules/start/header.js ***!
-  \*************************************/
-
 /*!**************************************!*\
   !*** ./node_modules/hasown/index.js ***!
   \**************************************/
 
 /*!**************************************!*\
   !*** ./src/fonts/MPLUS1p-Medium.ttf ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/modules/common/header.js ***!
   \**************************************/
 
 /*!**************************************!*\
@@ -556,10 +542,6 @@ object-assign
   !*** ./src/modules/react/IconSprite.js ***!
   \*****************************************/
 
-/*!*****************************************!*\
-  !*** ./src/modules/start/last-works.js ***!
-  \*****************************************/
-
 /*!******************************************!*\
   !*** ./node_modules/es-errors/syntax.js ***!
   \******************************************/
@@ -574,6 +556,10 @@ object-assign
 
 /*!******************************************!*\
   !*** ./src/modules/common/google-map.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/modules/common/refsCommon.js ***!
   \******************************************/
 
 /*!*******************************************!*\
@@ -665,14 +651,6 @@ object-assign
   \**********************************************/
 
 /*!**********************************************!*\
-  !*** ./src/img/calculator/step-two-h-1.webp ***!
-  \**********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/img/calculator/step-two-h-2.webp ***!
-  \**********************************************/
-
-/*!**********************************************!*\
   !*** ./src/modules/react/startpage/index.js ***!
   \**********************************************/
 
@@ -745,14 +723,6 @@ object-assign
   \*************************************************/
 
 /*!*************************************************!*\
-  !*** ./src/img/calculator/step-two-h-1@2x.webp ***!
-  \*************************************************/
-
-/*!*************************************************!*\
-  !*** ./src/img/calculator/step-two-h-2@2x.webp ***!
-  \*************************************************/
-
-/*!*************************************************!*\
   !*** ./src/modules/react/IllustrationSprite.js ***!
   \*************************************************/
 
@@ -822,6 +792,10 @@ object-assign
 
 /*!***************************************************!*\
   !*** ./node_modules/swiper/modules/scrollbar.mjs ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/modules/common/last-our-works-tabs.js ***!
   \***************************************************/
 
 /*!***************************************************!*\

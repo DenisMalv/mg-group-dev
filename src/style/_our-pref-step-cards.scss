@@ -5,6 +5,27 @@
 
     flex-wrap: wrap;
 
+    margin: 0 auto;
+
+    max-width: 100%;
+
+    @media screen and (min-width: 372px) {
+        justify-content: flex-start;
+        max-width: clamp(352px, 8rem + 54.27vw, 374px);
+    }
+    @media screen and (min-width: 423px) {
+        max-width: clamp(374px, 5.7em + 65vw, 600px)
+    }
+    @media screen and (min-width: 600px) {
+        max-width: clamp(493px, 5.35rem + 66.6vw, 616px);
+    }
+    @media screen and (min-width: 1006px) {
+        max-width: clamp(937px, 33.125rem + 26.5vw, 940px)
+    }
+    @media screen and (min-width: 1346px) {
+        max-width: 1264px;
+    }
+
 }
 
 .pref-item{

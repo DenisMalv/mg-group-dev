@@ -1,14 +1,24 @@
 import './warehouse.scss';
 
-//common
+// common
 import '../../modules/common/google-map';
+import '../../modules/common/refsCommon';
+import '../../modules/common/header';
+import '../../modules/common/last-our-works-tabs';
+
+
+
 
 // modules
 import '../../modules/warehouse/some'
 import '../../modules/warehouse/refs';
 
 
-import '../../modules/warehouse/header';
+// swiper
+import '../../modules/common/swiper'
+
+
+// partials
 
 
 

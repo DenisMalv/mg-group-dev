@@ -32,8 +32,8 @@
     align-items: center;
     justify-content: center;
     
-    padding-top: 12px ;
-    padding-left: 12px ;
+    padding-top: clamp(12px, 0.625rem + 0.5vw, 16px);;
+    padding-left: clamp(12px, 0.625rem + 0.5vw, 16px);;
 
     border-top-left-radius: clamp(16px, 0.6rem + 2.1vw, 24px);
 
@@ -50,14 +50,13 @@
         position: absolute;
         display: block;
         right: -7px;
-        bottom: clamp(60px, 2.384rem + 3.53vw, 72px);
+        bottom: clamp(61px, 2.374rem + 4.0vw, 76px);
         z-index: 4;
-        width: 40px;
-        max-width: 30px;
-        height: 40px;
+        width: 100px;
+        height: 100px;
         opacity: 1;
         background-color: transparent;
-        border-bottom-right-radius: clamp(16px, 0.6rem + 2.1vw, 24px);
+        border-bottom-right-radius: clamp(22px, 1.042rem + 1.33vw, 30px);
         border-right: 8px solid #182825;
         border-bottom: 8px solid #182825;
         transition: $transition  
@@ -67,15 +66,14 @@
         content: "";
         position: absolute;
         display: block;
-        left: -30px;
+        left: -40px;
         bottom: -7px;
-        z-index: 2;
+        z-index: 4;
         width: 40px;
-        max-width: 30px;
         height: 40px;
         opacity: 1;
         background-color: transparent;
-        border-bottom-right-radius: clamp(16px, 0.6rem + 2.1vw, 24px);
+        border-bottom-right-radius: clamp(22px, 1.042rem + 1.33vw, 30px);
         border-right: 8px solid #182825;
         border-bottom: 8px solid #182825;
         transition: $transition

@@ -18,6 +18,9 @@
     @include tablet{
       max-width: 298px;
     }
+    @media screen and (min-width: 999px){
+      max-width: clamp(217px, -1.595rem + 24.25vw, 298px);
+    }
   
     &-svg{
       width: clamp(40px, 1.2rem + 5vw, 60px);

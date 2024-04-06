@@ -18,7 +18,7 @@ const Calculator = ({typeCalc,showTabs}) => {
   
   return (
   <div className='container'> 
-    <h2 className='bg-card br-16-to-24 p-lr-12-56 p-tb-16-to-32 mb-44-to-68 '>Розрахувати вартість</h2>
+    <h2 className='bg-card br-16-to-24 p-lr-12-to-56 p-tb-16-to-32 mb-44-to-68 '>Розрахувати вартість</h2>
 
     <div className='calc-wrapper'>
       {showTabs && 

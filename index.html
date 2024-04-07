@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/favicon.ico" type="image">
 
   <title>M-Group</title>
-<script defer src="index/index.d512fa2b9cc6e2b9854a.js"></script></head>
+<script defer src="index/index.504e0553a0407a1c9edd.js"></script></head>
 <body>
   <header class="header-backround mb-24-to-32" id="header">
     <div class="container">
@@ -77,11 +77,11 @@
     <section>
       <div class="container">
         <div class="hero-wrapper gap-24-to-32">
-          <div class="hero-text gap-16-to-24 bg-card  p-lr-12-56 br-16-to-24">
+          <div class="hero-text gap-16-to-24 bg-card  p-lr-12-to-56 br-16-to-24">
             <h1 class="hero-title">Будівельна компанія МГгруп</h1>
             <p class="hero-descr">Ми створюємо та реконструюємо котеджі зі смаком та якістю. Наша експертиза охоплює всі етапи від фундаментів до останніх штрихів дизайну, що дозволяє пропонувати вам повний спектр будівництва</p>
             <div class="hero-btn-wrapper">
-              <button class=" btn-primary" type="button" >Розрахувати вартість</button>
+              <button class=" btn-primary" type="button" id="open-popup-btn">Розрахувати вартість</button>
             </div>
           </div>
           <div class="hero-img ">
@@ -136,7 +136,7 @@
     <section>
       <div class="container ">
         <div class="last-works-wrapper gap-24-to-32">
-          <div class="last-works-filter-card bg-card p-tb-16-to-32 p-lr-12-56 br-16-to-24">
+          <div class="last-works-filter-card bg-card p-tb-16-to-32 p-lr-12-to-56 br-16-to-24">
             <h2 class="last-works-title mb-24">Наші останні роботи</h2>
             <form class="tabs-container" id="last-works-form">
               <input class="tab-checkbox" type="checkbox" name="all" id="all" checked>
@@ -177,7 +177,7 @@
     </section>
     <section>
       <div class="container">
-        <h2 class="bg-card br-16-to-24 p-lr-12-56 p-tb-16-to-32 mb-44-to-68 ">Наші переваги</h2>
+        <h2 class="bg-card br-16-to-24 p-lr-12-to-56 p-tb-16-to-32 mb-44-to-68 ">Наші переваги</h2>
         <ul class="pref-list gap-24-to-32">
           <li class="pref-item">
             <div class="pref-item-svg-container">
@@ -185,7 +185,6 @@
                   <use href="assets/img/illustrations-combine.svg#computer_construction"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Сучасний підхід 
               до роботи</p>
           </li>
@@ -195,7 +194,6 @@
                   <use href="assets/img/illustrations-combine.svg#construction-worker"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Власні будівельні бригади</p>
           </li>
           <li class="pref-item">
@@ -204,7 +202,6 @@
                   <use href="assets/img/illustrations-combine.svg#calendar-reserved"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Завершуємо всі проекти з 2ХХХ року</p>
           </li>
           <li class="pref-item">
@@ -213,7 +210,6 @@
                   <use href="assets/img/illustrations-combine.svg#modern-building"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Весь спектр будівельних послуг під ключ</p>
           </li>
           <li class="pref-item">
@@ -222,7 +218,6 @@
                   <use href="assets/img/illustrations-combine.svg#bricks_wall"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Використовуємо сертифіковані матеріали</p>
           </li>
           <li class="pref-item">
@@ -231,7 +226,6 @@
                   <use href="assets/img/illustrations-combine.svg#plan"></use>
               </svg>
             </div>
-            <h4 class="pref-item-title">Title</h4>
             <p class="pref-item-descr">Професійність 
               та відповідальність 
               на кожному етапі</p>
@@ -325,7 +319,52 @@
   <div class="burger-modal-bgd burger" id="burger-modal">
   </div>
 
-  <!-- <script src="../../modules/react/start-page/index.js"></script> -->
+  <div class="modal-bgd pop-up " id="popup-modal">
+      <form action="" id="popup-form" class="pop-up-form  p-lr-12-to-56 p-tb-32-to-56 bg-card br-24 gap-44-to-68">
+        <button class="pop-up-close" id="popup-close" type="button" aria-label="close-btn">
+          <svg class="pop-up-close-icon" width="24" height="24">
+            <use href="assets/img/icon-sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="form-title">Замовити послугу</h2>
+        <div class="form-inputs-wrapper">
+          <div class="form-inputs-name-tel">
+            <label class="label-input-with-icon" for="popup-form-name">
+              <span class="ml-24">Ім’я</span>
+              <svg class="label-icon" width="24" height="24">
+                <use href="assets/img/icon-sprite.svg#user"></use>
+              </svg>
+              <input class="input-with-icon" name="popup-form-name" id="popup-form-name" type="text" placeholder="Введіть ваше ім’я">
+              <svg class="error-icon" width="24" height="24">
+                <use href="assets/img/icon-sprite.svg#warning"></use>
+              </svg>
+              <p class="error-message">Поле обов'язкове для заповнення</p>
+            </label>
+            <label class="label-input-with-icon" for="popup-form-phone">
+              <span class="ml-24">Телефон</span>
+              <svg class="label-icon" width="24" height="24">
+                <use href="assets/img/icon-sprite.svg#phone"></use>
+              </svg>
+              <input class="input-with-icon" name="popup-form-phone" id="popup-form-phone" type="tel" placeholder="Куди вам подзвонити">
+              <svg class="error-icon" width="24" height="24">
+                <use href="assets/img/icon-sprite.svg#warning"></use>
+              </svg>
+              <p class="error-message">Поле обов'язкове для заповнення</p>
+            </label>
+          </div>
+          <label class="label-textarea" for="popup-textarea">
+            <span class="ml-24">Коментар</span>
+            <textarea class="textarea-field" name="popup-textarea" id="popup-textarea" placeholder="Яка послуга ваc цікавить?" cols="24" rows="6" ></textarea>
+          </label>
+        </div>
+
+        <button class="btn-primary" type="submit" >Залишити заявку</button>
+      </form>
+      <div class="form-resp p-lr-12-to-56 p-tb-32-to-56 bg-card br-24" id="popup-resp">
+        <h2 class="form-resp-title">Дякуємо вам за заявку</h2>
+      </div>
+  </div>
+
 </body>
 </html>
 

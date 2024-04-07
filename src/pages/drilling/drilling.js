@@ -14,6 +14,8 @@ import '../../modules/common/swiper'
 import '../../modules/drilling/some'
 import '../../modules/drilling/refs';
 
+//modals
+import '../../modules/modals/popupModal'
 
 
 

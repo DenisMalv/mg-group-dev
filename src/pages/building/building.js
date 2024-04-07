@@ -16,6 +16,9 @@ import '../../modules/common/swiper'
 import '../../modules/building/some'
 import '../../modules/building/refs';
 
+//modals
+import '../../modules/modals/popupModal'
+
 
 // react calculator
 import '../../modules/react/Calculator/indexBuildingPage'

@@ -7,6 +7,8 @@ import StepThreeFormContent from './StepThreeFormContent';
 import StepFourFormContent from './StepFourFormContent';
 import StepOneDrillContent from './StepOneDrillContent';
 
+import { openPopUp } from '../../modals/popupModal';
+
 const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     console.log(type)
    
@@ -162,8 +164,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                     {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}
                     
                     {step !== 4 
-                        ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('area')}>Далі</button>
-                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
+                        ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('area')} >Далі</button>
+                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
                     }
 
             </form>
@@ -181,7 +183,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                     
                     {step !== 2 
                         ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('count')}>Далі</button>
-                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>console.log('contact-us')}>Зв’язатися з нами</button>
+                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
                     }
 
             </form>

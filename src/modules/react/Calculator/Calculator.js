@@ -37,12 +37,6 @@ const Calculator = ({typeCalc,showTabs}) => {
       }
       <CalculatorForm isShow={isShow} setIsShow={setIsShow} typeIsShow={typeIsShow} setTypeIsShow={setTypeIsShow} type={type} />
     </div>
-
-
-
-    {/* <p>Hello, World! {state}</p> */}
-    {/* <button onClick={()=>setState(state+1)}>increase</button>
-    <button onClick={()=>setState(state-1)}>decrese</button> */}
   </div>)
 };
 

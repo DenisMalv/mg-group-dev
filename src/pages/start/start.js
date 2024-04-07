@@ -13,7 +13,8 @@ import '../../modules/common/swiper'
 import '../../modules/start/some';
 
 
-
+//modals
+import '../../modules/modals/popupModal'
 
 
 // react calculator

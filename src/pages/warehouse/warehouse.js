@@ -21,5 +21,9 @@ import '../../modules/common/swiper'
 // partials
 
 
+//modals
+import '../../modules/modals/popupModal'
+
+
 
 

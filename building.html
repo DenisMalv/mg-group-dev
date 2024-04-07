@@ -8,10 +8,11 @@
   />
   <meta name="language" content="Ukrainian (Ukraine)"/>
   <meta http-equiv="content-language" content="uk_UA"/>
-  <meta name="theme-color" content="#F4FFFE"/>
+  <meta name="theme-color" content="#283935"/>
+  <link rel="icon" href="assets/favicon.ico" type="image">
 
   <title>M-Group</title>
-</head>
+<script defer src="building/building.a19f5affefe8b88791ad.js"></script></head>
 <body>
   <header class="header-backround mb-24-to-32" id="header">
     <div class="container">
@@ -21,18 +22,18 @@
                 <use href="assets/img/icon-sprite.svg#logo"></use>
             </svg>
         </a>
-        <ul class="nav-list">
+        <ul class="nav-list" id="header-list">
           <li class="nav-item">
-            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Про нас</a>
+            <a href="#about-us" class="nav-link link-hfa" role="link" aria-label="">Про нас</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Послуги</a>
+            <a href="#last-works" class="nav-link link-hfa" role="link" aria-label="">Послуги</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Ціна</a>
+            <a href="#calculator" class="nav-link link-hfa" role="link" aria-label="">Ціна</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-hfa" role="link" aria-label="">Контакти</a>
+            <a href="#footer" class="nav-link link-hfa" role="link" aria-label="">Контакти</a>
           </li>
         </ul>
 
@@ -50,16 +51,16 @@
       <nav aria-label="Навігація по сайту на вузькому екрані, телефон">
         <ul class="burger-list" id="burger-list">
           <li class="burger-item">
-            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Про нас</a>
+            <a href="#about-us" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Про нас</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Послуги</a>
+            <a href="#last-works" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Послуги</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Ціна</a>
+            <a href="#calculator" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Ціна</a>
           </li>
           <li class="burger-item">
-            <a href="#" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Контакти</a>
+            <a href="#footer" class="burger-link link-hfa" role="link" aria-label="Навігація до ">Контакти</a>
           </li>
         </ul>
       </nav>
@@ -69,10 +70,22 @@
   <main class="mb-88-to-120 flex fd-col gap-88-to-120">
     <section>
       <div class="container">
-        content-section-one
+        <div class="hero-wrapper gap-24-to-32">
+          <div class="hero-text gap-16-to-24 bg-card  p-lr-12-to-56 br-16-to-24">
+            <h1 class="hero-title">Будівництво та реконструкція котеджів під ключ</h1>
+            <p class="hero-descr">Надаємо повний спектр послуг, включаючи проектування, будівництво, реконструкцію та оздоблення вашого котеджу.</p>
+            <p class="hero-descr">Наша команда працює з вами на всіх етапах: від концепції до завершення будівництва. Ми враховуємо ваші унікальні побажання, щоб створити простір, який відображає ваш стиль і потреби.</p>
+            <div class="hero-btn-wrapper">
+              <button class=" btn-primary" type="button" id="open-popup-btn">Розрахувати вартість</button>
+            </div>
+          </div>
+          <div class="hero-img ">
+            <img class="br-16-to-24" src="assets/img/hero-start.webp"  alt="hero img">
+          </div>
+        </div>
       </div>
     </section>
-    <section>
+    <section  id="about-us">
       <div class="container">
         <h2 class="bg-card br-16-to-24 p-lr-12-to-56 p-tb-16-to-32 mb-44-to-68 ">Ми з вами на всіх етапах</h2>
         <ul class="pref-list gap-24-to-32">
@@ -151,7 +164,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="last-works">
       <div class="container">
         <div class="last-works-wrapper gap-24-to-32">
           <div class="last-works-filter-card bg-card p-tb-16-to-32 p-lr-12-to-56 br-16-to-24">
@@ -194,7 +207,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="container gap-24-to-32">
       <div class="upper-footer gap-24-to-32">
         <div class="footer-map br-16-to-24" id="map"></div>
@@ -275,6 +288,52 @@
 
   <div class="burger-modal-bgd burger" id="burger-modal">
   </div>
+
+  <div class="modal-bgd pop-up " id="popup-modal">
+    <form action="" id="popup-form" class="pop-up-form  p-lr-12-to-56 p-tb-32-to-56 bg-card br-24 gap-44-to-68">
+      <button class="pop-up-close" id="popup-close" type="button" aria-label="close-btn">
+        <svg class="pop-up-close-icon" width="24" height="24">
+          <use href="assets/img/icon-sprite.svg#close"></use>
+        </svg>
+      </button>
+      <h2 class="form-title">Замовити послугу</h2>
+      <div class="form-inputs-wrapper">
+        <div class="form-inputs-name-tel">
+          <label class="label-input-with-icon" for="popup-form-name">
+            <span class="ml-24">Ім’я</span>
+            <svg class="label-icon" width="24" height="24">
+              <use href="assets/img/icon-sprite.svg#user"></use>
+            </svg>
+            <input class="input-with-icon" name="popup-form-name" id="popup-form-name" type="text" placeholder="Введіть ваше ім’я">
+            <svg class="error-icon" width="24" height="24">
+              <use href="assets/img/icon-sprite.svg#warning"></use>
+            </svg>
+            <p class="error-message">Поле обов'язкове для заповнення</p>
+          </label>
+          <label class="label-input-with-icon" for="popup-form-phone">
+            <span class="ml-24">Телефон</span>
+            <svg class="label-icon" width="24" height="24">
+              <use href="assets/img/icon-sprite.svg#phone"></use>
+            </svg>
+            <input class="input-with-icon" name="popup-form-phone" id="popup-form-phone" type="tel" placeholder="Куди вам подзвонити">
+            <svg class="error-icon" width="24" height="24">
+              <use href="assets/img/icon-sprite.svg#warning"></use>
+            </svg>
+            <p class="error-message">Поле обов'язкове для заповнення</p>
+          </label>
+        </div>
+        <label class="label-textarea" for="popup-textarea">
+          <span class="ml-24">Коментар</span>
+          <textarea class="textarea-field" name="popup-textarea" id="popup-textarea" placeholder="Яка послуга ваc цікавить?" cols="24" rows="6" ></textarea>
+        </label>
+      </div>
+
+      <button class="btn-primary" type="submit" >Залишити заявку</button>
+    </form>
+    <div class="form-resp p-lr-12-to-56 p-tb-32-to-56 bg-card br-24" id="popup-resp">
+      <h3 class="form-resp-title">Дякуємо вам за заявку</h3>
+    </div>
+</div>
 
 </body>
 </html>

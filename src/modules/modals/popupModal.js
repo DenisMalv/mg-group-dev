@@ -42,9 +42,9 @@ export const openPopUp = ()=>{
     popupFormInputPhone.addEventListener('input',onInput)
 }
 
-export const toggleRespPopup = (type)=>{
+const toggleRespPopup = (type)=>{
     popupResp.style.display = 'block'
-    setTimeout(()=> popupResp.classList.add(SHOW),4)
+    setTimeout(()=> popupResp.classList.add(SHOW),20)
 
     if(type==='ok'){
         popupResp.children[0].textContent = 'Дякуємо вам за заявку'
@@ -78,11 +78,12 @@ const onFormSubmit = async (e)=>{
     elementsArr.forEach((el)=>data[el.name]=el.value)
 
     try {
-        const response = await fetch('', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data),
-        })
+        const response = {ok:true}
+        // await fetch('', {
+        //     method: 'POST',
+        //     headers: {'Content-Type': 'application/json'},
+        //     body: JSON.stringify(data),
+        // })
 
         if(response.ok){
             console.log('ok')

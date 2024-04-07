@@ -25,10 +25,10 @@ module.exports = {
   },
   entry: {
     index:path.resolve(__dirname, 'src', 'pages', 'start','start.js'),
-    building:path.resolve(__dirname, 'src', 'pages', 'building', 'building.js'),
-    concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
-    drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
-    warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
+    // building:path.resolve(__dirname, 'src', 'pages', 'building', 'building.js'),
+    // concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
+    // drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
+    // warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
   output: {

@@ -1,0 +1,162 @@
+.modal-bgd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $modal-bgd;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: $transition;
+    
+
+    z-index: 11;
+}
+
+.pop-up.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.pop-up-form{
+    display: none;
+    opacity: 0;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 12px;
+    margin-right: 12px;
+
+    width: 100%;
+    max-width: 676px;
+
+    position: relative;
+
+    transition: $transition;
+    // transition-duration: 300ms;  //кльовая фича но пока рано ( 
+    // transition-behavior: allow-discrete; //кльовая фича но пока рано ( 
+
+    @media screen and (max-width: 389px){
+        gap: 30px;
+    }
+
+
+}
+.pop-up-form.show{
+    // display: flex;
+    opacity: 1;
+
+    // @starting-style{  //кльовая фича но пока рано ( 
+    //     opacity: 0;  //кльовая фича но пока рано ( 
+    // }  //кльовая фича но пока рано ( 
+}
+
+.form-inputs-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    width: 100%;
+}
+
+.form-inputs-name-tel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 32px;
+
+    width: 100%;
+}
+
+
+.error-icon{
+    position: absolute;
+    right: 24px;
+    bottom: 14px;
+    fill: $error-text;
+    opacity: 0;
+
+    transition: $transition;
+}
+
+
+
+
+.pop-up-close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    color: $btn-pop-up-close;
+    
+    transition: $transition;
+
+    cursor: pointer;
+
+    &:hover,&:focus{
+        color: $btn-primary-accent-bg;
+    }
+    &:active{
+        color:$btn-primary-active-bg;
+    }
+    
+}
+.pop-up-close-icon{
+    stroke: currentColor;
+}
+
+
+.form-resp{
+    display: none;
+    opacity: 0; 
+
+    text-align: center;
+
+    margin-left: 12px;
+    margin-right: 12px;
+
+    width: 100%;
+    max-width: 676px;
+
+    transition: $transition;
+}
+
+.form-resp.show {
+    opacity: 1;
+}
+
+
+
+//кльовая фича но пока рано ( 
+// .form-resp{
+
+//     transition-duration: 300ms;
+//     transition-behavior: allow-discrete;
+// }
+
+// .form-resp.show {
+//     display: block;
+//     opacity: 1;
+
+//     @starting-style{
+//         opacity: 0;
+//     }
+// }

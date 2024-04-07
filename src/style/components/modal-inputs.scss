@@ -29,39 +29,53 @@
       padding-top: 16px;
       padding-bottom: 16px;
       padding-left: 60px;
-      padding-right: 24px;
+      padding-right: 60px;
   
       &::placeholder{
         color:$input-placeholder-text
       }
     }
   
-  }
+}
+
+.label-input-with-icon.error .input-with-icon::placeholder{
+    color:$error-text;
+}
+.label-input-with-icon.error .error-icon{
+  opacity: 1;
+}
+.label-input-with-icon.error .error-message{
+  opacity: 1;
+}
+
+
   
-  .label-textarea{
-  
-    display: flex;
-    flex-direction: column;
-  
-    width: 100%;
-    max-width: 524px;
-  
-    .textarea-field{
-      margin-top: 12px;
-  
-      outline: none;
-      border: none;
-      border-radius: clamp($frame-rad-16,2vw,$frame-rad-20);
-      
-      color: $input-select-text;
-  
-      padding: 16px 24px;
-  
-      position: relative;
-  
-      &::placeholder{
-        color:$input-placeholder-text
-      }
+.label-textarea{
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 524px;
+
+  .textarea-field{
+    margin-top: 12px;
+
+    outline: none;
+    border: none;
+    border-radius: clamp($frame-rad-16,2vw,$frame-rad-20);
+    
+    color: $input-select-text;
+
+    padding: 16px 24px;
+
+    position: relative;
+
+    resize: none;
+
+    &::placeholder{
+      color:$input-placeholder-text
     }
-  
   }
+  
+}

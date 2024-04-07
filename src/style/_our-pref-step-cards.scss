@@ -32,3 +32,11 @@
     width: clamp(162px, 1.8rem + 33.65vw, 292px);
 
 }
+
+.pref-item-descr{
+    margin-top: 24px;
+}
+
+.pref-item-title + .pref-item-descr{
+    margin-top: 0;
+}

@@ -1,6 +1,6 @@
 import refsCommon from './refsCommon'
 
-const {header, headerNav, burgerModal, burgerList, headerBurgerBtn} = refsCommon
+const {header, headerNav,headerList, burgerModal, burgerList, headerBurgerBtn,sectionAboutUs,sectionServices,sectionGallery,sectionPrice,sectionContacts} = refsCommon
 
 const BURGER_MODAL_ACTIVE = 'burger-modal-active'
 const SHOW = 'burger-show'
@@ -28,6 +28,7 @@ const closeBurgerMenu = (resize)=>{
     burgerList.classList.remove(SHOW)
     burgerListAnimationToggle(burgerList)
     document.removeEventListener('click',clickInOrOutsideBurger)
+    burgerList.removeEventListener('click',onClickNavigation)
     
     if(resize){
         headerBurgerBtn.children[0].classList.remove(BTN_HIDE)
@@ -47,6 +48,7 @@ const openBurgerMenu = ()=>{
     toggleBurgerIcon()
 
     document.addEventListener('click',clickInOrOutsideBurger)
+    burgerList.addEventListener('click',onClickNavigation)
    
 }
 
@@ -92,7 +94,41 @@ const toggleBurgerIcon = () =>{
     Array.from(headerBurgerBtn.children).forEach(el=>el.classList.toggle(BTN_HIDE))
 }
 
+const onClickNavigation = (e)=>{
+    e.preventDefault();
 
+    if(e.target.nodeName ==='UL')return
+
+    const i = e.target.href.indexOf("#")
+    const href = e.target.href.slice(i)
+
+    windowScroll(href)
+}
+
+const windowScroll = (href) =>{
+    if(href === '#about-us'){
+        window.scroll(0, sectionAboutUs.offsetTop -30)
+        return
+    }
+    if(href === '#services'){
+        window.scroll(0, sectionServices.offsetTop -30)
+        return
+    }
+    if(href === '#last-works'){
+        window.scroll(0, sectionGallery.offsetTop -30)
+        return
+    }
+    if(href === '#calculator'){
+        window.scroll(0, sectionPrice.offsetTop -30)
+        return
+    }
+    if(href === '#footer'){
+        window.scroll(0, sectionContacts.offsetTop -30)
+        return
+    }
+}
+
+headerList.addEventListener('click',onClickNavigation)
 headerBurgerBtn.addEventListener('click', toggleBurgerMenu)
 headerBurgerBtn.addEventListener('dblclick',clearTimeoutIdOnDblClick)
 window.addEventListener('resize',burgerListAnimationHide)

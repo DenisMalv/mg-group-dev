@@ -26,9 +26,12 @@ const closeBurgerMenu = (resize)=>{
     console.log('burger hide')
     burgerModal.classList.remove(BURGER_MODAL_ACTIVE)
     burgerList.classList.remove(SHOW)
+    document.body.classList.remove('hidden')
+
     burgerListAnimationToggle(burgerList)
     document.removeEventListener('click',clickInOrOutsideBurger)
     burgerList.removeEventListener('click',onClickNavigation)
+    
     
     if(resize){
         headerBurgerBtn.children[0].classList.remove(BTN_HIDE)
@@ -42,6 +45,7 @@ const openBurgerMenu = ()=>{
     console.log('burger show')
     burgerModal.classList.add(BURGER_MODAL_ACTIVE)
     burgerList.classList.add(SHOW)
+    document.body.classList.toggle('hidden')
 
     
     burgerListAnimationToggle(burgerList)
@@ -127,6 +131,7 @@ const windowScroll = (href) =>{
         return
     }
 }
+
 
 headerList.addEventListener('click',onClickNavigation)
 headerBurgerBtn.addEventListener('click', toggleBurgerMenu)

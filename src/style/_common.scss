@@ -17,6 +17,9 @@ body {
 //   window 1440px / max font-size = 44px
 //   1vw = 14.4px
 //   44px / 14.4px = 3.05vw
+body.hidden{
+  overflow: hidden;
+}
 
 address {
   font-style: normal;

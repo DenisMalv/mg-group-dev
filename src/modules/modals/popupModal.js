@@ -34,6 +34,11 @@ export const openPopUp = ()=>{
     popupForm.style.display = 'flex'
     popupForm.classList.add(SHOW)
 
+    popupFormInputName.labels[0].classList.remove('error')
+    popupFormInputPhone.labels[0].classList.remove('error')
+    popupFormInputPhone.value = ''
+    
+
     setTimeout(()=>document.addEventListener('click',clickInOrOutsideModal) ,30)
 
     popupCloseBtn.addEventListener('click', closePopUp)

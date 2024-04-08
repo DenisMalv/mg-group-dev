@@ -76,11 +76,11 @@
     @include tablet{
       max-width: max-content;
       color: $btn-secondary-desktop-text;
-      border: $btn-secondary-desctop-border;
+      border: $btn-secondary-desktop-border;
       &:active{
         background-color: transparent;
         color: $btn-secondary-desktop-text;
-        border: $btn-secondary-desctop-border;
+        border: $btn-secondary-desktop-border;
       }
     }
   }

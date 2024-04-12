@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { useNavigate, } from "react-router-dom";
 
-import Layout from './layout/layout';
+import Layout from './Layout/Layout';
 import Loader from './Loader/Loader';
 
 import Login from './Login/Login';

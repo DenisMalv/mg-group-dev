@@ -39,7 +39,7 @@ module.exports = {
     clean: true,
     filename: '[name]/[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
-    publicPath: '/',
+    // publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -24,42 +24,44 @@
     flex-direction: row;
     gap: clamp(24px, 2vw, 48px);
   }
-.service-descr {
-    width: clamp(350px, 100%, 567px);
-}
+  .service-descr {
+      width: clamp(350px, 100%, 567px);
+  }
 
-.services-btn {
-    border: $btn-secondary-accent-border;
-    color: $btn-secondary-desktop-text;
-    width: 200px;
-    margin-top: 44px;
-}
-.services-btn:hover, .services-btn:focus {
-    background: $btn-secondary-accent-bg;
-    color: $btn-secondary-accent-text;
-    transition: transition;
-}
+  .services-btn {
+      border: $btn-secondary-accent-border;
+      color: $btn-secondary-desktop-text;
+      width: 200px;
+      margin-top: 44px;
+      transition: $transition;
+  }
+  .services-btn:hover, .services-btn:focus {
+      background: $btn-secondary-accent-bg;
+      color: $btn-secondary-accent-text;
+      
+  }
 
-.service-title {
-  margin-top: 0;
-}
-.service-descr {
-  background-color: $card-bg;
-  border-radius: 24px;
-  padding: 32px;
-}
-.services-img {
-  width: 777px;
-}
+  .service-title {
+    margin-top: 0;
+  }
+  .service-descr {
+    background-color: $card-bg;
+    border-radius: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: clamp(12px, -0.4rem + 5vw, 56px);
+    padding-right: 32px
+  }
+  .services-img {
+    width: 777px;
+  }
 }
 
 .services-img {
   width: clamp(21.875rem, -4.688rem + 106.25vw, 75rem);
 }
 
-.mb-16-to-24 {
-  margin-bottom: clamp(16px, 0.75rem + 1vw, 24px);
-}
+
 
 .services-btn {
   margin-top: 32px;
@@ -79,8 +81,9 @@
 }
 .service-title {
   margin-top: 24px;
+  transition: $transition;
 }
 .service-title:hover, .service-title:focus {
  color: $hover-accent-text;
-    transition: $transition;
+    
 }

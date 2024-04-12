@@ -31,6 +31,8 @@ module.exports = {
     drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
     warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
     admin_page:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
+    login:path.resolve(__dirname, 'src', 'pages', 'login', 'login.js'),
+    register:path.resolve(__dirname, 'src', 'pages', 'register', 'register.js'),
     // index:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
@@ -82,6 +84,18 @@ module.exports = {
       output:'admin_page.html',
       filename:'admin_page.html',
       chunks: ['admin_page'],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'login', 'login.html'),
+      output:'login.html',
+      filename:'login.html',
+      chunks: ['login'],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'register', 'register.html'),
+      output:'register.html',
+      filename:'register.html',
+      chunks: ['register'],
     }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),

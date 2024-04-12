@@ -22,6 +22,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
+    // historyApiFallback: true,
   },
   entry: {
     index:path.resolve(__dirname, 'src', 'pages', 'start','start.js'),
@@ -29,6 +30,8 @@ module.exports = {
     concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
     drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
     warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
+    admin_page:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
+    // index:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
   output: {
@@ -36,6 +39,7 @@ module.exports = {
     clean: true,
     filename: '[name]/[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -72,6 +76,19 @@ module.exports = {
       filename:'warehouse.html',
       chunks: ['warehouse'],
     }),
+
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),
+      output:'admin_page.html',
+      filename:'admin_page.html',
+      chunks: ['admin_page'],
+    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),
+    //   output:'index.html',
+    //   filename:'index.html',
+    //   chunks: ['index'],
+    // }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),

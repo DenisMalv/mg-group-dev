@@ -1,4 +1,4 @@
-import './admin_page.scss';
+import './login.scss';
 
 //common
 // import '../../modules/common/google-map';
@@ -18,7 +18,7 @@ import './admin_page.scss';
 
 
 //react Admin_page 
-import '../../modules/login/login'
+import '../../modules/admin_page/login_page'
 
 
 

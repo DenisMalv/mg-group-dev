@@ -89,8 +89,8 @@ input[type='number']::-webkit-outer-spin-button {
   padding-right: clamp(12px, 0.125rem + 2.3vw, 32px);
 }
 .p-lr-12-to-56{
-    padding-left: clamp(12px, -0.4rem + 4vw, 56px);
-    padding-right: clamp(12px, -0.4rem + 4vw, 56px);
+    padding-left: clamp(12px, -0.4rem + 5vw, 56px);
+    padding-right: clamp(12px, -0.4rem + 5vw, 56px);
 }
 
 .p-tb-12-to-16{
@@ -114,6 +114,9 @@ input[type='number']::-webkit-outer-spin-button {
   margin-bottom: clamp(24px, 1rem + 1vw, 32px);;
 }
 
+.mb-16-to-24 {
+  margin-bottom: clamp(16px, 0.75rem + 1vw, 24px);
+}
 .mb-40-to-32{
   margin-bottom: clamp(40px, 1.25rem + 1vw, 32px);
 }

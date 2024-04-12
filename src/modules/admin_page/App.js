@@ -21,7 +21,7 @@ import Register from './Register/Register';
 // const PublicRoute = lazy(() => import('pages/PublicRoute.js'));
 
 const App = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
 //  useEffect(()=>{
 
@@ -33,13 +33,14 @@ const App = () => {
 //  },[window.location.path])
   return (
     <>
-      <Suspense fallback={<Loader />}>
+    <Layout />
+      {/* <Suspense fallback={<Loader />}>
         <Routes>
             <Route path="/" element={<Layout />}/>
             <Route path="login" element={<Login />}/>
             <Route path="register" element={<Register />}/>
         </Routes>
-      </Suspense>
+      </Suspense> */}
     </>
   );
 };

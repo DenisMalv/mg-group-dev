@@ -33,6 +33,7 @@ module.exports = {
     admin_page:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
     login:path.resolve(__dirname, 'src', 'pages', 'login', 'login.js'),
     register:path.resolve(__dirname, 'src', 'pages', 'register', 'register.js'),
+    start_ejs:path.resolve(__dirname, 'src', 'pages', 'start_ejs', 'start_ejs.js'),
     // index:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
     components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
@@ -103,6 +104,29 @@ module.exports = {
     //   filename:'index.html',
     //   chunks: ['index'],
     // }),
+
+    new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'start_ejs', 'start_ejs.ejs'), // Приклад шляху до вашого EJS-шаблону
+        templateParameters: async () => {
+          try {
+            // Виконати запит до бази даних
+            // const data = await fetchDataFromDatabase();
+            // const data = {title:'this is title'}
+            const data = await fetch('https://jsonplaceholder.typicode.com//users')
+                  .then(response => response.json())
+      
+  
+            // Повернути об'єкт з даними для використання у шаблоні
+            return { data };
+          } catch (error) {
+            console.error('Помилка під час отримання даних:', error);
+            return { error: 'Помилка під час отримання даних' };
+          }
+        },
+        output: 'start_ejs.html',
+        filename: 'start_ejs.html',
+        chunks: ['start_ejs'],
+    }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),
@@ -212,7 +236,14 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react'] // Пресеты для транспиляции JavaScript и JSX
           }
         }
-      }
+      },
+      {
+        test: /\.ejs$/,
+        loader: 'ejs-loader',
+        options: {
+            esModule: false, // Потрібно вимкнути esModule, щоб можна було правильно імпортувати шаблони EJS
+        },
+      },
       // {
       //   test: /\.handlebars$/,
       //   loader: "handlebars-loader",

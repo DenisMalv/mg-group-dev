@@ -33,9 +33,9 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     })
 
 
-    const basement = ['Бетон','Не-бетон']
-    const wall = ['Газоблок','Керамоблок','Каркас','Модуль','Цегла']
-    const roof = ['Металочерепиця','Шифер','Солома','Камиш']
+    const basement = ['Бетон']
+    const wall = ['Цегла','Газобетон',]
+    const roof = ['Металочерепиця','Бітумна черепиця']
 
     const material = ['Бетон','Цегла','Газоблок','Глина']
     const diametr = [100,200,300,400]
@@ -73,13 +73,13 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const buildPrises = {
         'Бетон':100,
         'Не-бетон':50,
-        'Газоблок':40,
+        'Газобетон':40,
         'Керамоблок':48,
         'Каркас':45,
         'Модуль':50,
         'Цегла':100,
         'Металочерепиця':20,
-        'Шифер':40,
+        'Бітумна черепиця':40,
         'Солома':10,
         'Камиш':5,
         '1':500,

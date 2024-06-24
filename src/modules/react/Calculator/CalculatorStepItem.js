@@ -3,14 +3,8 @@ import React from 'react';
 import Icon from '../IconSprite'
 
 
-const CalculatorStepItem = ({step, currentStep, setCurrentStep, active, svg, setIsShow})=>{
-    const toPrevStep=(e)=>{
-        if(e.target.id && currentStep > +e.target.id){
-            setIsShow(false)
-            setTimeout(()=>{setCurrentStep(+e.target.id)},300)
-            
-        }
-    }
+const CalculatorStepItem = ({step, currentStep, setCurrentStep, active, svg, setIsShow, toPrevStep})=>{
+
     return(
             <li className={`step flex ai-c gap-12-to-32 ${active ? "step-active" : ''}`}>
                 <button type='button' role='button' className='step-btn' id={step} onClick={toPrevStep} >

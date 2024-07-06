@@ -209,7 +209,7 @@ export const createSlides = (name,e,)=>{
 
     initializeSwiper()
 }
-
+console.dir(window.location)
 
 if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
     createSlides('all')

@@ -214,15 +214,15 @@ export const createSlides = (name,e,)=>{
 if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
     createSlides('all')
 }
-if(window.location.pathname === '/building.html'){
+if(window.location.pathname === '/building.html' || window.location.pathname === 'mg-group-dev/building.html'){
     createSlides('building')
 }
-if(window.location.pathname === '/concrete_works.html'){
+if(window.location.pathname === '/concrete_works.html' || window.location.pathname === 'mg-group-dev/concrete_works.html'){
     createSlides('concrete')
 }
-if(window.location.pathname === '/warehouse.html'){
+if(window.location.pathname === '/warehouse.html' || window.location.pathname === 'mg-group-dev/warehouse.html'){
     createSlides('warehouse')
 }
-if(window.location.pathname === '/drilling.html'){
+if(window.location.pathname === '/drilling.html' || window.location.pathname === 'mg-group-dev/drilling.html'){
     createSlides('drilling')
 }

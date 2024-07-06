@@ -426,3 +426,34 @@
 
 
 
+.coeficient-wrapper{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+
+    gap: 10px;
+
+    @media screen and (min-width: 640px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    @include tablet{
+        max-width: clamp(632px, 1.405rem + 78.37vw, 832px)
+    }
+
+
+}
+
+.calc-drill-tip{
+
+        @include tablet{
+            max-width: clamp(632px, 1.405rem + 78.37vw, 832px);
+            width: 100%;
+            
+        }
+}
+

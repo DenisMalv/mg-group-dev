@@ -2,9 +2,9 @@ export const building =[
 
     {id:1,alt:'alt-text'},
     {id:2,alt:'alt-text'},
-    // {id:3,alt:'alt-text'},
-    // {id:4,alt:'alt-text'},
-    // {id:5,alt:'alt-text'},
+    {id:3,alt:'alt-text'},
+    {id:4,alt:'alt-text'},
+    {id:5,alt:'alt-text'},
     // {id:6,alt:'alt-text'},
     // {id:7,alt:'alt-text'},
     // {id:8,alt:'alt-text'},
@@ -33,11 +33,11 @@ export const building =[
 export const concreteWorks =[
 
     {id:1,alt:'alt-text'},
-    // {id:2,alt:'alt-text'},
-    // {id:3,alt:'alt-text'},
-    // {id:4,alt:'alt-text'},
-    // {id:5,alt:'alt-text'},
-    // {id:6,alt:'alt-text'},
+    {id:2,alt:'alt-text'},
+    {id:3,alt:'alt-text'},
+    {id:4,alt:'alt-text'},
+    {id:5,alt:'alt-text'},
+    {id:6,alt:'alt-text'},
     // {id:7,alt:'alt-text'},
     // {id:8,alt:'alt-text'},
 ]
@@ -47,10 +47,10 @@ export const drilling =[
     {id:1,alt:'alt-text'},
     {id:2,alt:'alt-text'},
     {id:3,alt:'alt-text'},
-    // {id:4,alt:'alt-text'},
-    // {id:5,alt:'alt-text'},
-    // {id:6,alt:'alt-text'},
-    // {id:7,alt:'alt-text'},
+    {id:4,alt:'alt-text'},
+    {id:5,alt:'alt-text'},
+    {id:6,alt:'alt-text'},
+    {id:7,alt:'alt-text'},
     // {id:8,alt:'alt-text'},
     // {id:9,alt:'alt-text'},
     // {id:10,alt:'alt-text'},
@@ -75,32 +75,32 @@ export const warehouse =[
     {id:2,alt:'alt-text'},
     {id:3,alt:'alt-text'},
     {id:4,alt:'alt-text'},
-    // {id:5,alt:'alt-text'},
+    {id:5,alt:'alt-text'},
     // {id:6,alt:'alt-text'},
     // {id:7,alt:'alt-text'},
     // {id:8,alt:'alt-text'},
     // {id:9,alt:'alt-text'},
 ]
 
-export const imgObjStart = {
-    building:[
-        {id:1,alt:'alt-text'},
-        {id:2,alt:'alt-text'},
-    ],
-    concreteWorks:[
-        {id:1,alt:'alt-text'},
-    ],
-    drilling:[
-        {id:1,alt:'alt-text'},
-        {id:2,alt:'alt-text'},
-        {id:3,alt:'alt-text'},
-    ],
-    warehouse:[
-        {id:1,alt:'alt-text'},
-        {id:2,alt:'alt-text'},
-        {id:3,alt:'alt-text'},
-        {id:4,alt:'alt-text'},
-    ],
+// export const imgObjStart = {
+//     building:[
+//         {id:1,alt:'alt-text'},
+//         {id:2,alt:'alt-text'},
+//     ],
+//     concreteWorks:[
+//         {id:1,alt:'alt-text'},
+//     ],
+//     drilling:[
+//         {id:1,alt:'alt-text'},
+//         {id:2,alt:'alt-text'},
+//         {id:3,alt:'alt-text'},
+//     ],
+//     warehouse:[
+//         {id:1,alt:'alt-text'},
+//         {id:2,alt:'alt-text'},
+//         {id:3,alt:'alt-text'},
+//         {id:4,alt:'alt-text'},
+//     ],
     
-}
+// }
 

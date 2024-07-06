@@ -211,7 +211,7 @@ export const createSlides = (name,e,)=>{
 }
 console.dir(window.location)
 
-if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
+if(window.location.pathname === '/' || window.location.pathname === '/mg-group-dev/index.html'){
     createSlides('all')
 }
 if(window.location.pathname === '/building.html' || window.location.pathname === '/mg-group-dev/building.html'){

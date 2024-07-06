@@ -210,4 +210,19 @@ export const createSlides = (name,e,)=>{
     initializeSwiper()
 }
 
-createSlides('all')
+
+if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
+    createSlides('all')
+}
+if(window.location.pathname === '/building.html'){
+    createSlides('building')
+}
+if(window.location.pathname === '/concrete_works.html'){
+    createSlides('concrete')
+}
+if(window.location.pathname === '/warehouse.html'){
+    createSlides('warehouse')
+}
+if(window.location.pathname === '/drilling.html'){
+    createSlides('drilling')
+}

@@ -27,9 +27,17 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     })
     const [drillData,setDrillData] = useState({
         material:'Бетон',
-        diametr:100,
+        diametr:'62',
         deep:100,
         count:1,
+        under_two_metres:false,
+        hard_drill:false,
+        high_arm:false,
+        m400:false,
+        m500:false,
+        no_water:false,
+        winter:false,
+        holiday:false
     })
 
 
@@ -37,14 +45,30 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const wall = ['Цегла','Газобетон',]
     const roof = ['Металочерепиця','Бітумна черепиця']
 
-    const material = ['Бетон','Цегла','Газоблок','Глина']
-    const diametr = [100,200,300,400]
-    const deep = [100,200,300,400,500,600,700,800]
+    const material = ['Цегла','Газобетон','Силікатна цегла','Бетон','Залізобетон','Граніт']
+    const diametr = [62,82,102,112,132,162,202,252,302]
+    const deep = [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,'більше 2000']
     
 
     const onChangeInput = (name,value) =>{
         if(value !== ''){
             setError({...error,[name]:false})
+        }
+        console.log(name,' ',drillData.under_two_metres)
+
+
+
+        if(name==='deep' && value === 'більше 2000'){
+            setDrillData((prev)=>({...prev, [name]:value, under_two_metres: true}))
+            return
+        }
+        if(name==='under_two_metres' && value === false){
+            setDrillData((prev)=>({...prev, deep:100, under_two_metres: false}))
+            return
+        }
+        if(name==='under_two_metres' && value === true){
+            setDrillData((prev)=>({...prev, deep:'більше 2000', under_two_metres: true}))
+            return
         }
 
         type === 'build' 
@@ -61,10 +85,6 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             setTimeout(()=>{setStep(+e.target.id)},300)
         }
 
-        // if(step === 1){
-        //     return
-        // }
-        // setStep((prev)=>prev -1)
     }
 
     const onNextStep = (name)=>{
@@ -97,31 +117,70 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
 
         '1':1,
         '2':0.7,
-        // 'area-1':100,
-        // 'area-2':110,
-        // 'area-3':140,
-        // 'area-4':150,
-        // 'area-5':160,
     }
-    const drillPrises ={
-        'Бетон':100,
-        'Газоблок':40,
-        'Глина':48,
-        'Цегла':100,
-        'diametr-100':100,
-        'diametr-200':200,
-        'diametr-300':300,
-        'diametr-400':400,
-        'diametr-500':500,
-        'deep-100':100,
-        'deep-200':200,
-        'deep-300':300,
-        'deep-400':400,
-        'deep-500':500,
-        'deep-600':600,
-        'deep-700':700,
-        'deep-800':800,
-    }
+    const drillPrises =[
+
+        {
+            name:'Цегла',
+            62:12,
+            82:18,
+            102:25,
+            112:28,
+            132:30,
+            162:35,
+            202:40,
+            252:45,
+            302:50,
+        },
+        {
+            name:'Газобетон',
+            62:12,
+            82:18,
+            102:25,
+            112:28,
+            132:30,
+            162:35,
+            202:40,
+            252:45,
+            302:50,
+        },
+        {
+            name:'Силікатна цегла',
+            62:18,
+            82:22,
+            102:28,
+            112:30,
+            132:35,
+            162:40,
+            202:45,
+            252:50,
+            302:55,
+        },
+        {
+            name:'Бетон',
+            62:18,
+            82:22,
+            102:28,
+            112:30,
+            132:35,
+            162:40,
+            202:45,
+            252:50,
+            302:55,
+        },
+        {
+            name:'Залізобетон',
+            62:25,
+            82:30,
+            102:35,
+            112:38,
+            132:40,
+            162:45,
+            202:50,
+            252:55,
+            302:60,
+        },
+    ]
 
     const totalBuildSumm = () =>{
         const numberArea = +data['area']
@@ -138,27 +197,27 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         const wall = buildPrises[data['wall']]
         const roof = buildPrises[data['roof']]
         const stage = buildPrises[data['stage']]
-        // let area = 0
-        // if(numberArea <50) area = buildPrises['area-1']
-        // if(numberArea >=50 && numberArea <=80) area = buildPrises['area-2']
-        // if(numberArea >=81 && numberArea <=120) area = buildPrises['area-3']
-        // if(numberArea >=121 && numberArea <=200) area = buildPrises['area-4']
-        // if(numberArea >200) area = buildPrises['area-5']
-        console.log(basement)
-        console.log(wall)
-        console.log(roof)
-        console.log(stage)
-        console.log(numberArea)
         
         return Math.round((basement+wall+roof)*stage*numberArea)
     }
     const totalDrillSumm = () =>{
-        const material = drillPrises[drillData['material']]
-        const diametr = drillPrises[`diametr-${drillData['diametr']}`]
-        const deep = drillPrises[`deep-${drillData['deep']}`]
+
+        const diametrPrice = drillPrises.find(el=>el.name === drillData['material'])[drillData.diametr]
+        const deep = drillData['deep']
         const count = +drillData['count']
+        const underTwoMetres = drillData.under_two_metres ? 1.2 : 1
+        const hardDrill = drillData.hard_drill ? 1.15 : 1
+        const highArm = drillData.high_arm ? 1.25 : 1
+        const m_400 = drillData.m400 ? 1.15 : 1
+        const m_500 = drillData.m500 ? 1.25 : 1
+        const noWater = drillData.no_water ? 1.1 : 1
+        const winter = drillData.winter ? 1.1 : 1
+        const holiday = drillData.no_water ? 1.5 : 1
+
+        console.log(deep)
+
         
-        return (material+diametr+deep)*count
+        return Math.round(diametrPrice*count*underTwoMetres*hardDrill*highArm*m_400*m_500*noWater*winter*holiday)
     }
 
     useEffect(()=>{
@@ -182,7 +241,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                         <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>
                         <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1   ? true : false} svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>
                         <CalculatorStepItem step={3} currentStep={step} setCurrentStep={setStep} active={step >2  ? true : false} svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>
-                        <CalculatorStepItem step={4} currentStep={step} setCurrentStep={setStep} active={step >3  ? true : false} setIsShow={setIsShow} toPrevStep={toPrevStep}/>
+                        <CalculatorStepItem step={4} currentStep={step} setCurrentStep={setStep} active={step >3  ? true : false} setIsShow={setIsShow} />
                     </ul>
 
                     {step === 1 && <StepOneFormContent basement={basement} wall={wall} roof={roof} open={open} setOpen={setOpen} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
@@ -213,8 +272,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             :
             <form action="" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
                     <ul className={`calc-step-wrapper gap-12-to-32  ${typeIsShow ? 'show' : ''}`}>
-                        <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow}/>        
-                        <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1  ? true : false} setIsShow={setIsShow}/>
+                        <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>        
+                        <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1  ? true : false} setIsShow={setIsShow} />
                     </ul>
 
                     {step === 1 && <StepOneDrillContent material={material} diametr={diametr} deep={deep} count={'count'} open={open} setOpen={setOpen} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"}/>}

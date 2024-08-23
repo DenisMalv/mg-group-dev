@@ -113,11 +113,27 @@ const onFormSubmit = async (e)=>{
 
 
 const checkInputError = (input,label,error)=>{
+    
+    console.dir(input)
+    if (input === popupFormInputPhone && input.value !=='' && !validatePhone(input.value)) {
+        input.nextElementSibling.nextElementSibling.textContent = 'Введіть номер телефону у форматі +380123456789'
+        label.classList.add(error)
+        return true
+    }
+
     if(input.value === ''){
+        input.nextElementSibling.nextElementSibling.textContent = "Поле обов'язкове для заповнення"
         label.classList.add(error)
         return true
     }
     label.classList.remove(error)
+}
+
+const validatePhone = (phone) => {
+    let test = false
+    // const phonePattern = /^\+380\d{9}$/;
+    const phonePattern = /^(?:\+?380|80|0)\d{9}$/;
+    return phonePattern.test(phone);
 }
 
 const onInput = (e)=>{

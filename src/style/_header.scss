@@ -58,11 +58,53 @@ header{
 
 .header-link-phone{
     display: none;
+    opacity: 1;
+
+    transition: $transition;
 
     @include tablet{
         display: inline-block;
     }
 }
+.nav-popup-phone{
+    position: absolute;
+    top: -10px;
+    left: 56px;
+    display: flex;
+    opacity: 0;
+    z-index: -2;
+
+    transition: $transition;
+    @include tablet{
+    &:hover{
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+}         
+    .nav-phone-container{
+        position: relative;
+        opacity: 1;
+        cursor: pointer;
+        
+            @include tablet{
+                &:hover .header-link-phone{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                &:hover .nav-popup-phone{
+                    opacity: 1;
+                    z-index: 1;
+
+                }
+            }
+
+       
+    }  
+
+
 
 .burger-button{
     position: relative;
@@ -116,7 +158,6 @@ header{
 .burger-button-icon.btn-hide{
     opacity: 0;
 }
-
 
 
 

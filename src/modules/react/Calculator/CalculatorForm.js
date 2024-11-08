@@ -47,7 +47,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
 
     const material = ['Цегла','Газобетон','Силікатна цегла','Бетон','Залізобетон','Граніт']
     const diametr = [62,82,102,112,132,162,202,252,302]
-    const deep = [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,'більше 2000']
+    const deep = [100,200,300,400,500,600,700,800,900,1000]
     
 
     const onChangeInput = (name,value) =>{
@@ -265,7 +265,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                             <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
                         </div>
                     }
-
+                    {step === 4 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>}
             </form>
 
 
@@ -283,7 +283,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                         ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('count')}>Далі</button>
                         :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
                     }
-
+                   {step === 2 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>}
             </form>
 
 

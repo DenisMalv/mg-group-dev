@@ -187,11 +187,6 @@
     //     transform: translateX(-100%);
     // }
 
-    @include desktop{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
 
     &.show{
         opacity: 1;

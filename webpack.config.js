@@ -105,28 +105,28 @@ module.exports = {
     //   chunks: ['index'],
     // }),
 
-    new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'pages', 'start_ejs', 'start_ejs.ejs'), // Приклад шляху до вашого EJS-шаблону
-        templateParameters: async () => {
-          try {
-            // Виконати запит до бази даних
-            // const data = await fetchDataFromDatabase();
-            // const data = {title:'this is title'}
-            const data = await fetch('https://jsonplaceholder.typicode.com//users')
-                  .then(response => response.json())
+    // new HtmlWebpackPlugin({
+    //     template: path.resolve(__dirname, 'src', 'pages', 'start_ejs', 'start_ejs.ejs'), // Приклад шляху до вашого EJS-шаблону
+    //     templateParameters: async () => {
+    //       try {
+    //         // Виконати запит до бази даних
+    //         // const data = await fetchDataFromDatabase();
+    //         // const data = {title:'this is title'}
+    //         const data = await fetch('https://jsonplaceholder.typicode.com//users')
+    //               .then(response => response.json())
       
   
-            // Повернути об'єкт з даними для використання у шаблоні
-            return { data };
-          } catch (error) {
-            console.error('Помилка під час отримання даних:', error);
-            return { error: 'Помилка під час отримання даних' };
-          }
-        },
-        output: 'start_ejs.html',
-        filename: 'start_ejs.html',
-        chunks: ['start_ejs'],
-    }),
+    //         // Повернути об'єкт з даними для використання у шаблоні
+    //         return { data };
+    //       } catch (error) {
+    //         console.error('Помилка під час отримання даних:', error);
+    //         return { error: 'Помилка під час отримання даних' };
+    //       }
+    //     },
+    //     output: 'start_ejs.html',
+    //     filename: 'start_ejs.html',
+    //     chunks: ['start_ejs'],
+    // }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),

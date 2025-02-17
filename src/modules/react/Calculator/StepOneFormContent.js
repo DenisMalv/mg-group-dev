@@ -2,7 +2,7 @@ import React,{useRef, useEffect, useState} from 'react';
 
 import CalculatorSelectBox from './CalculatorSelectBox';
 
-const StepOneFormContent = ({basement,wall,roof,open,setOpen,data,updData, isShow, setIsShow})=>{
+const StepOneFormContent = ({basement,wall,roof,overlap,open,setOpen,data,updData, isShow, setIsShow})=>{
 
     useEffect(()=>{
         setTimeout(()=>{setIsShow(true)},20)
@@ -17,6 +17,7 @@ const StepOneFormContent = ({basement,wall,roof,open,setOpen,data,updData, isSho
                 <CalculatorSelectBox selectName={'basement'} title={'Фундамент'} options={basement} open={open} setOpen={setOpen} data={data} updData={updData}/>
                 <CalculatorSelectBox selectName={'wall'} title={'Стіни'} options={wall} open={open} setOpen={setOpen} data={data} updData={updData}/>
                 <CalculatorSelectBox selectName={'roof'} title={'Покрівля'} options={roof} open={open} setOpen={setOpen} data={data} updData={updData}/>
+                <CalculatorSelectBox selectName={'overlap'} title={'Перекриття'} options={overlap} open={open} setOpen={setOpen} data={data} updData={updData}/>
             </div>
         </>
        

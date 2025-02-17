@@ -22,6 +22,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         basement:'Фундамент і чорнова підлога',
         wall:'Цегла',
         roof:'Металочерепиця',
+        overlap:'З/б плити',
         stage:1,
         area:'',
     })
@@ -44,6 +45,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const basement = ['Фундамент і чорнова підлога','Залізобетон']
     const wall = ['Цегла','Газобетон',]
     const roof = ['Металочерепиця','Бітумна черепиця']
+    const overlap = ["Дерев'яне",'З/б плити']
 
     const material = ['Цегла','Газобетон','Силікатна цегла','Бетон','Залізобетон','Граніт']
     const diametr = [62,82,102,112,132,162,202,252,302]
@@ -112,11 +114,16 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         'Цегла':125,
         'Газобетон':100,
 
-        'Металочерепиця':70,
-        'Бітумна черепиця':90,
+        'Металочерепиця':90,
+        'Бітумна черепиця':110,
+
+        "Дерев'яне":40,
+        'З/б плити':65,
 
         '1':1,
         '2':0.7,
+
+
     }
     const drillPrises =[
 
@@ -186,7 +193,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         const numberArea = +data['area']
         
         let basement = 0
-        console.log(data['basement'])
+        // console.log(data['basement'])
         if(data['basement'] === 'Фундамент і чорнова підлога' || data['basement'] === 'Залізобетон'){
             basement =  buildPrises['Фундамент і чорнова підлога'] + buildPrises['Залізобетон']
         } else {
@@ -196,9 +203,10 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         // const basement = buildPrises[data['basement']]
         const wall = buildPrises[data['wall']]
         const roof = buildPrises[data['roof']]
+        const overlap = buildPrises[data['overlap']]
         const stage = buildPrises[data['stage']]
         
-        return Math.round((basement+wall+roof)*stage*numberArea)
+        return Math.round((basement+wall+roof+overlap)*stage*numberArea)
     }
     const totalDrillSumm = () =>{
 
@@ -244,7 +252,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                         <CalculatorStepItem step={4} currentStep={step} setCurrentStep={setStep} active={step >3  ? true : false} setIsShow={setIsShow} />
                     </ul>
 
-                    {step === 1 && <StepOneFormContent basement={basement} wall={wall} roof={roof} open={open} setOpen={setOpen} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
+                    {step === 1 && <StepOneFormContent basement={basement} wall={wall} roof={roof} overlap={overlap} open={open} setOpen={setOpen} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
                     {step === 2 && <StepTwoFormContent stage={'stage'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
                     {step === 3 && <StepThreeFormContent area={'area'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"}/>}
                     {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}

@@ -12,7 +12,7 @@ import StepOneDrillContent from './StepOneDrillContent';
 import { openPopUp } from '../../modals/popupModal';
 
 const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
-    console.log(type)
+    // console.log(type)
    
     const [error,setError] = useState({
         area:false,
@@ -66,7 +66,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         if(value !== ''){
             setError({...error,[name]:false})
         }
-        console.log(name,' ',drillData.under_two_metres)
+        // console.log(name,' ',drillData.under_two_metres)
 
 
 
@@ -132,7 +132,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         const phoneRegex = /^(?:\+?380|80|0)\d{9}$/;
         // const phoneRegex = /^(\+?\d{1,3})?[-.\s]?\(?\d{2,4}\)?[-.\s]?\d{3}[-.\s]?\d{2,4}$/;
         // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        console.log(data)
+
         if(!nameRegex.test(data[names[0]]) || !phoneRegex.test(data[names[1]?.trim()])){
             names.forEach(el =>{
                 if(el ==='name'){

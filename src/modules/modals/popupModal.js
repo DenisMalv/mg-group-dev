@@ -83,13 +83,13 @@ const onFormSubmit = async (e)=>{
     elementsArr.forEach((el)=>data[el.name]=el.value)
 
     try {
-        const response = {ok:true}
-        // await fetch('', {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body: JSON.stringify(data),
-        // })
-
+        // const response = {ok:true}
+        const response = await fetch('https://jsonplaceholder.typicode.com', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data),
+        })
+        console.log(response)
         if(response.ok){
             console.log('ok')
             popupForm.reset()
@@ -114,7 +114,7 @@ const onFormSubmit = async (e)=>{
 
 const checkInputError = (input,label,error)=>{
     
-    console.dir(input)
+    // console.dir(input)
     if (input === popupFormInputPhone && input.value !=='' && !validatePhone(input.value)) {
         input.nextElementSibling.nextElementSibling.textContent = 'Введіть номер телефону у форматі +380123456789'
         label.classList.add(error)

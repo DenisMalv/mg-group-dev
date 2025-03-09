@@ -12,7 +12,7 @@ import StepOneDrillContent from './StepOneDrillContent';
 import { openPopUp } from '../../modals/popupModal';
 
 const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
-    console.log(type)
+    // console.log(type)
    
     const [error,setError] = useState({
         area:false,
@@ -31,6 +31,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         area:'',
         name:'',
         phone:'',
+        total:''
     })
     const [drillData,setDrillData] = useState({
         material:'Бетон',
@@ -46,7 +47,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         winter:false,
         holiday:false,
         name:'',
-        phone:''
+        phone:'',
+        total:''
     })
 
 
@@ -64,7 +66,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         if(value !== ''){
             setError({...error,[name]:false})
         }
-        console.log(name,' ',drillData.under_two_metres)
+        // console.log(name,' ',drillData.under_two_metres)
 
 
 
@@ -96,6 +98,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         }
 
     }
+    
 
     const onNextStep = (name)=>{
         if(step >= 4)return
@@ -103,9 +106,18 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             setError({...error,[name]:true})
             return
         }
+        if(type ==='build' && step===3){
+            setData((prevState)=>({...prevState,total:normalizeSum(totalBuildSumm)}))
+
+        }
+
         if(type ==='drill' && (drillData[name] === '' || drillData[name] < 1)){
             setError({...error,[name]:true})
             return
+        }
+        if(type ==='drill' && step === 1) {
+            setDrillData((prevState)=>({...prevState,total:normalizeSum(totalDrillSumm)}))
+
         }
         
         setIsShow(false)
@@ -120,7 +132,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         const phoneRegex = /^(?:\+?380|80|0)\d{9}$/;
         // const phoneRegex = /^(\+?\d{1,3})?[-.\s]?\(?\d{2,4}\)?[-.\s]?\d{3}[-.\s]?\d{2,4}$/;
         // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        console.log(data)
+
         if(!nameRegex.test(data[names[0]]) || !phoneRegex.test(data[names[1]?.trim()])){
             names.forEach(el =>{
                 if(el ==='name'){
@@ -140,6 +152,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             return
 
         }
+
+
         
         
         setIsShow(false)
@@ -232,6 +246,11 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             302:60,
         },
     ]
+
+    const normalizeSum=(summ)=>{
+        const numberString = "" + summ()
+        return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + " $";
+    }
 
     const totalBuildSumm = () =>{
 

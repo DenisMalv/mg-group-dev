@@ -31,6 +31,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         area:'',
         name:'',
         phone:'',
+        total:''
     })
     const [drillData,setDrillData] = useState({
         material:'Бетон',
@@ -46,7 +47,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         winter:false,
         holiday:false,
         name:'',
-        phone:''
+        phone:'',
+        total:''
     })
 
 
@@ -96,6 +98,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         }
 
     }
+    
 
     const onNextStep = (name)=>{
         if(step >= 4)return
@@ -103,9 +106,18 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             setError({...error,[name]:true})
             return
         }
+        if(type ==='build' && step===3){
+            setData((prevState)=>({...prevState,total:normalizeSum(totalBuildSumm)}))
+
+        }
+
         if(type ==='drill' && (drillData[name] === '' || drillData[name] < 1)){
             setError({...error,[name]:true})
             return
+        }
+        if(type ==='drill' && step === 1) {
+            setDrillData((prevState)=>({...prevState,total:normalizeSum(totalDrillSumm)}))
+
         }
         
         setIsShow(false)
@@ -140,6 +152,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             return
 
         }
+
+
         
         
         setIsShow(false)
@@ -232,6 +246,11 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             302:60,
         },
     ]
+
+    const normalizeSum=(summ)=>{
+        const numberString = "" + summ()
+        return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + " $";
+    }
 
     const totalBuildSumm = () =>{
 

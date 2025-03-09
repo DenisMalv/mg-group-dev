@@ -1,5 +1,6 @@
 import { Loader } from "@googlemaps/js-api-loader"
-
+console.log(process.env.GOOGLE_MAPS_API_KEY)
+console.log(process.env['GOOGLE_MAPS_API_KEY'])
 const loader = new Loader({
     apiKey: process.env.GOOGLE_MAPS_API_KEY ?? "",
     version: "weekly",

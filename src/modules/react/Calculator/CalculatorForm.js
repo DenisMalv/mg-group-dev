@@ -5,6 +5,8 @@ import StepOneFormContent from './StepOneFormContent';
 import StepTwoFormContent from './StepTwoFormContent';
 import StepThreeFormContent from './StepThreeFormContent';
 import StepFourFormContent from './StepFourFormContent';
+import StepFourFormModalContent from './StepFourFormModalContent';
+import StepFiveFormSuccess from './StepFiveFormSuccess';
 import StepOneDrillContent from './StepOneDrillContent';
 
 import { openPopUp } from '../../modals/popupModal';
@@ -15,6 +17,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const [error,setError] = useState({
         area:false,
         count:false,
+        name:false,
+        phone:false,
     })
     const [step,setStep] = useState(1)
     const [open,setOpen] = useState('')
@@ -25,6 +29,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         overlap:'З/б плити',
         stage:1,
         area:'',
+        name:'',
+        phone:'',
     })
     const [drillData,setDrillData] = useState({
         material:'Бетон',
@@ -38,7 +44,9 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         m500:false,
         no_water:false,
         winter:false,
-        holiday:false
+        holiday:false,
+        name:'',
+        phone:''
     })
 
 
@@ -79,7 +87,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     }
 
     const toPrevStep=(e)=>{
-        console.log(e)
+        // console.log(e)
         if(step <= 1 ) return
 
         if(e.target.id && step > +e.target.id){
@@ -95,7 +103,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             setError({...error,[name]:true})
             return
         }
-        if(type ==='drill' && drillData[name] === ''){
+        if(type ==='drill' && (drillData[name] === '' || drillData[name] < 1)){
             setError({...error,[name]:true})
             return
         }
@@ -105,6 +113,42 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
             setStep(step+1)
         },300)
         
+    }
+
+    const onSubmit = (names, data, )=>{
+        const nameRegex = /^[a-zA-Zа-яА-ЯёЁіІїЇєЄ'-]{2,}$/;
+        const phoneRegex = /^(?:\+?380|80|0)\d{9}$/;
+        // const phoneRegex = /^(\+?\d{1,3})?[-.\s]?\(?\d{2,4}\)?[-.\s]?\d{3}[-.\s]?\d{2,4}$/;
+        // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        console.log(data)
+        if(!nameRegex.test(data[names[0]]) || !phoneRegex.test(data[names[1]?.trim()])){
+            names.forEach(el =>{
+                if(el ==='name'){
+                    nameRegex.test(data[el])
+                        ?  setError((prevState)=>({...prevState,[el]:false}))
+                        :   setError((prevState)=>({...prevState,[el]:true}))
+                }
+                if(el ==='phone'){
+
+                    phoneRegex.test(data[el]?.trim())
+                        ? setError((prevState)=>({...prevState,[el]:false}))
+                        : setError((prevState)=>({...prevState,[el]:true}))
+                }
+               
+              
+            })
+            return
+
+        }
+        
+        
+        setIsShow(false)
+        setTimeout(()=>{
+            setStep(step+1)
+        },300)
+
+        console.log('data',data)
+        console.log('drillData',drillData)
     }
 
     const buildPrises = {
@@ -190,17 +234,18 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     ]
 
     const totalBuildSumm = () =>{
+
         const numberArea = +data['area']
         
-        let basement = 0
+        // let basement = 0
         // console.log(data['basement'])
-        if(data['basement'] === 'Фундамент і чорнова підлога' || data['basement'] === 'Залізобетон'){
-            basement =  buildPrises['Фундамент і чорнова підлога'] + buildPrises['Залізобетон']
-        } else {
-            basement =  buildPrises[data['basement']]
-        }
+        // if(data['basement'] === 'Фундамент і чорнова підлога' || data['basement'] === 'Фундамент'){
+        //     basement =  buildPrises['Фундамент і чорнова підлога'] + buildPrises['Залізобетон']
+        // } else {
+        //     basement =  buildPrises[data['basement']]
+        // }
 
-        // const basement = buildPrises[data['basement']]
+        const basement = buildPrises[data['basement']]
         const wall = buildPrises[data['wall']]
         const roof = buildPrises[data['roof']]
         const overlap = buildPrises[data['overlap']]
@@ -244,7 +289,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     return(
         type === 'build' 
             ?
-            <form action="" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
+            <form action="#" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24' onSubmit={(e)=>{e.preventDefault();}}>
+                    
                     <ul className={`calc-step-wrapper gap-12-to-32  ${typeIsShow ? 'show' : ''}`}>
                         <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>
                         <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1   ? true : false} svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>
@@ -255,43 +301,58 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
                     {step === 1 && <StepOneFormContent basement={basement} wall={wall} roof={roof} overlap={overlap} open={open} setOpen={setOpen} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
                     {step === 2 && <StepTwoFormContent stage={'stage'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow}/>}
                     {step === 3 && <StepThreeFormContent area={'area'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"}/>}
-                    {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}
+                    {/* {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />} */}
+                    {step === 4 && <StepFourFormModalContent  descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} name={'name'} phone={'phone'} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"} />}
+                    {step === 5 && <StepFiveFormSuccess title={"Дякуємо за заявку"} descr={'Найближчим часом з вами звʼяжемось'} isShow={isShow} setIsShow={setIsShow} />}
 
                     {step === 1 && 
                         <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('area')} >Далі</button>
                     } 
-                    {step !== 1 && step !== 4 &&
+                    {step !== 1 && step !== 4 && step !== 5 &&
                         <div className='flex gap-12-to-32'>
                             <button className={`btn-secondary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={toPrevStep} id={step-1}>Назад</button>
                             <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('area')} >Далі</button>
                         </div>
                     }
                     
-                    {step === 4  && 
+                    {step === 4  &&  
                         <div className='flex gap-12-to-32'>
-                            {/* <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={toPrevStep}  id={step-1}>Назад</button> */}
-                            <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
+                         
+                            <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onSubmit(['name','phone'],data)} >Замовити консультацію</button>
                         </div>
                     }
-                    {step === 4 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>}
+                    {/* {step === 4  && 
+                        <div className='flex gap-12-to-32'>
+                         
+                            <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
+                        </div>
+                    } */}
+                    {/* {step === 4 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>} */}
+
+
             </form>
 
 
             :
-            <form action="" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
+            <form action="#" className='calc-form bg-card p-lr-12-to-32 gap-44-to-68 br-16-to-24'>
                     <ul className={`calc-step-wrapper gap-12-to-32  ${typeIsShow ? 'show' : ''}`}>
                         <CalculatorStepItem step={1} currentStep={step} setCurrentStep={setStep} active svg setIsShow={setIsShow} toPrevStep={toPrevStep}/>        
                         <CalculatorStepItem step={2} currentStep={step} setCurrentStep={setStep} active={step >1  ? true : false} setIsShow={setIsShow} />
                     </ul>
 
                     {step === 1 && <StepOneDrillContent material={material} diametr={diametr} deep={deep} count={'count'} open={open} setOpen={setOpen} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"}/>}
-                    {step === 2 && <StepFourFormContent title={"Вартість послуги з буріння отвору"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'}  summ={totalDrillSumm} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} drill/>}
+                    {step === 2 && <StepFourFormModalContent descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} name={'name'} phone={'phone'} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} error={error} errorMessage={"Поле обов'язкове для заповнення"} />}
+                    {step === 3 && <StepFiveFormSuccess title={"Дякуємо за заявку"} descr={'Найближчим часом з вами звʼяжемось'} isShow={isShow} setIsShow={setIsShow} />}
+                    {/* {step === 2 && <StepFourFormContent title={"Вартість послуги з буріння отвору"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'}  summ={totalDrillSumm} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} drill/>} */}
+
                     
-                    {step !== 2 
-                        ?<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('count')}>Далі</button>
-                        :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
+                    {step !== 2  && step !== 3 &&
+                        <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onNextStep('count')}>Далі</button>
+                       
+                        // :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
                     }
-                   {step === 2 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>}
+                    {step !== 1 && step !== 3 &&  <button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={()=>onSubmit(['name','phone'],drillData)} >Зв’язатися з нами</button>}
+                   {/* {step === 2 && <p className='price-tip'>* Наведено приблизні розрахунки, точна вартість може незначно відрізнятися і залежить від особливостей проєкту.</p>} */}
             </form>
 
 

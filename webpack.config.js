@@ -35,7 +35,7 @@ module.exports = {
     // register:path.resolve(__dirname, 'src', 'pages', 'register', 'register.js'),
     // start_ejs:path.resolve(__dirname, 'src', 'pages', 'start_ejs', 'start_ejs.js'),
     // index:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
-    components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
+    // components:path.resolve(__dirname, 'src', 'pages', 'components', 'components.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -47,60 +47,60 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'start', 'start.html'),
-      output:'index.html',
+
       filename:'index.html',
       chunks: ['index'],
     }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'building', 'building.html'),
-      output:'building.html',
-      filename:'building.html',
+
+      filename:'building/index.html',
       chunks: ['building'],
     }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.html'),
-      output:'concrete_works.html',
-      filename:'concrete_works.html',
+
+      filename:'concrete_works/index.html',
       chunks: ['concrete_works'],
     }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.html'),
-      output:'drilling.html',
-      filename:'drilling.html',
+
+      filename:'drilling/index.html',
       chunks: ['drilling'],
     }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.html'),
-      output:'warehouse.html',
-      filename:'warehouse.html',
+
+      filename:'warehouse/index.html',
       chunks: ['warehouse'],
     }),
 
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),
-    //   output:'admin_page.html',
+
     //   filename:'admin_page.html',
     //   chunks: ['admin_page'],
     // }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'login', 'login.html'),
-    //   output:'login.html',
+
     //   filename:'login.html',
     //   chunks: ['login'],
     // }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'register', 'register.html'),
-    //   output:'register.html',
+
     //   filename:'register.html',
     //   chunks: ['register'],
     // }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),
-    //   output:'index.html',
+
     //   filename:'index.html',
     //   chunks: ['index'],
     // }),
@@ -128,12 +128,12 @@ module.exports = {
     //     chunks: ['start_ejs'],
     // }),
 
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),
-      output:'components.html',
-      filename:'components.html',
-      chunks: ['components'],
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'components', 'components.html'),
+    //   output:'components.html',
+    //   filename:'components.html',
+    //   chunks: ['components'],
+    // }),
 
     new CopyWebpackPlugin({
       patterns: [

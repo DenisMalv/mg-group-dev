@@ -211,18 +211,18 @@ export const createSlides = (name,e,)=>{
 }
 console.dir(window.location)
 
-if(window.location.pathname === '/' || window.location.pathname === '/mg-group-dev/index.html' || window.location.pathname === '/index.html'){
+if(window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/mg-group-dev/index.html' ){
     createSlides('all')
 }
-if(window.location.pathname === '/building.html' || window.location.pathname === '/mg-group-dev/building.html'){
+if(window.location.pathname === '/building.html' || window.location.pathname === '/building' || window.location.pathname === '/mg-group-dev/building.html'){
     createSlides('building')
 }
-if(window.location.pathname === '/concrete_works.html' || window.location.pathname === '/mg-group-dev/concrete_works.html'){
+if(window.location.pathname === '/concrete_works.html' || window.location.pathname === '/concrete_works' || window.location.pathname === '/mg-group-dev/concrete_works.html'){
     createSlides('concrete')
 }
-if(window.location.pathname === '/warehouse.html' || window.location.pathname === '/mg-group-dev/warehouse.html'){
+if(window.location.pathname === '/warehouse.html' || window.location.pathname === '/warehouse' || window.location.pathname === '/mg-group-dev/warehouse.html'){
     createSlides('warehouse')
 }
-if(window.location.pathname === '/drilling.html' || window.location.pathname === '/mg-group-dev/drilling.html'){
+if(window.location.pathname === '/drilling.html' || window.location.pathname === '/drilling' || window.location.pathname === '/mg-group-dev/drilling.html'){
     createSlides('drilling')
 }

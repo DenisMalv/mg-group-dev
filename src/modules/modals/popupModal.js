@@ -84,10 +84,10 @@ const onFormSubmit = async (e)=>{
 
     try {
         // const response = {ok:true}
-        const response = await fetch('https://jsonplaceholder.typicode.com', {
+        const response = await fetch('http://localhost:3033/api/mail', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data),
+            body: JSON.stringify({...data,type:'consult'}),
         })
         console.log(response)
         if(response.ok){

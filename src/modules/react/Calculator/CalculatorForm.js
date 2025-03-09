@@ -23,6 +23,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     const [step,setStep] = useState(1)
     const [open,setOpen] = useState('')
     const [data,setData] = useState({
+        type:'build',
         basement:'Фундамент і чорнова підлога',
         wall:'Цегла',
         roof:'Металочерепиця',
@@ -34,6 +35,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         total:''
     })
     const [drillData,setDrillData] = useState({
+        type:'drill',
         material:'Бетон',
         diametr:'62',
         deep:100,
@@ -127,7 +129,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
         
     }
 
-    const onSubmit = (names, data, )=>{
+    const onSubmit = async (names, data, )=>{
         const nameRegex = /^[a-zA-Zа-яА-ЯёЁіІїЇєЄ'-]{2,}$/;
         const phoneRegex = /^(?:\+?380|80|0)\d{9}$/;
         // const phoneRegex = /^(\+?\d{1,3})?[-.\s]?\(?\d{2,4}\)?[-.\s]?\d{3}[-.\s]?\d{2,4}$/;
@@ -153,16 +155,34 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
 
         }
 
+        try {
+            // const response = {ok:true}
+            const response = await fetch('http://localhost:3033/api/mail', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({...data,type:'consult'}),
+            })
+            console.log(response)
+            if(response.ok){
+                console.log('ok')
+                setIsShow(false)
+                setTimeout(()=>{
+                    setStep(step+1)
+                },300)
+            }else{
+                throw new Error()
+            }
+    
+        } catch (error) {
+            console.log('error')
 
-        
-        
-        setIsShow(false)
-        setTimeout(()=>{
-            setStep(step+1)
-        },300)
-
-        console.log('data',data)
-        console.log('drillData',drillData)
+            setIsShow(false)
+            setTimeout(()=>{
+                setStep(step+10)
+            },300)
+        }
+        // console.log('data',data)
+        // console.log('drillData',drillData)
     }
 
     const buildPrises = {

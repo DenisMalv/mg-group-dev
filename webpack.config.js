@@ -45,6 +45,7 @@ module.exports = {
     // publicPath: '/',
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pages', 'start', 'start.html'),
 
@@ -143,9 +144,7 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: '[name]/[name].[contenthash].css',
-    }),
-    new Dotenv(),
-      
+    }),   
   ],
   module: {
     rules: [

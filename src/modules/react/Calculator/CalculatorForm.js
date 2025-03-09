@@ -42,7 +42,7 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     })
 
 
-    const basement = ['Фундамент і чорнова підлога','Залізобетон']
+    const basement = ['Фундамент і чорнова підлога','Фундамент']
     const wall = ['Цегла','Газобетон',]
     const roof = ['Металочерепиця','Бітумна черепиця']
     const overlap = ["Дерев'яне",'З/б плити']
@@ -108,8 +108,8 @@ const CalculatorForm = ({type,typeIsShow,setTypeIsShow,isShow,setIsShow})=>{
     }
 
     const buildPrises = {
-        'Фундамент і чорнова підлога':80,
-        'Залізобетон':55,
+        'Фундамент і чорнова підлога':135,
+        'Фундамент':80,
 
         'Цегла':125,
         'Газобетон':100,

@@ -1,6 +1,6 @@
 import refsCommon from '../common/refsCommon'
 
-const { popupOpenBtn, popupModal, popupResp, popupForm, popupFormInputName, popupFormInputPhone, popupCloseBtn } = refsCommon
+const { popupOpenBtn, popupModal, popupResp, popupForm, popupFormInputName, popupFormInputPhone, popupCloseBtn,recaptcha } = refsCommon
 
 const POPUP_MODAL_ACTIVE = 'modal-active'
 const SHOW = 'show'
@@ -70,21 +70,29 @@ const onFormSubmit = async (e)=>{
 
     const nameError = checkInputError(popupFormInputName,popupFormInputName.labels[0],'error')
     const phoneError = checkInputError(popupFormInputPhone,popupFormInputPhone.labels[0],'error')
-
-    if(nameError || phoneError){
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse){
+        recaptcha.classList.add('error')
+    }else{
+        recaptcha.classList.remove('error')
+    }
+    if(nameError || phoneError || !recaptchaResponse){
         console.log("nameError", nameError)
         console.log("phoneError", phoneError)
+        console.log('reCAPTCHA не пройдена');
         return
     }
+  
 
     const data = {}
     const elementsArr = Array.from(popupForm.elements).filter((item)=>item.nodeName !== 'BUTTON')
 
     elementsArr.forEach((el)=>data[el.name]=el.value)
-
+    // const API = 'http://localhost:3033'
+    const API = 'https://mg-group-post-api.onrender.com'
     try {
         // const response = {ok:true}
-        const response = await fetch('http://localhost:3033/api/mail', {
+        const response = await fetch(`${API}/api/mail`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({...data,type:'consult'}),

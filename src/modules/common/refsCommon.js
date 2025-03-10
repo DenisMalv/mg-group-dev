@@ -21,6 +21,7 @@ const refsCommon ={
     popupFormInputName:document.getElementById('popup-form-name'),
     popupFormInputPhone:document.getElementById('popup-form-phone'),
     popupCloseBtn:document.getElementById('popup-close'),
+    recaptcha:document.querySelector('#capthcaError'),
 
     //sections
     sectionAboutUs:document.getElementById('about-us'),

@@ -27,9 +27,9 @@ module.exports = {
   entry: {
     index:path.resolve(__dirname, 'src', 'pages', 'start','start.js'),
     building:path.resolve(__dirname, 'src', 'pages', 'building', 'building.js'),
-    concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
-    drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
-    warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
+    // concrete_works:path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.js'),
+    // drilling:path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.js'),
+    // warehouse:path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.js'),
     // admin_page:path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.js'),
     // login:path.resolve(__dirname, 'src', 'pages', 'login', 'login.js'),
     // register:path.resolve(__dirname, 'src', 'pages', 'register', 'register.js'),
@@ -60,26 +60,26 @@ module.exports = {
       chunks: ['building'],
     }),
 
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.html'),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'concrete_works', 'concrete_works.html'),
 
-      filename:'concrete_works/index.html',
-      chunks: ['concrete_works'],
-    }),
+    //   filename:'concrete_works/index.html',
+    //   chunks: ['concrete_works'],
+    // }),
 
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.html'),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'drilling', 'drilling.html'),
 
-      filename:'drilling/index.html',
-      chunks: ['drilling'],
-    }),
+    //   filename:'drilling/index.html',
+    //   chunks: ['drilling'],
+    // }),
 
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.html'),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'warehouse', 'warehouse.html'),
 
-      filename:'warehouse/index.html',
-      chunks: ['warehouse'],
-    }),
+    //   filename:'warehouse/index.html',
+    //   chunks: ['warehouse'],
+    // }),
 
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'admin_page', 'admin_page.html'),

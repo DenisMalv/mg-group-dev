@@ -13,6 +13,7 @@
   <meta name="theme-color" content="#283935" />
   <link rel="icon" href="../../img/favicon.ico" type="image">
 
+
   <title>МГБетон - будівництво під ключ</title>
 </head>
 <body>
@@ -428,6 +429,11 @@
             <span class="ml-24">Коментар</span>
             <textarea class="textarea-field" name="comment" id="popup-textarea" placeholder="Яка послуга ваc цікавить?" cols="24" rows="6" autoComplete='off' ></textarea>
           </label>
+          <div style="position: relative;">
+            <div class="g-recaptcha"  data-callback="recaptchaSuccess" data-sitekey="6LcVT_AqAAAAADCdK3OQ_gu-EjTbE2Z7BM_4mgS6"></div>
+            <div id="recaptchaError"></div>
+            <p class="error-message" id="capthcaError">Підтвердіть що ви людина</p>
+          </div>
         </div>
 
         <button class="btn-primary" type="submit" >Залишити заявку</button>
@@ -436,7 +442,7 @@
         <h3 class="form-resp-title">Дякуємо вам за заявку</h3>
       </div>
   </div>
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
 

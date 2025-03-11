@@ -152,7 +152,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 		try {
 			// const response = {ok:true}
 			console.log(data);
-			const response = await fetch("http://localhost:3033/api/mail", {
+			const response = await fetch("https://mg-group-post-api.onrender.com/api/mail", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ ...data, type: type, "g-recaptcha-response": captchaToken }),

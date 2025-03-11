@@ -8,11 +8,11 @@ function wakeUp() {
 			return response.json();
 		})
 		.then((data) => {
-			console.log("------------- i am wake up --------------");
+			// console.log("------------- i am wake up --------------");
 			console.log("front fetch complete:", data);
 		})
 		.catch((error) => {
-			console.log("------------- i am sleep --------------");
+			// console.log("------------- i am sleep --------------");
 			console.error("front fetch error:", error);
 		})
 		.finally(() => {});

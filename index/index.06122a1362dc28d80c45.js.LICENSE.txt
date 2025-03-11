@@ -48,6 +48,8 @@ object-assign
 
 /*! ../../modules/common/refsCommon */
 
+/*! ../../modules/common/server-health */
+
 /*! ../../modules/common/swiper */
 
 /*! ../../modules/modals/popupModal */
@@ -652,6 +654,10 @@ object-assign
 
 /*!*********************************************!*\
   !*** ./node_modules/object.values/index.js ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/modules/common/server-health.js ***!
   \*********************************************/
 
 /*!**********************************************!*\

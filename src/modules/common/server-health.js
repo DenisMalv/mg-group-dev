@@ -13,4 +13,6 @@ function wakeUp() {
 			console.error("front fetch error:", error);
 		});
 }
-setInterval(wakeUp, 60 * 60 * 1000); // 60 минут в миллисекундах
+setInterval(() => {
+	wakeUp();
+}, 60 * 60 * 1000); // 60 минут в миллисекундах

@@ -1,4 +1,4 @@
-function fetchData() {
+function wakeUp() {
 	fetch("https://mg-group-post-api.onrender.com/work")
 		.then((response) => {
 			if (!response.ok) {
@@ -13,4 +13,4 @@ function fetchData() {
 			console.error("front fetch error:", error);
 		});
 }
-setInterval(fetchData, 60 * 60 * 1000); // 60 минут в миллисекундах
+setInterval(wakeUp, 60 * 60 * 1000); // 60 минут в миллисекундах

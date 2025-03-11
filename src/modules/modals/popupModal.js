@@ -104,8 +104,8 @@ const onFormSubmit = async (e) => {
 	const elementsArr = Array.from(popupForm.elements).filter((item) => item.nodeName !== "BUTTON");
 
 	elementsArr.forEach((el) => (data[el.name] = el.value));
-	const API = "http://localhost:3033";
-	// const API = "https://mg-group-post-api.onrender.com";
+	// const API = "http://localhost:3033";
+	const API = "https://mg-group-post-api.onrender.com";
 	try {
 		// const response = {ok:true}
 		const response = await fetch(`${API}/api/mail`, {

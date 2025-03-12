@@ -26,8 +26,8 @@ const StepFourFormModalContent = ({
 
 	return (
 		<>
-			{/* <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>{title}</h4> */}
-			<p>{descr}</p>
+			<h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>{title}</h3>
+			{/* <p>{descr}</p> */}
 
 			<div className="calc-select-wrapper" style={{ opacity: 1 }}>
 				<div className={`calc-select-label ${isShow ? "show" : "hide"}`}>
@@ -90,7 +90,7 @@ const StepFourFormModalContent = ({
 						style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
 					>
 						<ReCAPTCHA
-							sitekey="6LeYhvIqAAAAAIJYKzvRgG8SjGF9OIzqAzMPlWUf"
+							sitekey="6LdWrvIqAAAAAKLu8uzCdUmU43rGNleyLNZkeZzW"
 							onChange={(token) => {
 								setCaptchaToken(token);
 								setError((prevState) => ({ ...prevState, captcha: false })); // Убираем ошибку при прохождении

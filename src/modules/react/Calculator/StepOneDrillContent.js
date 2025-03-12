@@ -61,7 +61,7 @@ const StepOneDrillContent = ({material, diametr, deep, count, open,setOpen, isSh
 
     return(
         <>
-            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Введіть необхідні параметри</h4>
+            <h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>Введіть необхідні параметри</h3>
 
             <div className={`calc-select-wrapper step-two  ${isShow ? 'show' : ''}`}>
                 <CalculatorSelectBox selectName={'material'} title={'Матеріал'} options={material} open={open} setOpen={setOpen} data={data} updData={updData} drill/>

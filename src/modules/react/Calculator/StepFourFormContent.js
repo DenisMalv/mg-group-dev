@@ -14,7 +14,7 @@ const StepFourFormContent = ({title, descr, summ, data,updData, isShow, setIsSho
 
     return(
         <>
-            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>{title}</h4>
+            <h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>{title}</h3>
             
             <div className={`calc-step-four-res-text ${isShow ? 'show' : ''}`}>
                 <h2>{normalizeSum()} {drill ? 'грн' : '$'}</h2>

@@ -11,7 +11,7 @@ const StepSixFormError = ({ title, descr, setIsShow, isShow }) => {
 
 	return (
 		<>
-			<h4 className={`calc-form-title ${isShow ? "show" : ""}`}>{title}</h4>
+			<h3 className={`calc-form-title ${isShow ? "show" : ""}`}>{title}</h3>
 			<p>{descr}</p>
 		</>
 	);

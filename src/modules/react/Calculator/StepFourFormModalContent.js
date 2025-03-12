@@ -90,7 +90,7 @@ const StepFourFormModalContent = ({
 						style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
 					>
 						<ReCAPTCHA
-							sitekey="6LdaEPIqAAAAAN8XB-58_hqKH5ZSRSK8cJBIoset"
+							sitekey="6LeYhvIqAAAAAIJYKzvRgG8SjGF9OIzqAzMPlWUf"
 							onChange={(token) => {
 								setCaptchaToken(token);
 								setError((prevState) => ({ ...prevState, captcha: false })); // Убираем ошибку при прохождении

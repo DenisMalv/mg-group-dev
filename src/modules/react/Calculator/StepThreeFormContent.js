@@ -12,7 +12,7 @@ const StepThreeFormContent = ({area, data,updData,  isShow, setIsShow, error, se
 
     return(
         <>
-            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Введіть бажану площу будинку</h4>
+            <h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>Введіть бажану площу будинку</h3>
 
             <div className={`calc-select-label ${isShow ? 'show' : 'hide'}`} >
                 <span className='calc-select-label-text'>Площа, кв.м.</span>

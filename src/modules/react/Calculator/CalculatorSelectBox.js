@@ -43,7 +43,7 @@ const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData
 
     return(
        
-            <div className={`calc-select-label ${drill ? 'drill-step-one' : ''}`} >
+            <label for={selectName} className={`calc-select-label ${drill ? 'drill-step-one' : ''}`} >
                 <span className='calc-select-label-text'>{title}</span>
                
                 <div className='calc-select-input-wrapper' onClick={(e)=>toggleDropdown(e,selectName)}> 
@@ -59,7 +59,7 @@ const CalculatorSelectBox = ({selectName,title,options,open,setOpen,data,updData
                         }
                     </ul>
                 </div>
-            </div>
+            </label>
        
     )
 }

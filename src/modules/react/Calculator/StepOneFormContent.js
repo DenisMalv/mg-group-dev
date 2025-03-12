@@ -11,7 +11,7 @@ const StepOneFormContent = ({basement,wall,roof,overlap,open,setOpen,data,updDat
 
     return(
         <>
-            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Оберіть матеріал, який бажаєте використати</h4>
+            <h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>Оберіть матеріал, який бажаєте використати</h3>
 
             <div className={`calc-select-wrapper  ${isShow ? 'show' : ''}`}>
                 <CalculatorSelectBox selectName={'basement'} title={'Фундамент'} options={basement} open={open} setOpen={setOpen} data={data} updData={updData}/>

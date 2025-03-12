@@ -1,20 +1,29 @@
 @font-face {
   font-family: "M PLUS 1p";
-  src: url('../../fonts/MPLUS1p-Regular.ttf') ;
-    font-weight: 400;
+  src: url('../../fonts/MPLUS1p-Regular.woff2') format('woff2'),
+       url('../../fonts/MPLUS1p-Regular.woff') format('woff'),
+       url('../../fonts/MPLUS1p-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "M PLUS 1p";
-  src: url('../../fonts/MPLUS1p-Medium.ttf') ;
-    font-weight: 500;
+  src: url('../../fonts/MPLUS1p-Medium.woff2') format('woff2'),
+       url('../../fonts/MPLUS1p-Medium.woff') format('woff'),
+       url('../../fonts/MPLUS1p-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Russo One";
-  src: url('../../fonts/Russo_One.ttf') ;
-    font-weight: 400;
+  src: url('../../fonts/Russo_One.woff2') format('woff2'),
+       url('../../fonts/Russo_One.woff') format('woff'),
+       url('../../fonts/Russo_One.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
 }
-
 
   // @font-face {
   //   font-family: 'Roboto';

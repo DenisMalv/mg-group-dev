@@ -388,7 +388,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 			{/* {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />} */}
 			{step === 4 && (
 				<StepFourFormModalContent
-					descr={"Готові замовити або у вас залишилися запитання? Зв’яжіться з нами"}
+					title={"Готові замовити або у вас залишилися запитання? Зв’яжіться з нами"}
 					name={"name"}
 					phone={"phone"}
 					captcha={captchaToken}

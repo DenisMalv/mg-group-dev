@@ -15,7 +15,7 @@ const StepTwoFormContent = ({stage, data,updData, isShow, setIsShow})=>{
 
     return(
         <>
-            <h4 className={`calc-form-title ${isShow ? 'show' : ''}`}>Виберіть кількість поверхів будинку</h4>
+            <h3 className={`calc-form-title ${isShow ? 'show' : ''}`}>Виберіть кількість поверхів будинку</h3>
 
             <ul className={`calc-select-wrapper step-two ${isShow ? 'show' : ''}`}>
                 <li className={`step-two-item ${data[stage] == 1 ? 'active' : ''}`}  onClick={()=>updData(stage,'1')}>

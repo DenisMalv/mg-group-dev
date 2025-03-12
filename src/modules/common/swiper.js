@@ -153,6 +153,16 @@ const createSlide = (imageSrc,altText) =>{
     // Встановлюємо атрибут alt для опису зображення
     img.alt = altText;
 
+//      // Адаптивные изображения
+//      img.srcset = `
+//      ${imageSrc.replace('.jpg', '-small.jpg')} 480w, 
+//      ${imageSrc.replace('.jpg', '-medium.jpg')} 768w, 
+//      ${imageSrc.replace('.jpg', '-large.jpg')} 1200w
+//  `;
+ img.sizes = `(max-width: 480px) 100vw, 
+              (max-width: 768px) 50vw, 
+              1200px`;
+
     // Додаємо тег <img> до створеного <div>
     slide.appendChild(img);
 

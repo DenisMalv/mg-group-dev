@@ -5,6 +5,9 @@ import { createSlides } from './swiper';
 
 const {lastWorksForm,swiperWrapper} = refsCommon
 
+document.addEventListener('DOMContentLoaded',()=>{
+
+
 const tabsArray = Array.from(lastWorksForm.elements)
 
 let activeTab = {tab:''}
@@ -37,7 +40,7 @@ const onChangeTab = (e) => {
 lastWorksForm.addEventListener('click',onChangeTab)
 
 
-
+})
 
 
 

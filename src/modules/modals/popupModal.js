@@ -12,6 +12,7 @@ const {
 	recaptcha,
 } = refsCommon;
 
+
 const POPUP_MODAL_ACTIVE = "modal-active";
 const SHOW = "show";
 // const BTN_HIDE = 'btn-hide'
@@ -54,6 +55,10 @@ export const openPopUp = () => {
 	popupFormInputName.addEventListener("input", onInput);
 	popupFormInputPhone.addEventListener("input", onInput);
 };
+
+
+
+
 
 const toggleRespPopup = (type) => {
 	popupResp.style.display = "block";
@@ -163,3 +168,4 @@ const onInput = (e) => {
 };
 
 popupOpenBtn.addEventListener("click", openPopUp);
+

@@ -95,7 +95,7 @@
   // max-width: 888px;
   max-width: 1024px;
   max-height: 720px;
-  min-height: clamp(252px, 3.417rem + 52.33vw, 548px);
+  // min-height: clamp(252px, 3.417rem + 52.33vw, 548px);
   // max-height: clamp(252px, 3.417rem + 52.33vw, 548px);
   // max-height: clamp(252px, -0.059rem + 63.24vw, 682px)
 
@@ -123,10 +123,8 @@
   & img{
     height: 100%;
     width: 100%;
-    aspect-ratio: 387 / 277;
-    @include tablet{
-      aspect-ratio: 1150 / 647;
-    }
+    aspect-ratio: 16 / 9;
+   
     
   }
 }

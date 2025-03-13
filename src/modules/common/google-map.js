@@ -1,5 +1,10 @@
 import { Loader } from "@googlemaps/js-api-loader"
 
+document.addEventListener('DOMContentLoaded', ()=>{
+
+setTimeout(() => {
+    
+
 const loader = new Loader({
     apiKey: process.env.GOOGLE_MAPS_API_KEY ?? "AIzaSyCPTwg8YceKEZEZXKgkMqfYpf71hHVRCpg",
     version: "weekly",
@@ -103,5 +108,5 @@ loader.load().then(async () => {
   
     const map = new Map(document.getElementById("map"), mapOptions);
   });
-
-
+}, 1000);
+})

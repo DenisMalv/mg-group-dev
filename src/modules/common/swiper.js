@@ -224,6 +224,10 @@ console.dir(window.location)
 document.addEventListener('DOMContentLoaded', ()=>{
 
 
+    setTimeout(()=>{
+
+ 
+
 if(window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/mg-group-dev/' ){
     createSlides('all')
 }
@@ -239,4 +243,6 @@ if(window.location.pathname === '/warehouse.html' || window.location.pathname ==
 if(window.location.pathname === '/drilling.html' || window.location.pathname === '/drilling' || window.location.pathname === '/mg-group-dev/drilling'){
     createSlides('drilling')
 }
+
+},1000)
 })

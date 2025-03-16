@@ -224,7 +224,7 @@ console.dir(window.location)
 document.addEventListener('DOMContentLoaded', ()=>{
 
 
-    setTimeout(()=>{
+
 
  
 
@@ -244,5 +244,5 @@ if(window.location.pathname === '/drilling.html' || window.location.pathname ===
     createSlides('drilling')
 }
 
-},1000)
+
 })

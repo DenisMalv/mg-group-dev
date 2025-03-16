@@ -9,5 +9,5 @@ function loadReCaptcha() {
 }
 
 setTimeout(() => {
-	// loadReCaptcha();
+	loadReCaptcha();
 }, 1000);

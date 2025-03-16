@@ -1,12 +1,17 @@
 import { Loader } from "@googlemaps/js-api-loader";
 
 document.addEventListener("DOMContentLoaded", () => {
+	let mapLoaded = false;
 	setTimeout(() => {
 		const loader = new Loader({
 			apiKey: process.env.GOOGLE_MAPS_API_KEY ?? "AIzaSyCPTwg8YceKEZEZXKgkMqfYpf71hHVRCpg",
 			version: "weekly",
 			// ...additionalOptions,
 		});
+
+		if (mapLoaded) return; // Если карта уже загружена, выходим
+
+		mapLoaded = true;
 
 		loader.load().then(async () => {
 			const { Map } = await google.maps.importLibrary("maps");
@@ -86,5 +91,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const map = new Map(document.getElementById("map"), mapOptions);
 		});
-	}, 2000);
+	}, 3000);
 });

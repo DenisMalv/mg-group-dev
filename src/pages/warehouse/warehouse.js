@@ -8,7 +8,7 @@ import "../../modules/common/last-our-works-tabs";
 
 // modules
 import "../../modules/warehouse/some";
-import "../../modules/warehouse/refs";
+// import "../../modules/warehouse/refs";
 import "../../modules/common/server-health";
 
 // swiper

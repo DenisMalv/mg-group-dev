@@ -10,6 +10,8 @@
 		<meta name="theme-color" content="#283935" />
 		<link rel="icon" href="../../img/favicon.ico" type="image" />
 
+		<link rel="preconnect" href="https://mg-group-post-api.onrender.com" crossorigin />
+
 		<title>МГбетон - Буріння отворів</title>
 	</head>
 	<body>
@@ -19,8 +21,8 @@
 					class="header-navigation bg-card br-24"
 					aria-label="Навігація по сайте на широкому екрані, планшет компʼютер"
 				>
-					<a href="/" class="logo flex" role="link" aria-label="">
-						<svg class="logo-icon" width="112" height="56" alt="Логотип компанії">
+					<a href="/" class="logo flex" role="link" aria-label="Логотип компанії МГ-Груп">
+						<svg class="logo-icon" width="112" height="56" title="Логотип компанії">
 							<use href="../../img/icons/icon-sprite.svg#logo"></use>
 						</svg>
 					</a>
@@ -57,7 +59,7 @@
 										class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 										width="32"
 										height="32"
-										alt="Іконка соцмережі telegram"
+										title="Іконка соцмережі telegram"
 									>
 										<use href="../../img/icons/icon-sprite.svg#telegram"></use>
 									</svg>
@@ -76,7 +78,7 @@
 										class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 										width="32"
 										height="32"
-										alt="Іконка соцмережі viber"
+										title="Іконка соцмережі viber"
 									>
 										<use href="../../img/icons/icon-sprite.svg#viber"></use>
 									</svg>
@@ -85,15 +87,15 @@
 						</ul>
 					</div>
 
-					<button type="button" role="button" class="burger-button" id="burger-btn">
-						<svg class="burger-button-icon" width="32" height="32" alt="Іконка відкриття мобільного меню навігації">
+					<button type="button" role="button" class="burger-button" id="burger-btn" aria-label="Відкрити мобільне меню">
+						<svg class="burger-button-icon" width="32" height="32" title="Іконка відкриття мобільного меню навігації">
 							<use href="../../img/icons/icon-sprite.svg#menu-burger"></use>
 						</svg>
 						<svg
 							class="burger-button-icon btn-hide"
 							width="32"
 							height="32"
-							alt="Іконка закриття мобільного меню навігації"
+							title="Іконка закриття мобільного меню навігації"
 						>
 							<use href="../../img/icons/icon-sprite.svg#close"></use>
 						</svg>
@@ -139,7 +141,7 @@
 						</div>
 						<div class="hero-img">
 							<img
-								loading="lazy"
+								loading="eager"
 								class="br-16-to-24"
 								width="672"
 								height="548"
@@ -209,7 +211,7 @@
 											class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 											width="32"
 											height="32"
-											alt="Іконка телефону"
+											title="Іконка телефону"
 										>
 											<use href="../../img/icons/icon-sprite.svg#phone"></use>
 										</svg>
@@ -224,7 +226,7 @@
 										class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 										width="32"
 										height="32"
-										alt="Іконка локації"
+										title="Іконка локації"
 									>
 										<use href="../../img/icons/icon-sprite.svg#pin-location"></use>
 									</svg>
@@ -250,7 +252,7 @@
 											class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 											width="32"
 											height="32"
-											alt="Іконка соцмережі telegram"
+											title="Іконка соцмережі telegram"
 										>
 											<use href="../../img/icons/icon-sprite.svg#telegram"></use>
 										</svg>
@@ -269,7 +271,7 @@
 											class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 											width="32"
 											height="32"
-											alt="Іконка соцмережі viber"
+											title="Іконка соцмережі viber"
 										>
 											<use href="../../img/icons/icon-sprite.svg#viber"></use>
 										</svg>
@@ -288,7 +290,7 @@
 											class="footer-contacts-item-icon w-32-to-48 h-32-to-48"
 											width="32"
 											height="32"
-											alt="Іконка соцмережі TikTok"
+											title="Іконка соцмережі TikTok"
 										>
 											<use href="../../img/icons/icon-sprite.svg#tiktok"></use>
 										</svg>
@@ -436,5 +438,6 @@
 				<h3 class="form-resp-title">Дякуємо вам за заявку</h3>
 			</div>
 		</div>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</body>
 </html>

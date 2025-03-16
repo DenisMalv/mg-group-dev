@@ -12,7 +12,7 @@ import "../../modules/common/swiper";
 
 // modules
 import "../../modules/drilling/some";
-import "../../modules/drilling/refs";
+// import "../../modules/drilling/refs";
 import "../../modules/common/server-health";
 
 //modals

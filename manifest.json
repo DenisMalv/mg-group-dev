@@ -1,0 +1,23 @@
+{
+	"name": "МГБетон — Будівництво під ключ",
+	"short_name": "МГБетон",
+	"lang": "uk-UA",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#283935",
+	"orientation": "portrait",
+	"description": "Професійне будівництво під ключ – надійність та якість.",
+	"icons": [
+		{
+			"src": "assets/img/icons/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/img/icons/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

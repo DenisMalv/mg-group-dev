@@ -1,7 +1,20 @@
 header{
-    position: relative;
+    // position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 11;
     margin: 0 auto;
+    &.scrolled{
+        .header-navigation {
+            @include tablet{
+            box-shadow: 1px 12px 12px -8px rgba(255, 201, 53, 0.86);
+                -webkit-box-shadow: 1px 12px 12px -8px rgba(255, 201, 53, 0.86);
+                -moz-box-shadow: 1px 12px 12px -8px rgba(255, 201, 53, 0.86);
+            }
+        }
+    }
 }
 
 
@@ -30,6 +43,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: $transition;
 
     //
     position: relative;

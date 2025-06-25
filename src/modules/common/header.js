@@ -138,6 +138,14 @@ const windowScroll = (href) => {
 	}
 };
 
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 50) {
+		header.classList.add("scrolled");
+	} else {
+		header.classList.remove("scrolled");
+	}
+});
+
 headerList.addEventListener("click", onClickNavigation);
 headerBurgerBtn.addEventListener("click", toggleBurgerMenu);
 headerBurgerBtn.addEventListener("dblclick", clearTimeoutIdOnDblClick);

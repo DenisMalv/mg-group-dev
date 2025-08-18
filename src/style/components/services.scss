@@ -9,6 +9,14 @@
   margin-bottom: 44px;
 }
 
+ .services-item img{
+    width: 100%;
+  }
+@media screen and (min-width: 767.9px) {
+  .services-item img{
+    width: auto;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .services-list {

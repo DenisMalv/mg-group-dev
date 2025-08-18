@@ -100,12 +100,12 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 	};
 
 	const onNextStep = (name) => {
-		if (step >= 4) return;
+		if (step >= 5) return;
 		if (type === "build" && step === 3 && data[name] === "") {
 			setError({ ...error, [name]: true });
 			return;
 		}
-		if (type === "build" && step === 3) {
+		if (type === "build" && step === 4) {
 			setData((prevState) => ({ ...prevState, total: normalizeSum(totalBuildSumm) }));
 		}
 
@@ -329,7 +329,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					svg
 					setIsShow={setIsShow}
 					toPrevStep={toPrevStep}
-				/>
+				/> 
 				<CalculatorStepItem
 					step={2}
 					currentStep={step}
@@ -385,8 +385,8 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					errorMessage={"Поле обов'язкове для заповнення"}
 				/>
 			)}
-			{/* {step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />} */}
-			{step === 4 && (
+			{step === 4 && <StepFourFormContent title={"Вартість вашого будинку"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'} summ={totalBuildSumm} data={data} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} />}
+			{step === 5 && (
 				<StepFourFormModalContent
 					title={"Готові замовити або у вас залишилися запитання? Зв’яжіться з нами"}
 					name={"name"}
@@ -402,7 +402,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					errorMessage={"Поле обов'язкове для заповнення"}
 				/>
 			)}
-			{step === 5 && (
+			{step === 6 && (
 				<StepFiveFormSuccess
 					title={"Дякуємо за заявку"}
 					descr={"Найближчим часом з вами звʼяжемось"}
@@ -410,7 +410,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					setIsShow={setIsShow}
 				/>
 			)}
-			{step === 6 && (
+			{step === 7 && (
 				<StepSixFormError
 					title={"Упс, щось пішло не так"}
 					descr={"Зателефонуйте нам +380 67 566 02 73 або напишіть в мессенжер"}
@@ -428,7 +428,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					Далі
 				</button>
 			)}
-			{step !== 1 && step !== 4 && step !== 5 && step !== 6 && (
+			{step !== 1 && step !== 4 && step !== 5 && step !== 6 && step !== 7 && (
 				<div className="flex gap-12-to-32">
 					<button
 						className={`btn-secondary calc-next-step  ${typeIsShow ? "show" : ""}`}
@@ -449,6 +449,17 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 			)}
 
 			{step === 4 && (
+				<div className="flex gap-12-to-32">
+					<button
+						className={`btn-primary calc-next-step  ${typeIsShow ? "show" : ""}`}
+						type="button"
+						onClick={() => onNextStep("area")}
+					>
+						Замовити консультацію
+					</button>
+				</div>
+			)}
+			{step === 5 && (
 				<div className="flex gap-12-to-32">
 					<button
 						className={`btn-primary calc-next-step  ${typeIsShow ? "show" : ""}`}

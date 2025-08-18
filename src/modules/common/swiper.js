@@ -158,37 +158,37 @@ export const createSlides = (name, e) => {
 
 	if (name === "all") {
 		const buildingSlides = building.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/building/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/building/${id}.webp`, alt);
 		});
 		const concreteWorksSlides = concreteWorks.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/concrete-works/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/concrete-works/${id}.webp`, alt);
 		});
 		const drillingSlides = drilling.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/drilling/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/drilling/${id}.webp`, alt);
 		});
 		const warehouseSlides = warehouse.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/warehouse/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/warehouse/${id}.webp`, alt);
 		});
 		slidesArray = [...buildingSlides, ...concreteWorksSlides, ...drillingSlides, ...warehouseSlides];
 	}
 	if (name === "building") {
 		slidesArray = building.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/building/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/building/${id}.webp`, alt);
 		});
 	}
 	if (name === "concrete") {
 		slidesArray = concreteWorks.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/concrete-works/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/concrete-works/${id}.webp`, alt);
 		});
 	}
 	if (name === "drilling") {
 		slidesArray = drilling.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/drilling/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/drilling/${id}.webp`, alt);
 		});
 	}
 	if (name === "warehouse") {
 		slidesArray = warehouse.map(({ id, alt }) => {
-			return createSlide(`assets/img/start/last-works/warehouse/${id}.webp`, alt);
+			return createSlide(`/assets/img/start/last-works/warehouse/${id}.webp`, alt);
 		});
 	}
 	paginationLength(slidesArray);
@@ -204,16 +204,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (window.location.pathname === "/index.html" || window.location.pathname === "/" || window.location.pathname === "/mg-group-dev/") {
 		createSlides("all");
 	}
-	if (window.location.pathname === "/building/building.html" || window.location.pathname === "/building/" || window.location.pathname === "/mg-group-dev/building/") {
+	if (window.location.pathname === "/building/building.html" || window.location.pathname === "/building" || window.location.pathname === "/building/" || window.location.pathname === "/mg-group-dev/building/") {
 		createSlides("building");
 	}
-	if (window.location.pathname === "/concrete_works/concrete_works.html" || window.location.pathname === "/concrete_works/" || window.location.pathname === "/mg-group-dev/concrete_works/") {
+	if (window.location.pathname === "/concrete_works/concrete_works.html" || window.location.pathname === "/concrete_works" || window.location.pathname === "/concrete_works/" || window.location.pathname === "/mg-group-dev/concrete_works/") {
 		createSlides("concrete");
 	}
-	if (window.location.pathname === "/warehouse/warehouse.html" || window.location.pathname === "/warehouse/" || window.location.pathname === "/mg-group-dev/warehouse/") {
+	if (window.location.pathname === "/warehouse/warehouse.html" || window.location.pathname === "/warehouse" || window.location.pathname === "/warehouse/" || window.location.pathname === "/mg-group-dev/warehouse/") {
 		createSlides("warehouse");
 	}
-	if (window.location.pathname === "/drilling/index.html" || window.location.pathname === "/drilling/" || window.location.pathname === "/mg-group-dev/drilling/") {
+	if (window.location.pathname === "/drilling/index.html" || window.location.pathname === "/drilling" || window.location.pathname === "/drilling/" || window.location.pathname === "/mg-group-dev/drilling/") {
 		createSlides("drilling");
 	}
 });

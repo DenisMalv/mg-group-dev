@@ -515,7 +515,9 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					errorMessage={"Поле обов'язкове для заповнення"}
 				/>
 			)}
-			{step === 2 && (
+			{step === 2 && 
+			<StepFourFormContent title={"Вартість послуги з буріння отвору"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'}  summ={totalDrillSumm} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} drill/>}
+			{step === 3 && (
 				<StepFourFormModalContent
 					descr={"Готові замовити або у вас залишилися запитання? Зв’яжіться з нами"}
 					name={"name"}
@@ -531,7 +533,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					errorMessage={"Поле обов'язкове для заповнення"}
 				/>
 			)}
-			{step === 3 && (
+			{step === 4 && (
 				<StepFiveFormSuccess
 					title={"Дякуємо за заявку"}
 					descr={"Найближчим часом з вами звʼяжемось"}
@@ -547,10 +549,10 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 					setIsShow={setIsShow}
 				/>
 			)}
-			{/* {step === 2 && <StepFourFormContent title={"Вартість послуги з буріння отвору"} descr={'Готові замовити або у вас залишилися запитання? Зв’яжіться з нами'}  summ={totalDrillSumm} data={drillData} updData={onChangeInput} isShow={isShow} setIsShow={setIsShow} drill/>} */}
+			
 
 			{
-				step !== 2 && step !== 3 && step !== 6 && (
+				step !== 3 && step !== 4 && step !== 6 && (
 					<button
 						className={`btn-primary calc-next-step  ${typeIsShow ? "show" : ""}`}
 						type="button"
@@ -562,7 +564,7 @@ const CalculatorForm = ({ type, typeIsShow, setTypeIsShow, isShow, setIsShow }) 
 
 				// :<button className={`btn-primary calc-next-step  ${typeIsShow ? 'show' : ''}`} type='button' onClick={openPopUp} >Зв’язатися з нами</button>
 			}
-			{step !== 1 && step !== 3 && step !== 6 && (
+			{step !== 1 && step !== 2 && step !== 4 && step !== 6 && (
 				<button
 					className={`btn-primary calc-next-step  ${typeIsShow ? "show" : ""}`}
 					type="button"

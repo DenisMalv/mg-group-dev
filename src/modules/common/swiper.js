@@ -121,6 +121,10 @@ const paginationLength = (arr) => {
 };
 
 const createSlide = (imageSrc, altText) => {
+    // шлях зображень для гх-пейджс
+    if(window.location.host.includes('github')){
+        imageSrc = `/mg-group-dev${imageSrc}`
+    }
 	const slide = document.createElement("div");
 	// Додаємо клас "swiper-slide" до створеного <div>
 	slide.classList.add("swiper-slide");

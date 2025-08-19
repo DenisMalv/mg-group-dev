@@ -1,18 +1,6 @@
 import refsCommon from "./refsCommon";
 
-const {
-	header,
-	headerNav,
-	headerList,
-	burgerModal,
-	burgerList,
-	headerBurgerBtn,
-	sectionAboutUs,
-	sectionServices,
-	sectionGallery,
-	sectionPrice,
-	sectionContacts,
-} = refsCommon;
+const { header, headerNav, headerList, burgerModal, burgerList, headerBurgerBtn, sectionAboutUs, sectionServices, sectionGallery, sectionPrice, sectionContacts } = refsCommon;
 
 const BURGER_MODAL_ACTIVE = "burger-modal-active";
 const SHOW = "burger-show";
